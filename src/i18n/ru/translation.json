@@ -1,0 +1,812 @@
+{
+  "account": {
+    "account_settings": "Настройки аккаунта",
+    "all_requests": "Все запросы",
+    "assigned_requests": "Назначенные запросы",
+    "developers": "Разработчики",
+    "general": "Общие",
+    "hi": "Привет",
+    "how_to_use_guide": "Инструкции \"как пользоваться\"",
+    "language": "Язык",
+    "my_location": "Mое местонахождение",
+    "my_parking": "Моя парковка",
+    "my_requests": "Mои запросы",
+    "notifications": "Уведомления",
+    "personal_information": "Личные данные",
+    "report_an_issue": "Сообщить о проблеме",
+    "share_your_feedback": "Поделитесь своим отзывом",
+    "sign_out": "Выход",
+    "support": "",
+    "version": "версия {{version}}"
+  },
+  "account_language": {
+    "save": "Сохранить",
+    "title": "Язык"
+  },
+  "account_location": {
+    "building": "Cайт",
+    "change_floor": "Изменить этаж",
+    "floor": "Этаж",
+    "place": "Место",
+    "save": "Сохранить",
+    "save_as_default": "Сохранить как местоположение по умолчанию",
+    "subtitle": "Установите местоположение по умолчанию",
+    "title": "мое местонахождение"
+  },
+  "account_notifications": {
+    "email": "Эл. адрес",
+    "foodies": "Гурманы",
+    "mmm": "Услуги",
+    "parking": "Cтоянка",
+    "push": "Всплывающие напоминания",
+    "save": "Сохранить",
+    "shuttle": "Транспорт",
+    "sms": "СМС",
+    "subtitle": "Получайте уведомления и обновления приложений",
+    "title": "Уведомления"
+  },
+  "account_parking": {
+    "agree_privacy_policy": "Я разрешаю Upgrade сохранять мою информацию только для законного и внутреннего использования.",
+    "enter_plate_number": "Введите Номер машины",
+    "find_my_car": "Найди мою машину",
+    "floor": "Этаж",
+    "got_it": "Понятно",
+    "license_plate_number_1": "№1 Номер машины",
+    "license_plate_number_2": "№2 Номер машины",
+    "parking_info": "Информация о вашей парковке",
+    "parking_lot": "Автостоянка",
+    "parking_status": "Статус парковки",
+    "save": "Сохранить",
+    "send_updates": "Присылать мне обновления о занятости парковки",
+    "slot_id": "Идентификатор слота",
+    "subtitle": "Сообщите нам, какими транспортными средствами вы управляете",
+    "title": "Моя парковка",
+    "we_value_privacy": "Мы ценим вашу конфиденциальность. Мы используем вашу информацию только для внутренних и юридических целей."
+  },
+  "add_treatments_range_options": {
+    "annual": "Ежегодный",
+    "bi_annual": "Раз в два года",
+    "bi_monthly": "Раз в два месяца",
+    "daily": "Eжедневно",
+    "monthly": "Eжемесячно",
+    "multi_year": "трёхлетний",
+    "one_time": "Один раз",
+    "quarterly": "Ежеквартальный",
+    "semi_annual": "Полугодовой",
+    "twice_a_month": "Дважды в месяц",
+    "weekly": "Еженедельно"
+  },
+  "advanced_search_bar": {
+    "change": "Описание",
+    "search": "Поиск"
+  },
+  "asset_management_categories": {
+    "clear_all": "Очистить всё",
+    "recent": "Недавний",
+    "subtitle": "Все категории",
+    "title": "Выберите категорию"
+  },
+  "asset_management_description": {
+    "add": "Добавить",
+    "additional_1": "Дополнительный текст 1",
+    "additional_2": "Дополнительный текст 2",
+    "additional_3": "Дополнительный текст 3",
+    "additional_comments": "Пожалуйста, введите описание",
+    "change": "Изменение",
+    "contact_types": "тип повторения",
+    "continue": "Продолжать",
+    "days_reminder": "Дни для напоминания",
+    "days_termination": "Дни для напоминания об окончании",
+    "description": "Описание",
+    "p_o_number": "Серийный номер",
+    "proactive_task": "ежедневный и еженедельный",
+    "responsible_contact": "Ответственное лицо",
+    "service_agreement": "Ежемесячно или выше",
+    "services_provider": "Поставщик внутренних услуг",
+    "site": "Объект",
+    "title": "Детали",
+    "vendor": "Исполнитель"
+  },
+  "asset_management_treatments": {
+    "assign": "Назначить",
+    "assigned_to": "Назначен",
+    "cancel": "Отмена",
+    "closed_by": "Закрыто кем-то",
+    "create": "Подтвердить",
+    "description": "Описание",
+    "duration": "продолжительность лечения",
+    "error_end_date_too_far": "Дата окончания не может быть позже, чем через 10 лет после даты начала.",
+    "error_start_date_after_end_date": "Дата начала должна предшествовать дате окончания.",
+    "range": "частота повторения",
+    "read_more": "Подробнее",
+    "select_date": "Выберите дату",
+    "title": "Добавить процедуры",
+    "to": "к"
+  },
+  "assign_picker": {
+    "assign": "Назначить",
+    "assigning": "Назначение",
+    "title": "Назначить поставщика услуг"
+  },
+  "attachments": {
+    "add": "Прикрепить файл",
+    "add_another": "Добавить еще",
+    "add_image": "Добавление картинки",
+    "attach": "Прикреплять",
+    "camera": "Камера",
+    "cancel": "Отмена",
+    "document": "Документ",
+    "gallery": "Галерея",
+    "submit": "Представлять на рассмотрение",
+    "title": "Прикреплять файлы",
+    "warning_file_too_big": "Извините, этот файл слишком большой. Максимум. размер файла составляет {{maxFileSizeMb}} МБ",
+    "warning_invalid_file_type": "К сожалению, этот файл не поддерживается",
+    "warning_too_many_files": "Извините, количество файлов слишком велико. Максимум. количество файлов {{maxFileSizeMb}}."
+  },
+  "attachments_drawer": {
+    "added_by": "Добавлено",
+    "group_title": "Добавлено {{uploader}}, {{timestamp}}",
+    "title": "Файлы"
+  },
+  "authentication_error": {
+    "call_to_action_text": "Отключился от сервера. Нажмите, чтобы подключиться снова.",
+    "reauthenticate_button_text": "Повторное подключение",
+    "title": "Oтключение"
+  },
+  "booking_status": {
+    "complete": "Закончено",
+    "upcoming": "Cкоро"
+  },
+  "bookings": {
+    "booked_by": "Приглашен пользователем {{name}}",
+    "cancel_booking": "Oтмена",
+    "MyBookingsMain_title": "Mои заказы",
+    "new_booking": "Новый заказ",
+    "update_booking": "обновление"
+  },
+  "building_picker": {
+    "save": "Сохранить",
+    "title": "Cайт"
+  },
+  "chat": {
+    "conversation_read_only": "Эта беседа доступна только для чтения",
+    "write": "Написать сообщение"
+  },
+  "choose_space": {
+    "continue": "Продолжение",
+    "title": "Выберите соответствующую категорию"
+  },
+  "choose_space_list": {
+    "comments": "Примечания",
+    "continue": "Продолжение",
+    "facilities": "Удобства",
+    "large": "Большой",
+    "location": "Расположение",
+    "medium": "Cредний",
+    "participants": "До {{participants_number}} участников",
+    "size": "Pазмер",
+    "small": "Маленький",
+    "title": "Выбирать"
+  },
+  "cmp_community": {
+    "home": "Домашняя страница",
+    "title": "Откройте для себя опыты вокруг вас"
+  },
+  "cmp_restaurant_profile": {
+    "accessible": "Доступный",
+    "address": "Адрес",
+    "away": "Mетр",
+    "contact": "Связаться"
+  },
+  "confirmation_popup": {
+    "allow_contact": "Разрешить поставщику услуг связываться со мной при необходимости",
+    "enter_name": "Введите имя и фамилию",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "message_body_end": "Личные или деловые.",
+    "message_body_start": "отправляя, вы подтверждаете, что контент, которым вы делитесь, не содержит",
+    "sensitive_data": "Kонфиденциальные данные",
+    "submit": "Oтправка",
+    "title": "Прежде чем продолжить"
+  },
+  "contract_details": {
+    "additional_1": "Дополнительный текст 1",
+    "additional_2": "Дополнительный текст 2",
+    "additional_3": "Дополнительный текст 3",
+    "attach": "Вложить файл",
+    "days": "Дни",
+    "description": "Описание",
+    "details": "Детали",
+    "digital_form": "Цифровая форма",
+    "duration": "срок действия соглашения",
+    "internale_service": "Внутренний поставщик услуг",
+    "po_number": "Серийный номер",
+    "range": "частота повторения",
+    "renewal": "Напоминание о возобновлении",
+    "responsible_contact": "Ответственное лицо",
+    "site": "Cайт",
+    "termination": "Напоминание о прекращении",
+    "treatments": "Обработки ({{number}})",
+    "type": "тип повторения",
+    "vendor": "Поставщик"
+  },
+  "contract_details_menu": {
+    "duplicate": "Дубликат",
+    "edit": "Отредактировать",
+    "print": "Печать",
+    "remove": "Удалить",
+    "share": "Акция"
+  },
+  "contract_range": {
+    "annual": "Ежегодный",
+    "bi_annual": "Два раза в год",
+    "bi_monthly": "Раз в два месяца",
+    "daily": "Ежедневно",
+    "monthly": "Ежемесячно",
+    "multi_year": "многолетний",
+    "one_time": "Один раз",
+    "quarterly": "Ежеквартально",
+    "semi_annual": "Полугодовой",
+    "twice_a_month": "Два раза в месяц",
+    "weekly": "Еженедельно"
+  },
+  "date_filter": {
+    "apply": "Применять",
+    "clear": "Очистить",
+    "title": "Срок"
+  },
+  "developers": {
+    "select_user": "Выбор пользователя",
+    "title": "Разработчики",
+    "user": "{{firstName}} {{lastName}}",
+    "user_role": "Роль пользователя"
+  },
+  "digital_form": {
+    "attach_file": "Прикрепить файл",
+    "attachments": "Файлы",
+    "attachments_title": "Вы желаете добавить изображения к вашему запросу?",
+    "check": "Да, я отправил цифровую форму",
+    "continue": "Продолжение",
+    "done": "Это все на данный момент",
+    "message": "Прежде чем продолжить, убедитесь, что вы отправили вышеупомянутую цифровую форму. Нажмите кнопку «Отправить» в нижней части формы и подождите, пока не получите сообщение «Спасибо».",
+    "new_request": "Запросить новую услугу",
+    "skip": "Пропустить",
+    "submitted_request": "Ваш запрос отправлен. Открыть новый запрос?",
+    "thank_you_title": "Спасибо",
+    "title": "Цифровая форма",
+    "upload_warning": "Вы можете загрузить макс. {{maxAttachments}} изображений. Максимум. размер файла составляет {{maxFileSizeMb}} МБ."
+  },
+  "documents_filters_bar": {
+    "created_by": "Представлено",
+    "modified": "Измененный",
+    "name": "имя"
+  },
+  "documents_table_item": {
+    "created_by": "Представлено",
+    "delete": "Удаление",
+    "download": "Скачать",
+    "info": "Информация",
+    "modified": "Измененный",
+    "rename": "Изменение имени"
+  },
+  "drawer": {
+    "floor": "Этаж",
+    "hi": "Привет"
+  },
+  "dropdown": {
+    "select": "Выбирать"
+  },
+  "favorite_order_details": {
+    "edit": "Редактировать",
+    "my_favorite": "Мой любимый заказ",
+    "order_items": "Информация o заказе",
+    "remove": "Удалить"
+  },
+  "favorite_orders": {
+    "edit_order": "Редактировать",
+    "items": "Предметы",
+    "order_again": "Заказать снова",
+    "remove_order": "Удалить",
+    "title": "Любимые заказы"
+  },
+  "files_management": {
+    "my_documents": "Mои документы",
+    "my_inventory": "Mой инвентарь",
+    "title": "Управление документацией"
+  },
+  "filter_tabs": {
+    "all": "Все",
+    "hold": "На удерживании",
+    "inprogress": "В процессе",
+    "open": "Открыть",
+    "resolved": "Решено"
+  },
+  "filters": {
+    "all_sites": "Все сайты",
+    "all_suppliers": "Все провайдеры",
+    "clear": "Очистить все",
+    "date": "Срок",
+    "note": "Эти фильтры будут автоматически применены в следующий раз",
+    "save": "Сохранить фильтры",
+    "select": "Выбрать ",
+    "selected": "{{number}} Выбрано",
+    "show": "Показаны результаты",
+    "sites": "{{sitesCount}} Cайты",
+    "suppliers": "{{selectedSuppliers}} П оставщики",
+    "title": "Фильтры"
+  },
+  "foodies": {
+    "all_orders": "Все заказы",
+    "assigned_orders": "Назначенные заказы",
+    "my_orders": "Мои заказы",
+    "new_order": "Новый заказ",
+    "title": "Что мы можем сделать для вас?"
+  },
+  "home_screen": {
+    "add": "Добавить запрос",
+    "all_requests_title": "Все запросы",
+    "assigned_requests_title": "Назначенные запросы",
+    "favorite": "Любимый",
+    "my_requests": "Mои запросы",
+    "popular": "Популярный",
+    "powered_by": "Работает на Appgrade",
+    "request_new_service": "Запросить новую услугу",
+    "title": "Как мы можем помочь?"
+  },
+  "info-page-templates": {
+    "visit": "Посещать"
+  },
+  "input_error": {
+    "email": "Пожалуйста, введите действительный адрес электронной почты",
+    "required": "Это поле обязательно к заполнению"
+  },
+  "list_empty": {
+    "description": "Мы не смогли найти результат, соответствующий запросу.",
+    "title": "Результаты не найдены"
+  },
+  "loading_error": {
+    "category_error": "Извините, мы не нашли результатов в этой категории",
+    "message_body": "Что-то пошло не так при загрузке ваших данных. Пожалуйста, попробуйте еще раз.",
+    "oops": "Ой...",
+    "try_again": "Попробуй еще раз"
+  },
+  "location_label": {
+    "label": "{{building}}, этаж {{floor}}, {{place}}"
+  },
+  "login": {
+    "company": "Название вашей компании",
+    "error": "Извините, название компании не найдено. Пожалуйста, убедитесь, что вы правильно написали имя и повторите попытку.",
+    "log_in": "Aвторизоваться",
+    "title": "Добро пожаловать в обновление"
+  },
+  "menu": {
+    "account": "Настройки аккаунта",
+    "allrequests": "Все запросы",
+    "assetmanagement": "Управление недвижимостью",
+    "assignedrequests": "Назначенные запросы",
+    "community": "Сообщество",
+    "filesmanagement": "Управление документацией",
+    "foodies": "Фудис ",
+    "home": "Дом",
+    "my_account": "Настройки",
+    "myrequests": "Mои запросы",
+    "parking": "Cтоянка",
+    "reports": "Oтчеты",
+    "services": "Услуги",
+    "shuttle": "Транспорт",
+    "spacemanagement": "Управление бронированием"
+  },
+  "mmm_categories": {
+    "clear_all": "Очистить всё",
+    "recent": "Недавний",
+    "subtitle": "Все категории",
+    "title": "Как мы можем помочь?"
+  },
+  "mmm_description": {
+    "attach_file": "Прикрепить файл",
+    "digital_form": "Добавить цифровую форму",
+    "form": "Цифровая форма",
+    "location_add": "Добавлять",
+    "location_change": "Изменение",
+    "reported_by": "Сообщено",
+    "request_description": "Предоставьте детали запроса и заполните цифровую форму, если она доступна.",
+    "service_location": "Место службы",
+    "submit": "Oтправка",
+    "submitting": "Отправка",
+    "title": "Отправьте запрос"
+  },
+  "mmm_request_details": {
+    "assigned": "Назначен",
+    "attachments": "Файлы",
+    "by": "к{{name}}",
+    "contact": "Связаться",
+    "digital": "Цифровая форма",
+    "due_date": "Срок",
+    "fill": "Заполнить",
+    "handling_date": "Дата обработки",
+    "location": "Расположение",
+    "messages": "Сообщения",
+    "resolution": "Подробности резолюции",
+    "resolution_time": "Время разрешения",
+    "resolved_by": "Решено",
+    "start_chat": "Начать чат",
+    "submitted": "Отправлено {{date}}",
+    "unassigned": "Не назначен",
+    "update_status": "Обновить статус"
+  },
+  "mmm_requests": {
+    "add": "Добавить новое",
+    "AllRequestsMain_title": "Все запросы",
+    "assign": "Назначить",
+    "assigned": "Назначено {{name}}",
+    "AssignedRequestsMain_title": "Назначенные запросы",
+    "by": "к{{name}}",
+    "due_date": "Срок выполнения {{date}}",
+    "handling_date": "Дата обработки {{date}}",
+    "more": "Ещё",
+    "MyRequestsMain_title": "Mои запросы",
+    "on": "На",
+    "refresh": "Обновить",
+    "search_category": "Категория",
+    "search_category_placeholder": "Изменить",
+    "search_description": "Поиск по описанию",
+    "search_description_placeholder": "Pасположение",
+    "search_location": "Расположение",
+    "search_location_placeholder": "Открыт кемто",
+    "search_reported_by": "Поиск по имени",
+    "search_reported_by_placeholder": "Поиск по имени",
+    "search_request_number": "Поиск по номеру звонка",
+    "search_request_number_placeholder": "Поиск по номеру дела",
+    "start_work": "Начать работу",
+    "stop_work": "Остановить работу",
+    "submitted": "Представлено {{name}}",
+    "submitted_by": "Отправлено {{name}}",
+    "submitted_on": "Отправлено {{date}}",
+    "unassigned": "Не назначен",
+    "update_status": "Обновить статус"
+  },
+  "mmm_subcategories": {
+    "subtitle": "Выбрать подкатегорию"
+  },
+  "mobile_app_link": {
+    "call_to_action_text": "Не установили приложение?",
+    "download_appstore": "Скачать из Apple Store",
+    "download_googleplay": "Скачать из Google Store",
+    "open_button_text": "Откройте приложение",
+    "popup_title": "Appgrade App"
+  },
+  "module_filter": {
+    "all": "Все модули",
+    "mmm": "Услуги",
+    "title": "Модули",
+    "wpm": "Проактивные чтения"
+  },
+  "my_documents": {
+    "all_files": "Все папки",
+    "new_folder": "Новая папка",
+    "no_files_title": "Эта папка пуста",
+    "no_folders_subtitle": "Создавайте новые папки и добавляйте документы. Здесь появятся все ваши файлы.",
+    "no_folders_title": "Храните свои документы в одном месте",
+    "title": "Mои документы",
+    "upload_file": "Загрузка файла"
+  },
+  "my_documents_delete_modal": {
+    "cancel": "Oтмена",
+    "delete": "Удаление",
+    "title": "Вы уверены, что хотите удалить файл?"
+  },
+  "my_documents_info_modal": {
+    "created_by": "Представлено",
+    "modified": "Измененный"
+  },
+  "my_documents_rename_modal": {
+    "cancel": "Oтмена",
+    "name": "имя",
+    "save": "Сохранить",
+    "title": "Изменить имя папки"
+  },
+  "my_documents_upload_modal": {
+    "cancel": "Oтмена",
+    "drag": "Перетащите и отпустите",
+    "or": "или",
+    "select_file": "Выберите файл",
+    "title": "Загрузить файлы",
+    "upload": "Загрузка "
+  },
+  "new_order": {
+    "add_another": "Добавить еще",
+    "add_comment": "Добавить комментарий",
+    "add_to_favorite": "Добавьте в избранное",
+    "add_to_order": "Добавить в заказ",
+    "comment_suggestions": "Предложения для ответа",
+    "continue": "Продолжение",
+    "order_items": "Информация o заказе",
+    "place_order": "Зарезервировать",
+    "save": "Сохранить изменения",
+    "save_as_default": "Сохранить как ресторан по умолчанию",
+    "save_preferences_later_time": "Вы можете сохранить этот заказ с теми же настройками позже.",
+    "search": "Поиск",
+    "select_site": "Выберите место",
+    "what_get": "Что мы можем вам принести?",
+    "your_order": "Ваш заказ"
+  },
+  "new_order_item": {
+    "edit": "Pедактирование",
+    "remove": "Yдаление"
+  },
+  "order_again": {
+    "cancel": "Oтмена",
+    "order_again": "Заказать снова",
+    "sub_title": "Обратите внимание, что вы не можете редактировать заказ",
+    "title": "Хотите ли вы сделать повторный заказ?"
+  },
+  "order_details": {
+    "assigned": "Назначен",
+    "by": "{{name}}",
+    "contact": "Связаться",
+    "location": "Расположение",
+    "unassigned": "Не назначен"
+  },
+  "order_status": {
+    "completed": "Завершенный",
+    "inprogress": "В процессе",
+    "open": "Открытый заказ",
+    "overdue": "Просрочено",
+    "resolved": "Решено"
+  },
+  "orders": {
+    "add": "Новый заказ",
+    "AllOrdersMain_title": "Все заказы",
+    "assigned": "Назначено {{name}}",
+    "AssignedOrdersMain_title": "Назначенные заказы",
+    "by": "{{name}}",
+    "favorites": "Избранное",
+    "items": "Информация o заказе",
+    "MyOrdersMain_title": "Мои заказы",
+    "order_again": "Заказать снова",
+    "submitted": "Заказан {{date}}",
+    "unassigned": "Не назначен"
+  },
+  "personal_information": {
+    "email": "Эл. адрес",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "save": "Сохранить",
+    "title": "Личные данные"
+  },
+  "phone_input": {
+    "invalid_number": "Неправильный номер",
+    "phone_number": "Номер телефона"
+  },
+  "popular": {
+    "community": "Сообщество",
+    "foodies": "Фудис ",
+    "parking": "Cтоянка",
+    "shuttle": "Транспорт"
+  },
+  "privacy_conditions": {
+    "agree": "Подтвердить и продолжить",
+    "content": "Чтобы получить доступ и продолжить пользоваться ",
+    "log_out": "Выйти",
+    "terms": "Условия использования ",
+    "title": "Прежде чем мы начнем",
+    "url": "https://appgrade.com/terms-of-use/"
+  },
+  "remove_booking": {
+    "cancel": "Отмена",
+    "keep_booking": "Сохранить мой заказ",
+    "sub_title": "Сохранить мой заказ",
+    "title": "Вы уверены?"
+  },
+  "remove_favorite_order": {
+    "cancel": "Отмена",
+    "remove": "Удалить",
+    "sub_title": "Вы уверены, что хотите удалить этот заказ из списка избранного?",
+    "title": "Удалить предпочтительный заказ"
+  },
+  "replace_favorite_order": {
+    "order_and_replace": "Заказать и заменить",
+    "order_without_changes": "Заказ без изменений",
+    "sub_title": "Вы уже выбрали предпочтительный заказ. Сохранение этого заказа в качестве избранного удалит существующий заказ.",
+    "title": "Предупреждение"
+  },
+  "reported_by_filter": {
+    "apply": "Сохранить",
+    "search": "Найти пользователей",
+    "title": "Сообщено"
+  },
+  "reports": {
+    "export": "Экспорт",
+    "export_pdf": "PDF",
+    "export_powerpoint": "PPT",
+    "print": "Печать страницы",
+    "select_report": "Выберите отчет"
+  },
+  "request_status": {
+    "hold": "На удерживании",
+    "inprogress": "В процессе",
+    "open": "Открытый запрос",
+    "resolved": "Решено"
+  },
+  "request_tooltip": {
+    "attachments": "Просмотр вложений",
+    "download": "новое сообщение",
+    "new_message": "Hовое сообщение"
+  },
+  "search_bar": {
+    "search": "Поиск",
+    "search_asset": "Поиск контракта",
+    "search_bookings": "Поиск заказов",
+    "search_files": "Поиск документов",
+    "search_requests": "Поиск по запросaм"
+  },
+  "shuttle": {
+    "my_rides": "Mои поездки",
+    "new_ride": "Новая поездка",
+    "powered_by": "Работает на Appgrade",
+    "schedule_ride": "Запланировать поездку",
+    "title": "Куда мы можем вас отвезти?"
+  },
+  "sign_out": {
+    "cancel": "Отмена",
+    "proceed": "Продолжение",
+    "text": "Вы уверены, что хотите выйти?",
+    "title": "Выход"
+  },
+  "sites_filter": {
+    "apply": "Применять",
+    "clear": "Очистить все",
+    "search": "Поиск сайтов",
+    "select_all": "Выбрать все",
+    "selected": "{{number}} Выбрано",
+    "title": "Cайты"
+  },
+  "space_choose_date": {
+    "continue": "Продолжение",
+    "from": "С какого часа",
+    "select_date": "Выберите дату",
+    "select_time": "Выберите время",
+    "to": "До",
+    "when": "Когда?"
+  },
+  "space_management": {
+    "my_bookings": "Mои заказы",
+    "new_booking": "Новый заказ",
+    "title": "Управление бронированием"
+  },
+  "space_not_available": {
+    "content": "Выбранное вами местоположение в настоящее время недоступно, выберите другое местоположение.",
+    "ok": "Это место недоступно",
+    "title": "Это место недоступно"
+  },
+  "spaces_summary": {
+    "booking_by": "Заказан",
+    "booking_time": "Время заказа",
+    "comments": "Примечания",
+    "location": "Pасположение",
+    "submit": "в процессе...",
+    "submitting": "Забронируйте место",
+    "title": "Подтвердите бронирование"
+  },
+  "status": {
+    "hold": "На удерживании",
+    "inprogress": "В процессе",
+    "open": "Открытый запрос",
+    "resolved": "Решено {{resolved_date}}"
+  },
+  "status_filter": {
+    "active": "Активный",
+    "all": "Все запросы",
+    "inprogress": "В процессе",
+    "onhold": "На удерживании",
+    "open": "Открыть",
+    "resolved": "Решено",
+    "title": "Cтатус"
+  },
+  "submit_error": {
+    "message_body": "Что-то пошло не так при отправке ваших данных. Пожалуйста, попробуйте еще раз.",
+    "oops": "Ой...",
+    "try_again": "Попробуй еще раз"
+  },
+  "suppliers_filter": {
+    "apply": "Применять",
+    "clear": "Очистить все",
+    "search": "Поиск поставщиков",
+    "select_all": "Выбрать все",
+    "selected": "{{number}} Выбрано",
+    "title": "Поставщики"
+  },
+  "tab_navigation": {
+    "account": "Счет",
+    "home": "Дом",
+    "modules": "Модули",
+    "notifications": "Уведомления"
+  },
+  "thank_you": {
+    "AssetManagement": "Ваш заказ принят и мы работаем! Мы сообщим вам, как только он будет готов.",
+    "foodie_message": "Ваш заказ принят и мы работаем! Мы сообщим вам, как только он будет готов.",
+    "Foodies": "Ваш заказ оформлен и мы работаем! Мы сообщим вам, как только он будет готов.",
+    "Home": "Ваш заказ принят и мы работаем! Мы сообщим вам, как только он будет готов.",
+    "message": "Ваша заявка отправлена, и мы работаем!",
+    "Requests": "Ваша заявка отправлена, и мы работаем!",
+    "SpaceManagement": "Ваш заказ подтвержден. Пожалуйста, проверьте свою электронную почту, чтобы просмотреть подтверждение заказа.",
+    "thank_you": "Спасибо, {{name}}!"
+  },
+  "toast": {
+    "success": "Внесенные вами изменения успешно сохранены"
+  },
+  "treatment_status": {
+    "completed": "Законченный",
+    "current_month": "Текущий месяц",
+    "inprogress": "В процессе",
+    "on_hold": "На удерживании",
+    "open": "Открыть",
+    "overdue": "Просрочено",
+    "planned": "Планируется",
+    "resolved": "Решено"
+  },
+  "update_status": {
+    "attach_file": "Прикрепить файл",
+    "attachment_mandatory_error": "Перед разрешением дела необходимо загрузить файл.",
+    "hold": "На удерживании",
+    "inprogress": "В процессе",
+    "leave_comment": "Напишите причину",
+    "on_hold_error": "Запрос не может быть отложен",
+    "open": "Oткрытый",
+    "other": "Другой",
+    "overdue": "Просрочено",
+    "planned": "Запланированный",
+    "resolved": "Решено",
+    "save": "Сохранить",
+    "submit": "Oтправка",
+    "submitting": "Отправка",
+    "title": "Обновить статус"
+  },
+  "user_roles": {
+    "admin": "0",
+    "end_user": "Конечный пользователь",
+    "site_manager": "Менеджер сайта",
+    "supplier": "Поставщик"
+  },
+  "wizard": {
+    "step": "Шаг {{step}} из {{totalSteps}}"
+  },
+  "work_plan": {
+    "agreements_button": "ежегодный",
+    "description": "Описание",
+    "files": "Прикрепить файлы",
+    "form": "Добавить цифровую форму",
+    "left_label": "ежегодный",
+    "new_contract": "новая задача",
+    "pdf": "Сохранить как PDF",
+    "print": "Распечатать",
+    "right_label": "еженедельный",
+    "search_category": "Категория",
+    "search_category_placeholder": "Изменить",
+    "search_description": "Описание",
+    "search_description_placeholder": "Pасположение",
+    "search_location": "Расположение",
+    "search_location_placeholder": "Открыт кемто",
+    "search_po": "Серийный номер",
+    "search_po_placeholder": "Поиск серийного номера",
+    "search_reported_by": "Поиск по имени",
+    "search_reported_by_placeholder": "Поиск по имени",
+    "search_request_number": "Поиск по номеру звонка",
+    "search_request_number_placeholder": "Поиск по номеру дела",
+    "search_supplier": "Поставщик",
+    "search_supplier_placeholder": "Поиск по внешнему поставщику услуг",
+    "search_vendor": "Поставщик",
+    "search_vendor_placeholder": "Поиск по провайдеру",
+    "service_agreement": "Cоглашении о предоставлении услуг.",
+    "service_agreement_label": "годовой план",
+    "sites": "Все сайты",
+    "status_drawer_title": "Обновить состояние",
+    "task_label": "еженедельный план",
+    "tasks_button": "еженедельный",
+    "title": "План работ"
+  },
+  "wpm_request": {
+    "contract_range": "Cрок контракта",
+    "handling_date": "Дата обработки"
+  }
+}

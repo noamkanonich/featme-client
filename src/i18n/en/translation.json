@@ -1,0 +1,368 @@
+{
+  "login_screen": {
+    "title": "Welcome Back to FeatMe!",
+    "subtitle": "Log in to continue tracking your nutrition",
+    "email": "Email",
+    "email_placeholder": "Enter your email",
+    "password": "Password",
+    "password_placeholder": "Enter your password",
+    "forgot_password": "Forgot Password?",
+    "login_button": "Log In",
+    "no_account": "Don't have an account?",
+    "register": "Sign Up",
+    "or": "Or",
+    "google_login": "Continue with Google",
+    "login": "Log In"
+  },
+  "register_screen": {
+    "title": "Join FeatMe Today!",
+    "subtitle": "Create an account to start your nutrition journey",
+    "full_name": "Full Name",
+    "full_name_placeholder": "Enter your full name",
+    "phone": "Phone Number",
+    "phone_placeholder": "Enter your phone number",
+    "email": "Email",
+    "email_placeholder": "Enter your email",
+    "password": "Password",
+    "password_placeholder": "Enter your password",
+    "confirm_password": "Confirm Password",
+    "confirm_password_placeholder": "Re-enter your password",
+    "register": "Sign Up",
+    "have_account": "Already have an account?",
+    "login": "Log In"
+  },
+  "bottom_tab": {
+    "dashboard": "Dashboard",
+    "recipes": "Recipes",
+    "history": "History",
+    "insights": "Insights",
+    "profile": "Profile"
+  },
+  "nutrition": {
+    "calories": "Calories",
+    "protein": "Protein",
+    "fat": "Fat",
+    "carbs": "Carbs"
+  },
+  "insights_screen": {
+    "title": "Insights",
+    "subtitle": "Your nutrition trends and tips",
+    "average_intake": "Average Intake",
+    "macro_distribution": "Macro Distribution",
+    "calories_trend": "Calories Trend",
+    "ai_nutirion_tip": "AI Nutrition Tip",
+    "calories": "Calories",
+    "protein": "Protein",
+    "fat": "Fat",
+    "carbs": "Carbs"
+  },
+  "profile_screen": {
+    "title": "Profile",
+    "subtitle": "Customize your nutritional preferences",
+    "daily_goals": "Daily Nutrition Goals",
+    "daily_calories": "Daily Calories",
+    "daily_protein": "Protein (g)",
+    "daily_fat": "Fat (g)",
+    "daily_carbs": "Carbs (g)",
+    "activity_prefs": "Activity & Preferences",
+    "height_metric": "Height (cm)",
+    "height_imperial": "Height (ft)",
+    "weight_metric": "Weight (kg)",
+    "weight_imperial": "Weight (lbs)",
+
+    "weight_goal": "Weight Goal",
+    "weight_goal_options": {
+      "lose_weight": "Lose Weight",
+      "maintain_weight": "Maintain Weight",
+      "gain_weight": "Gain Weight"
+    },
+    "activity_level": "Activity Level",
+    "activity_level_options": {
+      "sedentary": "Sedentary (little or no exercise)",
+      "lightly_active": "Lightly Active (light exercise/sports 1-3 days/week)",
+      "moderately_active": "Moderately Active (moderate exercise/sports 3-5 days/week)",
+      "very_active": "Very Active (hard exercise/sports 6-7 days a week)",
+      "extra_active": "Extra Active (very hard exercise/physical job & exercise 2x/day)"
+    },
+    "preferred_units": "Preferred Units",
+    "preferred_units_options": {
+      "metric": "Metric (kg, cm)",
+      "imperial": "Imperial (lbs, ft)"
+    },
+    "language": "Language",
+    "save_changes": "Save Changes"
+  },
+  "history_screen": {
+    "title": "History",
+    "subtitle": "Your nutrition journey",
+    "this_week": "This Week",
+    "total_entries": "Total Entries",
+    "avg_calories": "Avg Calories",
+    "days_tracked": "Days Tracked",
+    "daily_breakdown_title": "Daily Breakdown",
+    "go_to_this_week": "Go to This Week",
+    "entries": "entries",
+    "calories_progress": "Calories Progress",
+    "no_entries": "No entries available for today"
+  },
+  "onboarding_first_screen": {
+    "title": "Let's personalize your journey.",
+    "subtitle": "We'll set up your profile to give you the best nutrition targets.",
+    "bullet_personalized": "Personalized nutrition targets",
+    "bullet_ai": "AI-powered food analysis",
+    "bullet_track": "Track your progress daily",
+    "start": "Start",
+    "skip_for_now": "Skip for now"
+  },
+  "onboarding_second_screen": {
+    "title": "Tell us about yourself.",
+    "subtitle": "We need some basic measurements to calculate your targets.",
+    "weight_kg": "Weight (kg)",
+    "weight_lbs": "Weight (lbs)",
+    "height_cm": "Height (cm)",
+    "height_ft": "Height (ft)",
+    "next": "Next",
+    "back": "Back",
+    "skip_for_now": "Skip for now"
+  },
+  "onboarding_third_screen": {
+    "title": "A bit more about you.",
+    "subtitle": "This helps us personalize your recommendations.",
+    "gender": "Gender",
+    "gender_female": "Female",
+    "gender_male": "Male",
+    "gender_other": "Other",
+    "next": "Next",
+    "back": "Back",
+    "skip_for_now": "Skip for now",
+    "birth_date": "Birth Date"
+  },
+  "onboarding_forth_screen": {
+    "title": "How active are you?",
+    "subtitle": "This affects your daily calorie needs.",
+    "sedentary_label": "Sedentary",
+    "sedentary_desc": "Little to no exercise",
+    "lightly_active_label": "Lightly Active",
+    "lightly_active_desc": "1-3 days per week",
+    "moderately_active_label": "Moderately Active",
+    "moderately_active_desc": "3-5 days per week",
+    "very_active_label": "Very Active",
+    "very_active_desc": "6-7 days per week",
+    "athlete_label": "Athlete",
+    "athlete_desc": "Intense daily training",
+    "next": "Next",
+    "back": "Back",
+    "skip": "Skip for now"
+  },
+  "onboarding_fifth_screen": {
+    "title": "What's your goal?",
+    "subtitle": "We'll adjust your nutrition targets accordingly.",
+    "lose_fat_label": "Lose Fat",
+    "lose_fat_desc": "Reduce body fat percentage",
+    "maintain_weight_label": "Maintain Weight",
+    "maintain_weight_desc": "Stay at current weight",
+    "gain_muscle_label": "Gain Muscle",
+    "gain_muscle_desc": "Build lean muscle mass",
+    "next": "Next",
+    "back": "Back",
+    "skip": "Skip for now"
+  },
+  "onboarding_final_screen": {
+    "title": "Your personalized targets!",
+    "subtitle": "Based on your profile, here are your daily nutrition goals.",
+    "daily_goals_title": "Your Daily Targets",
+    "daily_goals_note": "You can update these anytime in your profile.",
+    "card_calories": "Calories",
+    "card_protein": "Protein",
+    "card_fat": "Fat",
+    "card_carbs": "Carbs",
+    "btn_lets_go": "Let's Go!",
+    "back": "Back"
+  },
+  "day_slider": {
+    "today": "Today",
+    "go_to_today": "Go to Today"
+  },
+  "dates": {
+    "days": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    },
+    "months": {
+      "jan": "January",
+      "feb": "February",
+      "mar": "March",
+      "apr": "April",
+      "may": "May",
+      "june": "June",
+      "jun": "June",
+      "july": "July",
+      "jul": "July",
+      "aug": "August",
+      "sep": "September",
+      "oct": "October",
+      "nov": "November",
+      "dec": "December"
+    },
+    "formats": {
+      "title": "{{month}} {{day}}",
+      "subtitle": "{{weekday}}, {{year}}"
+    }
+  },
+  "daily_breakdown": {
+    "title": "Daily Breakdown",
+    "this_week": "This Week",
+    "progress": "Calories Progress",
+    "entries": "entries"
+  },
+  "add_food_screen": {
+    "title": "Add Food",
+    "subtitle": "Use AI to analyze your meal",
+    "scan_with_camera_title": "Scan with Camera",
+    "scan_with_camera_subtitle": "Capture your meal for instant AI analysis",
+    "open_camera": "Open Camera",
+    "pick_from_gallery": "Pick from Gallery",
+    "describe_food_title": "Describe Your Food",
+    "describe_food_subtitle": "Type what you ate for AI analysis",
+    "text_input_placeholder": "e.g., grilled chicken with vegetables, medium portion.",
+    "analyze_food": "Analyze Food",
+    "food_details": "Food Details",
+    "food_name": "Food Name",
+    "serving_size": "Serving Size",
+    "date": "Date",
+    "time": "Time",
+    "description": "Description",
+    "meal_type": "Meal Type",
+    "save": "Save",
+    "back": "Back",
+    "quick_add": "Quick Add",
+    "nutrition_facts": "Nutrition Facts",
+    "calories": "Calories",
+    "protein": "Protein (g)",
+    "fat": "Fat (g)",
+    "carbs": "Carbs (g)"
+  },
+  "settings_screen": {
+    "title": "Settings",
+    "subtitle": "Manage your app preferences",
+    "personal_info": "Personal Information",
+    "full_name": "Full Name",
+    "email": "Email",
+    "language": "Language",
+    "theme": "Theme",
+    "theme_options": {
+      "light": "Light",
+      "dark": "Dark",
+      "system_default": "System Default"
+    },
+    "notifications": "Notifications",
+    "notifications_text": " Enable app notifications",
+    "notifications_subtext": "Get reminded to log your meals and track your progress",
+    "privacy": "Privacy",
+    "privacy_text": "Share data for improvement",
+    "privacy_subtext": "Help us improve the app by sharing anonymous usage data",
+    "about": "About",
+    "about_text_one": "FeatMe v1.0.0",
+    "about_text_two": "AI-powered nutrition tracker",
+    "about_text_three": "Built with ❤️ by FeatMe team",
+    "save_changes": "Save Changes",
+    "logout": "Log Out"
+  },
+  "meals": {
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner",
+    "snacks": "Snacks",
+    "snack": "Snacks",
+    "dessert": "Dessert",
+    "Breakfast": "Breakfast",
+    "Lunch": "Lunch",
+    "Dinner": "Dinner",
+    "Snack": "Snacks",
+    "Dessert": "Dessert",
+    "empty_title": "No {{meal}} logged yet",
+    "tap_plus": "Tap the '+' button to add a meal"
+  },
+  "dashboard_screen": {
+    "title": "Dashboard",
+    "daily_progress": "Daily Progress"
+  },
+  "button": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "update": "Update",
+    "quick_add": "Quick Add"
+  },
+  "meal_item": {
+    "calories": " kcal",
+    "protein": "Protein",
+    "fat": "Fat",
+    "carbs": "Carbs"
+  },
+  "quick_add": {
+    "title": "Quick add to",
+    "subtitle": "Add calories and macros quickly",
+    "food_name": "Food Name",
+    "description": "Description",
+    "calories": "Calories",
+    "protein": "Protein",
+    "fat": "Fat",
+    "carbs": "Carbs",
+    "add_image": "Add Image"
+  },
+  "logout_modal": {
+    "title": "Are you sure you want to log out?",
+    "subtitle": "You will need to log in again to access your data.",
+    "cancel": "Cancel",
+    "logout": "Log Out"
+  },
+  "recipes_screen": {
+    "title": "AI Recipe Builder",
+    "subtitle": "Let our AI chef create a recipe for you!",
+    "ingredients": "Ingredients you have",
+    "ingredients_placeholder": "e.g., chicken, broccoli, rice",
+    "dietary_needs": "Dietary Needs",
+    "meal_type": "Meal Type",
+    "search_placeholder": "Search recipes...",
+    "filter": "Filter",
+    "no_recipes": "No recipes found",
+    "generate_recipe": "Generate Recipe",
+    "generating": "AI Chef is cooking your recipe..."
+  },
+  "recipe_result": {
+    "cook": "Cook",
+    "min": " min",
+    "prep": "Prep",
+    "servings": " servings",
+    "difficulty": "Difficulty",
+
+    "ingredients": "Ingredients",
+    "instructions": "Instructions",
+    "estimetad_nutrition": "Estimated Nutrition (per serving)",
+    "calories": "Calories",
+    "protein": "Protein (g)",
+    "fat": "Fat (g)",
+    "carbs": "Carbs (g)",
+    "save_recipe": "Save Recipe",
+    "start_over": "Start Over"
+  },
+  "toast": {
+    "food_added": "Food added successfully!",
+    "food_updated": "Food updated successfully!",
+    "food_deleted": "Food deleted successfully!",
+    "profile_updated": "Profile updated successfully!",
+    "settings_saved": "Settings saved successfully!",
+    "error_occurred": "An error occurred. Please try again.",
+    "added_to_favorite": "Added to favorites!",
+    "remove_from_favorite": "Removed from favorites!"
+  }
+}

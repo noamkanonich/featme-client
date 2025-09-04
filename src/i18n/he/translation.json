@@ -1,0 +1,364 @@
+{
+  "login_screen": {
+    "title": "ברוכים השבים ל-FeatMe!",
+    "subtitle": "התחבר כדי להמשיך לעקוב אחר התזונה שלך",
+    "email": "אימייל",
+    "email_placeholder": "הכנס את האימייל שלך",
+    "password": "סיסמה",
+    "password_placeholder": "הכנס את הסיסמה שלך",
+    "forgot_password": "שכחת סיסמה?",
+    "login_button": "התחבר",
+    "no_account": "אין לך חשבון?",
+    "register": "הרשמה",
+    "or": "או",
+    "google_login": "המשך באמצעות Google",
+    "login": "התחברות"
+  },
+  "register_screen": {
+    "title": "הצטרף ל-FeatMe היום!",
+    "subtitle": "צור חשבון כדי להתחיל לעקוב אחר התזונה שלך",
+    "full_name": "שם מלא",
+    "full_name_placeholder": "הכנס את שמך המלא",
+    "phone": "מספר טלפון",
+    "phone_placeholder": "הכנס את מספר הטלפון שלך",
+    "email": "אימייל",
+    "email_placeholder": "הכנס את האימייל שלך",
+    "password": "סיסמה",
+    "password_placeholder": "צור סיסמה",
+    "confirm_password": "אימות סיסמה",
+    "confirm_password_placeholder": "אשר את הסיסמה שלך",
+    "have_account": "כבר יש לך חשבון?",
+    "login": "התחברות",
+    "or": "או",
+    "google_register": "המשך באמצעות Google",
+    "register": "הרשמה"
+  },
+
+  "bottom_tab": {
+    "dashboard": "בית",
+    "recipes": "מתכונים",
+    "history": "היסטוריה",
+    "insights": "תובנות",
+    "profile": "פרופיל"
+  },
+  "nutrition": {
+    "calories": "קלוריות",
+    "protein": "חלבון",
+    "fat": "שומן",
+    "carbs": "פחמימות"
+  },
+  "insights_screen": {
+    "title": "תובנות",
+    "subtitle": "מגמות וטיפים תזונתיים שלך",
+    "average_intake": "צריכה ממוצעת",
+    "macro_distribution": "התפלגות מאקרו",
+    "calories_trend": "מגמה קלוריות"
+  },
+  "profile_screen": {
+    "title": "פרופיל",
+    "subtitle": "התאם אישית את העדפות התזונה שלך",
+    "daily_goals": "מטרות תזונה יומיות",
+    "daily_calories": "קלוריות יומיות",
+    "daily_protein": "חלבון (גרם)",
+    "daily_fat": "שומן (גרם)",
+    "daily_carbs": "פחמימות (גרם)",
+    "activity_prefs": "פעילות והעדפות",
+    "height_metric": "גובה (ס״מ)",
+    "height_imperial": "גובה (פיט)",
+    "weight_metric": "משקל (ק״ג)",
+    "weight_imperial": "משקל (lbs)",
+    "weight_goal": "מטרה למשקל",
+    "weight_goal_options": {
+      "lose_weight": "ירידה במשקל",
+      "maintain_weight": "שמירה על משקל",
+      "gain_weight": "עלייה במשקל"
+    },
+    "activity_level": "רמת פעילות",
+    "activity_level_options": {
+      "sedentary": "לא פעיל (מעט או ללא פעילות גופנית)",
+      "lightly_active": "פעיל קלות (פעילות קלה/ספורט 1-3 ימים בשבוע)",
+      "moderately_active": "פעיל באופן מתון (פעילות מתונה/ספורט 3-5 ימים בשבוע)",
+      "very_active": "פעיל מאוד (פעילות קשה/ספורט 6-7 ימים בשבוע)",
+      "extra_active": "פעיל מאוד במיוחד (פעילות גופנית קשה/עבודה פיזית ופעילות 2x ביום)"
+    },
+    "preferred_units": "יחידות מועדפות",
+    "preferred_units_options": {
+      "metric": "מטרי (ק״ג, ס״מ)",
+      "imperial": "אימפריאלי (lbs, פיט)"
+    },
+    "language": "שפה",
+    "save_changes": "שמור שינויים"
+  },
+  "history_screen": {
+    "title": "היסטוריה",
+    "subtitle": "המסע התזונתי שלך",
+    "this_week": "השבוע",
+    "total_entries": "סה\"כ רשומות",
+    "avg_calories": "ממוצע קלוריות",
+    "days_tracked": "ימים במעקב",
+    "daily_breakdown_title": "פירוט יומי",
+    "go_to_this_week": "חזרה לשבוע הנוכחי",
+    "calories_progress": "התקדמות קלוריות",
+    "entries": "רשומות",
+    "no_entries": "אין רשומות זמינות להיום"
+  },
+  "onboarding_first_screen": {
+    "title": "בואו נתאים את המסע האישי שלך.",
+    "subtitle": "נגדיר את הפרופיל שלך כדי לספק לך את יעדי התזונה הטובים ביותר.",
+    "bullet_personalized": "יעדי תזונה מותאמים אישית",
+    "bullet_ai": "ניתוח מזון מבוסס בינה מלאכותית",
+    "bullet_track": "עקוב אחרי ההתקדמות היומית שלך",
+    "start": "התחל",
+    "skip_for_now": "דלג לעת עתה"
+  },
+  "onboarding_second_screen": {
+    "title": "ספר/י לנו על עצמך.",
+    "subtitle": "נזדקק למדידות בסיסיות כדי לחשב את היעדים שלך.",
+    "weight_kg": "משקל (ק\"ג)",
+    "weight_lbs": "משקל (ליברות)",
+    "height_cm": "גובה (ס\"מ)",
+    "height_ft": "גובה (פיט)",
+    "next": "המשך",
+    "back": "חזרה",
+    "skip_for_now": "דלג לעת עתה"
+  },
+
+  "onboarding_third_screen": {
+    "title": "עוד קצת עליך.",
+    "subtitle": "זה יעזור לנו להתאים אישית את ההמלצות שלך.",
+    "gender": "זהות",
+    "gender_female": "נקבה",
+    "gender_male": "זכר",
+    "gender_other": "אחר",
+    "next": "המשך",
+    "back": "חזרה",
+    "skip_for_now": "דלג לעת עתה",
+    "birth_date": "תאריך לידה"
+  },
+  "onboarding_forth_screen": {
+    "title": "עד כמה אתה פעיל?",
+    "subtitle": "זה משפיע על צריכת הקלוריות היומית שלך.",
+    "sedentary_label": "יושבני",
+    "sedentary_desc": "מעט או ללא פעילות גופנית",
+    "lightly_active_label": "פעיל קלות",
+    "lightly_active_desc": "1-3 ימים בשבוע",
+    "moderately_active_label": "פעיל מתון",
+    "moderately_active_desc": "3-5 ימים בשבוע",
+    "very_active_label": "פעיל מאוד",
+    "very_active_desc": "6-7 ימים בשבוע",
+    "athlete_label": "אתלט",
+    "athlete_desc": "אימון יומי אינטנסיבי",
+    "next": "המשך",
+    "back": "חזור",
+    "skip": "דלג לעת עתה"
+  },
+  "onboarding_fifth_screen": {
+    "title": "מה המטרה שלך?",
+    "subtitle": "נכוון את יעדי התזונה בהתאם.",
+    "lose_fat_label": "הפחתת שומן",
+    "lose_fat_desc": "הפחתת אחוזי שומן בגוף",
+    "maintain_weight_label": "שמירה על המשקל",
+    "maintain_weight_desc": "להישאר במשקל הנוכחי",
+    "gain_muscle_label": "עלייה במסת שריר",
+    "gain_muscle_desc": "בניית מסת שריר רזה",
+    "next": "המשך",
+    "back": "חזור",
+    "skip": "דלג לעת עתה"
+  },
+  "onboarding_final_screen": {
+    "title": "היעדים האישיים שלך!",
+    "subtitle": "בהתאם לפרופיל שלך, הנה יעדי התזונה היומיים.",
+    "daily_goals_title": "היעדים היומיים שלך",
+    "daily_goals_note": "תמיד אפשר לעדכן את היעדים בפרופיל.",
+    "card_calories": "קלוריות",
+    "card_protein": "חלבון",
+    "card_fat": "שומן",
+    "card_carbs": "פחמימות",
+    "btn_lets_go": "יאללה, יוצאים לדרך!",
+    "back": "חזרה"
+  },
+  "day_slider": {
+    "today": "היום",
+    "go_to_today": "חזרה להיום"
+  },
+  "dates": {
+    "days": {
+      "sun": "ראשון",
+      "mon": "שני",
+      "tue": "שלישי",
+      "wed": "רביעי",
+      "thu": "חמישי",
+      "fri": "שישי",
+      "sat": "שבת"
+    },
+    "months": {
+      "jan": "ינואר",
+      "feb": "פברואר",
+      "mar": "מרץ",
+      "apr": "אפריל",
+      "may": "מאי",
+      "jun": "יוני",
+      "jul": "יולי",
+      "aug": "אוגוסט",
+      "sep": "ספטמבר",
+      "oct": "אוקטובר",
+      "nov": "נובמבר",
+      "dec": "דצמבר"
+    },
+    "formats": {
+      "title": "{{day}} ב{{month}}",
+      "subtitle": "{{weekday}}, {{year}}"
+    }
+  },
+  "add_food_screen": {
+    "title": "הוספת מזון",
+    "subtitle": "השתמש ב־AI כדי לנתח את הארוחה שלך",
+    "scan_with_camera_title": "סריקה באמצעות המצלמה",
+    "scan_with_camera_subtitle": "צלם את הארוחה לניתוח מיידי בעזרת AI",
+    "open_camera": "פתח את המצלמה",
+    "pick_from_gallery": "בחר מהגלריה",
+    "describe_food_title": "תאר את המנה שלך",
+    "describe_food_subtitle": "כתוב מה אכלת לניתוח בעזרת AI",
+    "text_input_placeholder": "לדוגמה: חזה עוף בגריל עם ירקות, מנה בינונית.",
+    "analyze_food": "נתח את המנה",
+    "food_details": "פרטי המנה",
+    "food_name": "שם המנה",
+    "serving_size": "גודל מנה",
+    "date": "תאריך",
+    "time": "שעה",
+    "description": "תיאור",
+    "meal_type": "סוג הארוחה",
+    "nutrition_facts": "ערכי תזונה",
+    "calories": "קלוריות",
+    "protein": "חלבון (ג)",
+    "fat": "שומן (ג)",
+    "carbs": "פחמימות (ג)",
+    "save": "שמור",
+    "back": "חזרה",
+    "quick_add": "הוספה מהירה"
+  },
+  "settings_screen": {
+    "title": "הגדרות",
+    "subtitle": "נהל את ההעדפות שלך באפליקציה",
+    "personal_info": "מידע אישי",
+    "full_name": "שם מלא",
+    "email": "אימייל",
+    "language": "שפה",
+    "theme": "ערכת נושא",
+    "theme_options": {
+      "light": "בהיר",
+      "dark": "כהה",
+      "system_default": "ברירת המחדל של המערכת"
+    },
+    "notifications": "התראות",
+    "notifications_text": "אפשר התראות",
+    "notifications_subtext": "כדי לעזור לך לעקוב אחרי התזונה שלך",
+    "privacy": "פרטיות",
+    "privacy_text": "שתף מידע לשיפור",
+    "privacy_subtext": "עזור לנו לשפר את האפליקציה ע״י שיתוף של מידע שימושי אנונימי",
+    "about": "אודות",
+    "about_text_one": "FeatMe v1.0.0",
+    "about_text_two": "מעקב תזונה מבוסס AI",
+    "about_text_three": "פותח עם ❤️ ע״י צוות FeatMe",
+    "save_changes": "שמור שינויים",
+    "logout": "התנתקות"
+  },
+  "meals": {
+    "breakfast": "ארוחת בוקר",
+    "lunch": "ארוחת צהריים",
+    "dinner": "ארוחת ערב",
+    "snacks": "נשנושים",
+    "snack": "נשנושים",
+    "other": "אחר",
+    "Breakfast": "ארוחת בוקר",
+    "Lunch": "ארוחת צהריים",
+    "Dinner": "ארוחת ערב",
+    "Snack": "נשנושים",
+    "Other": "אחר",
+    "empty_title": "עדיין לא הוכנסו מנות אל {{meal}}",
+    "tap_plus": "לחץ על כפתור ה '+' כדי להוסיף מנה"
+  },
+  "dashboard_screen": {
+    "title": "לוח מחוונים",
+    "daily_progress": "התקדמות יומית"
+  },
+  "button": {
+    "save": "שמור",
+    "cancel": "בטל",
+    "delete": "מחק",
+    "edit": "ערוך",
+    "add": "הוסף",
+    "update": "עדכן",
+    "confirm": "אשר",
+    "close": "סגור",
+    "next": "הבא",
+    "back": "חזור",
+    "finish": "סיום",
+    "quick_add": "הוספה מהירה"
+  },
+  "meal_item": {
+    "calories": "קלוריות",
+    "protein": "חלבון",
+    "fat": "שומן",
+    "carbs": "פחמימות"
+  },
+  "quick_add": {
+    "title": "הוספה מהירה אל",
+    "subtitle": "הוסף מנה ונתוני תזונה במהירות",
+    "food_name": "שם המנה",
+    "description": "תיאור (אופציונלי)",
+    "calories": "קלוריות",
+    "protein": "חלבון (ג)",
+
+    "fat": "שומן (ג)",
+    "carbs": "פחמימות (ג)",
+    "meal_type": "סוג הארוחה",
+    "date": "תאריך",
+    "add_image": "הוסף תמונה"
+  },
+  "logout_modal": {
+    "title": "האם אתה בטוח שברצונך להתנתק?",
+    "subtitle": "תצטרך להיכנס שוב כדי לגשת לנתונים שלך.",
+    "cancel": "ביטול",
+    "logout": "התנתקות"
+  },
+  "recipes_screen": {
+    "title": "בונה מתכונים עם AI",
+    "subtitle": "תנו לשף הבינה המלאכותית שלנו ליצור לכם מתכון!",
+    "ingredients": "רכיבים שיש לך",
+    "ingredients_placeholder": "לדוגמה: עוף, אורז, ברוקולי",
+    "dietary_needs": "העדפות תזונתיות (אופציונלי)",
+    "dietary_needs_placeholder": "לדוגמה: טבעוני, ללא גלוטן",
+    "meal_type": "סוג הארוחה",
+    "search_placeholder": "חפש מתכונים...",
+    "no_results": "לא נמצאו מתכונים. נסה מונח אחר.",
+    "generate_recipe": "צור מתכון",
+    "generating": "השף עובד על זה..."
+  },
+  "recipe_result": {
+    "cook": "בישול",
+    "min": "דקות",
+    "prep": "הכנה",
+    "servings": "מנות",
+    "ingredients": "רכיבים",
+    "instructions": "הוראות",
+    "estimetad_nutrition": "תזונה משוערת למנה",
+    "calories": "קלוריות",
+    "protein": "חלבון (ג)",
+    "fat": "שומן (ג)",
+    "carbs": "פחמימות (ג)",
+    "start_over": "התחל מחדש"
+  },
+  "toast": {
+    "food_added": "המנה נוספה בהצלחה!",
+    "food_updated": "המנה עודכנה בהצלחה!",
+    "food_deleted": "המנה נמחקה בהצלחה!",
+    "profile_updated": "הפרופיל עודכן בהצלחה!",
+    "settings_saved": "ההגדרות נשמרו בהצלחה!",
+    "error_occurred": "אירעה שגיאה. אנא נסה שוב.",
+    "logged_out": "התנתקת בהצלחה!",
+    "changes_saved": "השינויים נשמרו בהצלחה!",
+    "remove_from_favorite": "הוסר בהצלחה מהמועדפים",
+    "added_to_favorite": "נוסף בהצלחה למועדפים"
+  }
+}

@@ -1,0 +1,812 @@
+{
+  "account": {
+    "account_settings": "Kontoeinstellungen",
+    "all_requests": "Alle Anfragen",
+    "assigned_requests": "Zugewiesene Anfragen",
+    "developers": "Entwickler",
+    "general": "Allgemein",
+    "hi": "Hi",
+    "how_to_use_guide": "'Gebrauchsanweisung'",
+    "language": "Sprache",
+    "my_location": "mein Standort",
+    "my_parking": "Mein Parkplatz",
+    "my_requests": "meine Anfragen",
+    "notifications": "Benachrichtigungen",
+    "personal_information": "Persönliche Informationen",
+    "report_an_issue": "Melde ein Problem",
+    "share_your_feedback": "Teilen Sie Ihr Feedback",
+    "sign_out": "Austragen",
+    "support": "",
+    "version": "Version {{version}}"
+  },
+  "account_language": {
+    "save": "Speichern",
+    "title": "Sprache"
+  },
+  "account_location": {
+    "building": "Standort",
+    "change_floor": "Stockwerk wechseln",
+    "floor": "Stockwerk",
+    "place": "Ort",
+    "save": "Speichern",
+    "save_as_default": "Als Standardspeicherort speichern",
+    "subtitle": "Legen Sie Ihren Standardstandort fest",
+    "title": "mein Standort"
+  },
+  "account_notifications": {
+    "email": "Email",
+    "foodies": "Feinschmecker",
+    "mmm": "Dienstleistungen",
+    "parking": "Parkieren",
+    "push": "Push - Mitteilungen",
+    "save": "Speichern",
+    "shuttle": "Transport",
+    "sms": "SMS",
+    "subtitle": "Erhalten Sie App-Benachrichtigungen und -Updates",
+    "title": "Benachrichtigungen"
+  },
+  "account_parking": {
+    "agree_privacy_policy": "Ich erteile Appgrade die Erlaubnis, meine Informationen nur für rechtliche und interne Zwecke zu speichern.",
+    "enter_plate_number": "Nummernschild eingeben",
+    "find_my_car": "Finde mein Auto",
+    "floor": "Stockwerk",
+    "got_it": "Verstanden",
+    "license_plate_number_1": "#1 Nummernschild",
+    "license_plate_number_2": "#2 Nummernschild",
+    "parking_info": "Informationen zu Ihrem Parkplatz",
+    "parking_lot": "Parkplatz",
+    "parking_status": "Parkstatus",
+    "save": "Speichern",
+    "send_updates": "Senden Sie mir Aktualisierungen zur Parkplatzbelegung",
+    "slot_id": "Der Slot",
+    "subtitle": "Teilen Sie uns mit, welche Fahrzeuge Sie fahren",
+    "title": "Mein Parkplatz",
+    "we_value_privacy": "Wir schätzen Ihre Privatsphäre. Wir verwenden Ihre Informationen nur für interne und rechtliche Zwecke."
+  },
+  "add_treatments_range_options": {
+    "annual": "Jährlich",
+    "bi_annual": "Halbjährlich",
+    "bi_monthly": "Zweimonatlich",
+    "daily": "Täglich",
+    "monthly": "monatlich",
+    "multi_year": "Dreijährig",
+    "one_time": "Einmal",
+    "quarterly": "Vierteljährlich",
+    "semi_annual": "Halbjährlich",
+    "twice_a_month": "Zweimal im Monat",
+    "weekly": "Wöchentlich"
+  },
+  "advanced_search_bar": {
+    "change": "Änderung",
+    "search": "Suchen"
+  },
+  "asset_management_categories": {
+    "clear_all": "Alles löschen",
+    "recent": "Neueste",
+    "subtitle": "Alle Kategorien",
+    "title": "Wählen Sie eine Kategorie"
+  },
+  "asset_management_description": {
+    "add": "hinzufügen",
+    "additional_1": "Zusatztext 1",
+    "additional_2": "Zusatztext 2",
+    "additional_3": "Zusatztext 3",
+    "additional_comments": "Voer een beschrijving in",
+    "change": "Rückgeld",
+    "contact_types": "Wiederholungstyp",
+    "continue": "Weitermachen",
+    "days_reminder": "Tage zur Erinnerung",
+    "days_termination": "Tage für Kündigungserinnerung",
+    "description": "Beschreibung",
+    "p_o_number": "Serienummer",
+    "proactive_task": "täglich und wöchentlich",
+    "responsible_contact": "Verantwortlicher Kontakt",
+    "service_agreement": "Monatlich oder höher",
+    "services_provider": "Interner Dienstleister",
+    "site": "Standort",
+    "title": "Details",
+    "vendor": "Externer Verkäufer"
+  },
+  "asset_management_treatments": {
+    "assign": "Zuordnen",
+    "assigned_to": "Zugewiesen an",
+    "cancel": "Stornierung",
+    "closed_by": "Gesloten door",
+    "create": "Bestätigen",
+    "description": "Beschreibung",
+    "duration": "Behandlungsdauer",
+    "error_end_date_too_far": "De einddatum kan niet later liggen dan 10 jaar na de startdatum.",
+    "error_start_date_after_end_date": "De startdatum mag niet na de einddatum liggen.",
+    "range": "Wiederholungsrate",
+    "read_more": "Mehr lesen",
+    "select_date": "Datum auswählen",
+    "title": "Behandlungen hinzufügen",
+    "to": "bis"
+  },
+  "assign_picker": {
+    "assign": "Zuordnen",
+    "assigning": "Zuteilen ",
+    "title": "Einen Dienstleister zuordnen"
+  },
+  "attachments": {
+    "add": "Datei anhängen",
+    "add_another": "Neue hinzufügen",
+    "add_image": "Afbeelding bijvoegen",
+    "attach": "Anfügen",
+    "camera": "Kamera",
+    "cancel": "Stornieren",
+    "document": "Dokumentieren",
+    "gallery": "Galerie",
+    "submit": "einreichen",
+    "title": "Dateien anhängen",
+    "warning_file_too_big": "Entschuldigung, diese Datei ist zu groß. max. Dateigröße ist {{maxFileSizeMb}} MB",
+    "warning_invalid_file_type": "Oeps, dit bestand wordt niet ondersteund",
+    "warning_too_many_files": "Entschuldigung, die Anzahl der Dateien ist zu groß. max. Dateinummer ist {{maxFileSizeMb}}."
+  },
+  "attachments_drawer": {
+    "added_by": "Hinzugefügt von",
+    "group_title": "Hinzugefügt von {{uploader}}, {{timestamp}}",
+    "title": "Anhänge"
+  },
+  "authentication_error": {
+    "call_to_action_text": "Ihre Verbindung zum Server wurde getrennt. Drücken, um die Verbindung wiederherzustellen",
+    "reauthenticate_button_text": "Wieder verbinden",
+    "title": "Trennen"
+  },
+  "booking_status": {
+    "complete": "Vollständig",
+    "upcoming": "Bevorstehend"
+  },
+  "bookings": {
+    "booked_by": "Reserviert von {{name}}",
+    "cancel_booking": "Stornieren",
+    "MyBookingsMain_title": "Meine Reservationen",
+    "new_booking": "Neue Reservation",
+    "update_booking": "Aktualisierung"
+  },
+  "building_picker": {
+    "save": "Speichern",
+    "title": "Standort"
+  },
+  "chat": {
+    "conversation_read_only": "Diese Konversation ist schreibgeschützt",
+    "write": "Nachricht schreiben/schreiben"
+  },
+  "choose_space": {
+    "continue": "Fortfahren",
+    "title": "Wählen Sie die entsprechende Kategorie"
+  },
+  "choose_space_list": {
+    "comments": "Kommentare",
+    "continue": "Fortfahren",
+    "facilities": "Einrichtungen",
+    "large": "Gross",
+    "location": "Locatie",
+    "medium": "Mittel",
+    "participants": "bis zu",
+    "size": "Grösse",
+    "small": "Klein",
+    "title": "Wählen"
+  },
+  "cmp_community": {
+    "home": "Startpagina",
+    "title": "Entdecke Erfahrungen um dich herum"
+  },
+  "cmp_restaurant_profile": {
+    "accessible": "Zugänglich",
+    "address": "Adresse",
+    "away": "Meter",
+    "contact": "Kontakt aufnehmen"
+  },
+  "confirmation_popup": {
+    "allow_contact": "Gestatten Sie dem Dienstanbieter, mich bei Bedarf zu kontaktieren",
+    "enter_name": "Geben Sie den Vor- und Nachnamen ein",
+    "first_name": "Vorname",
+    "last_name": "Familienname, Nachname",
+    "message_body_end": ", privat oder geschäftlich.",
+    "message_body_start": "Durch das Absenden bestätigen Sie, dass der von Ihnen geteilte Inhalt keine.. enthält",
+    "sensitive_data": "sensible Daten",
+    "submit": "einreichen",
+    "title": "vor dem Fortfahren"
+  },
+  "contract_details": {
+    "additional_1": "Zusatztext 1",
+    "additional_2": "Zusatztext 2",
+    "additional_3": "Zusatztext 3",
+    "attach": "Datei anhängen",
+    "days": "Tage",
+    "description": "Beschreibung",
+    "details": "Details",
+    "digital_form": "Digitales Formular",
+    "duration": "Vertragsdauer",
+    "internale_service": "Interner Dienstleister",
+    "po_number": "Serienummer",
+    "range": "Wiederholungsrate",
+    "renewal": "Erneuerungserrinerung",
+    "responsible_contact": "Bereich",
+    "site": "Standort",
+    "termination": "Kündigungserinnerung",
+    "treatments": "Behandlungen ({{number}})",
+    "type": "Wiederholungstyp",
+    "vendor": "Verkäufer"
+  },
+  "contract_details_menu": {
+    "duplicate": "vervielfältigen",
+    "edit": "bearbeiten",
+    "print": "drucken",
+    "remove": "entfernen",
+    "share": "teilen"
+  },
+  "contract_range": {
+    "annual": "Jährlich",
+    "bi_annual": "Halbjährlich",
+    "bi_monthly": "bi monatlich",
+    "daily": "täglich",
+    "monthly": "monatlich",
+    "multi_year": "Mehrjährig",
+    "one_time": "einmal",
+    "quarterly": "Vierteljährlich",
+    "semi_annual": "Halbjährlich",
+    "twice_a_month": "zwei mal im Monat",
+    "weekly": "Wöchentlich"
+  },
+  "date_filter": {
+    "apply": "Anwenden",
+    "clear": "löschen",
+    "title": "Datum"
+  },
+  "developers": {
+    "select_user": "Nutzer wählen",
+    "title": "Entwickler",
+    "user": "{{firstName}} {{lastName}}",
+    "user_role": "Benutzer-Rolle"
+  },
+  "digital_form": {
+    "attach_file": "Datei anhängen",
+    "attachments": "Anhänge",
+    "attachments_title": "Möchten Sie Ihrer Anfrage Bilder hinzufügen?",
+    "check": "Ja, ich habe das digitale Formular gesendet",
+    "continue": "Fortsetzung",
+    "done": "Das ist alles für den Moment",
+    "message": "Bevor Sie fortfahren, vergewissern Sie sich bitte, dass Sie das oben genannte digitale Formular gesendet haben. Wählen Sie unten im Formular die Schaltfläche „Senden“ und warten Sie, bis Sie eine „Danke“-Nachricht erhalten.",
+    "new_request": "Neuen Dienst anfordern",
+    "skip": "Überspringen",
+    "submitted_request": "Ihre Anfrage wurde erfolgreich gesendet. Möchten Sie eine neue Anfrage eröffnen?",
+    "thank_you_title": "Danke",
+    "title": "Digitales Formular",
+    "upload_warning": "Sie können max. {{maxAttachments}} Bilder. max. Dateigröße ist {{maxFileSizeMb}} MB."
+  },
+  "documents_filters_bar": {
+    "created_by": "Eingereicht von",
+    "modified": "Gewijzigd",
+    "name": "Naam"
+  },
+  "documents_table_item": {
+    "created_by": "Eingereicht von",
+    "delete": "Verwijderen",
+    "download": "Downloaden",
+    "info": "Informatie",
+    "modified": "Gewijzigd",
+    "rename": "Hernoemen"
+  },
+  "drawer": {
+    "floor": "Stockwerk",
+    "hi": "Hi"
+  },
+  "dropdown": {
+    "select": "Wählen"
+  },
+  "favorite_order_details": {
+    "edit": "Bearbeiten",
+    "my_favorite": "Meine Lieblingsbestellung",
+    "order_items": "Auftragsdetails",
+    "remove": "Entfernung"
+  },
+  "favorite_orders": {
+    "edit_order": "Bearbeiten",
+    "items": "Artikel",
+    "order_again": "Bestelle nochmals",
+    "remove_order": "Entfernung",
+    "title": "Lieblingsbestellungen"
+  },
+  "files_management": {
+    "my_documents": "Mijn documenten",
+    "my_inventory": "Mijn inventaris",
+    "title": "Bestandsbeheer"
+  },
+  "filter_tabs": {
+    "all": "Alles",
+    "hold": "in Wartestellung",
+    "inprogress": "In Bearbeitung",
+    "open": "Offen",
+    "resolved": "Aufgelöst"
+  },
+  "filters": {
+    "all_sites": "Alle Standorte",
+    "all_suppliers": "Alle Anbieter",
+    "clear": "Alles löschen",
+    "date": "Datum",
+    "note": "Diese Filter werden beim nächsten Mal automatisch angewendet",
+    "save": "Filter speichern",
+    "select": "wählen",
+    "selected": "{{number}} ausgewählt",
+    "show": "Ergebnisse anzeigen",
+    "sites": "{{sitesCount}} Standorte",
+    "suppliers": "{{selectedSuppliers}} Anbieter",
+    "title": "Filter"
+  },
+  "foodies": {
+    "all_orders": "Alle Bestellungen",
+    "assigned_orders": "Zugewiesene Aufträge",
+    "my_orders": "Meine Bestellungen",
+    "new_order": "Neue Ordnung",
+    "title": "Was können wir für dich tun?"
+  },
+  "home_screen": {
+    "add": "Anfrage hinzufügen",
+    "all_requests_title": "Alle Anfragen",
+    "assigned_requests_title": "Zugewiesene Anfragen",
+    "favorite": "Favorit",
+    "my_requests": "meine Anfragen",
+    "popular": "Beliebt",
+    "powered_by": "Unterstützt von Appgrade ",
+    "request_new_service": "Neuen Dienst anfordern",
+    "title": "Wie können wir helfen?"
+  },
+  "info-page-templates": {
+    "visit": "Besuch"
+  },
+  "input_error": {
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "required": "Dieses Feld wird benötigt"
+  },
+  "list_empty": {
+    "description": "Wir konnten kein Ergebnis finden, das der Suche entspricht.",
+    "title": "Es wurden keine Ergebnisse gefunden"
+  },
+  "loading_error": {
+    "category_error": "Entschuldigung, wir haben keine Ergebnisse in dieser Kategorie gefunden",
+    "message_body": "Beim Laden Ihrer Daten ist etwas schief gelaufen. Bitte versuches Sie es erneut.",
+    "oops": "Hoppla...",
+    "try_again": "Versuchen Sie es nochmal"
+  },
+  "location_label": {
+    "label": "{{building}}, Gebäude {{floor}}, {{place}}"
+  },
+  "login": {
+    "company": "Ihr Firmenname",
+    "error": "Entschuldigung, der Firmenname wurde nicht gefunden. Bitte vergewissern Sie sich, dass Sie den Namen richtig geschrieben haben, und versuchen Sie es erneut.",
+    "log_in": "Anschließen",
+    "title": "Willkommen bei Appgrade"
+  },
+  "menu": {
+    "account": "Kontoeinstellungen",
+    "allrequests": "Alle Anfragen",
+    "assetmanagement": "Vermögensverwaltung",
+    "assignedrequests": "Zugewiesene Anfragen",
+    "community": "Gemeinschaft",
+    "filesmanagement": "Bestandsbeheer",
+    "foodies": "Feinschmecker",
+    "home": "Haus",
+    "my_account": "Einstellungen",
+    "myrequests": "meine Anfragen",
+    "parking": "Parkieren",
+    "reports": "Online-Dashboards",
+    "services": "Dienstleistungen",
+    "shuttle": "Transport",
+    "spacemanagement": "Boekingsbeheer"
+  },
+  "mmm_categories": {
+    "clear_all": "Alles löschen",
+    "recent": "Neueste",
+    "subtitle": "Alle Kategorien",
+    "title": "Wie können wir helfen?"
+  },
+  "mmm_description": {
+    "attach_file": "Datei anhängen",
+    "digital_form": "Digitales Formular hinzufügen",
+    "form": "Digitales Formular",
+    "location_add": "Hinzufügen",
+    "location_change": "Ändern",
+    "reported_by": "Gemeldet von",
+    "request_description": "Geben Sie die Anfragedetails an und füllen Sie das digitale Formular aus, falls vorhanden.",
+    "service_location": "Dienststandort",
+    "submit": "einreichen",
+    "submitting": "Wird eingereicht",
+    "title": "Senden Sie Ihre Anfrage"
+  },
+  "mmm_request_details": {
+    "assigned": "Zugewiesen an",
+    "attachments": "Anhänge",
+    "by": "{{name}}",
+    "contact": "Kontakt aufnehmen",
+    "digital": "Digitales Formular",
+    "due_date": "Ablaufdatum",
+    "fill": "Ausfüllen",
+    "handling_date": "Handhabungsdatum",
+    "location": "Locatie",
+    "messages": "Mitteilungen",
+    "resolution": "Details zur Lösung",
+    "resolution_time": "Lösungszeit",
+    "resolved_by": "Gelöst von",
+    "start_chat": "Starten Sie einen Chat",
+    "submitted": "Eingereicht am {{date}}",
+    "unassigned": "Nicht zugeordnet",
+    "update_status": "Status update"
+  },
+  "mmm_requests": {
+    "add": "Neue Anfrage hinzufügen",
+    "AllRequestsMain_title": "Alle Anfragen",
+    "assign": "Zuordnen",
+    "assigned": "Zugewiesen an {{name}}",
+    "AssignedRequestsMain_title": "Zugewiesene Anfragen",
+    "by": "{{name}}",
+    "due_date": "Ablaufdatum {{date}}",
+    "handling_date": "Bearbeitungsdatum {{date}}",
+    "more": "mehr",
+    "MyRequestsMain_title": "meine Anfragen",
+    "on": "in",
+    "refresh": "Verversen",
+    "search_category": "Kategorie",
+    "search_category_placeholder": "Suche nach Fall",
+    "search_description": "Beschreibung",
+    "search_description_placeholder": "Suche nach Beschreibung",
+    "search_location": "Locatie",
+    "search_location_placeholder": "Suche nach Zimmer oder Stockwerk",
+    "search_reported_by": "Geöffnet von",
+    "search_reported_by_placeholder": "Suche nach Namen",
+    "search_request_number": "Geval nr.",
+    "search_request_number_placeholder": "Fallnummer suchen",
+    "start_work": "Arbeit beginnen",
+    "stop_work": "Arbeit beenden",
+    "submitted": "Eingereicht von {{name}}",
+    "submitted_by": "eingereicht {{name}}",
+    "submitted_on": "eingereicht am  {{date}}",
+    "unassigned": "Nicht zugeordnet",
+    "update_status": "Status update"
+  },
+  "mmm_subcategories": {
+    "subtitle": "Unterkategorie wählen"
+  },
+  "mobile_app_link": {
+    "call_to_action_text": "Sie haben die App nicht_",
+    "download_appstore": "vom AppStore herunterladen",
+    "download_googleplay": "Von Google Play herunterladen",
+    "open_button_text": "Öffnen Sie die Appgrade Applikation",
+    "popup_title": "Appgrade Applikation"
+  },
+  "module_filter": {
+    "all": "Alle Module",
+    "mmm": "Dienstleistungen",
+    "title": "Module",
+    "wpm": "Geplande taak"
+  },
+  "my_documents": {
+    "all_files": "Alle bestanden",
+    "new_folder": "Nieuwe map",
+    "no_files_title": "Deze map is leeg",
+    "no_folders_subtitle": "Voeg nieuwe mappen toe en upload documenten. Al uw bestanden worden hier weergegeven.",
+    "no_folders_title": "Houd uw documenten op één plek georganiseerd",
+    "title": "Mijn documenten",
+    "upload_file": "Bestand uploaden"
+  },
+  "my_documents_delete_modal": {
+    "cancel": "Stornierung",
+    "delete": "Verwijderen",
+    "title": "Weet u zeker dat u dit item wilt verwijderen?"
+  },
+  "my_documents_info_modal": {
+    "created_by": "Eingereicht von",
+    "modified": "Gewijzigd"
+  },
+  "my_documents_rename_modal": {
+    "cancel": "Stornierung",
+    "name": "Naam",
+    "save": "Speichern",
+    "title": "Map hernoemen"
+  },
+  "my_documents_upload_modal": {
+    "cancel": "Stornierung",
+    "drag": "Slepen en neerzetten",
+    "or": "of",
+    "select_file": "Selecteer bestand",
+    "title": "Bestanden uploaden",
+    "upload": "Uploaden"
+  },
+  "new_order": {
+    "add_another": "Neue hinzufügen",
+    "add_comment": "Einen Kommentar hinzufügen",
+    "add_to_favorite": "Zu den Favoriten hinzufügen",
+    "add_to_order": "Zur Bestellung hinzufügen",
+    "comment_suggestions": "Vorschläge für Anmerkungen",
+    "continue": "Fortsetzung",
+    "order_items": "Auftragsdetails",
+    "place_order": "Eine Reservierung machen",
+    "save": "Änderungen speichern",
+    "save_as_default": "Als mein Standardrestaurant speichern",
+    "save_preferences_later_time": "Du kannst diese Bestellung mit denselben Einstellungen später speichern.",
+    "search": "Suche",
+    "select_site": "Ort auswählen",
+    "what_get": "Was können wir Ihnen bringen?",
+    "your_order": "Deine Bestellung"
+  },
+  "new_order_item": {
+    "edit": "Bearbeiten",
+    "remove": "Entfernen"
+  },
+  "order_again": {
+    "cancel": "Stornierung",
+    "order_again": "Bestelle nochmals",
+    "sub_title": "Bitte beachten Sie, dass Sie die Bestellung nicht bearbeiten können",
+    "title": "Möchten Sie eine wiederkehrende Bestellung aufgeben?"
+  },
+  "order_details": {
+    "assigned": "Zugewiesen an",
+    "by": "{{name}}",
+    "contact": "Kontakt aufnehmen",
+    "location": "Locatie",
+    "unassigned": "Nicht zugeordnet"
+  },
+  "order_status": {
+    "completed": "Vollendet",
+    "inprogress": "In Bearbeitung",
+    "open": "Offene Bestellung",
+    "overdue": "Überfällig",
+    "resolved": "Aufgelöst"
+  },
+  "orders": {
+    "add": "Neue Ordnung",
+    "AllOrdersMain_title": "Alle Bestellungen",
+    "assigned": "Zugewiesen an {{name}}",
+    "AssignedOrdersMain_title": "Zugewiesene Aufträge",
+    "by": "{{name}}",
+    "favorites": "Favoriten",
+    "items": "Auftragsdetails",
+    "MyOrdersMain_title": "Meine Bestellungen",
+    "order_again": "Bestelle nochmals",
+    "submitted": "Bestellt am {{date}}",
+    "unassigned": "Nicht zugeordnet"
+  },
+  "personal_information": {
+    "email": "Email",
+    "first_name": "Vorname",
+    "last_name": "Familienname, Nachname",
+    "save": "Speichern",
+    "title": "Persönliche Informationen"
+  },
+  "phone_input": {
+    "invalid_number": "Ungültige Nummer",
+    "phone_number": "Telefonnummer"
+  },
+  "popular": {
+    "community": "Gemeinschaft",
+    "foodies": "Feinschmecker",
+    "parking": "Parkieren",
+    "shuttle": "Transport"
+  },
+  "privacy_conditions": {
+    "agree": "Zustimmen & Fortfahren",
+    "content": "Um auf unseren Service zuzugreifen und weiterhin zu nutzen, stimmen sie bitte zu",
+    "log_out": "Abmelden",
+    "terms": "Nutzungsbedingungen",
+    "title": "Bevor wir beginnen ",
+    "url": "https://appgrade.com/terms-of-use/"
+  },
+  "remove_booking": {
+    "cancel": "Stornierung",
+    "keep_booking": "Behalte meine Buchung",
+    "sub_title": "Behalte meine Buchung",
+    "title": "Bitte bestätigen Sie, dass Sie ihre Buchung stornieren möchten. Diese Aktion kann nicht rückgangig gemach werden."
+  },
+  "remove_favorite_order": {
+    "cancel": "Stornierung",
+    "remove": "Entfernung",
+    "sub_title": "Sind Sie sicher, dass Sie diese Bestellung von Ihrer Favoritenliste entfernen möchten?",
+    "title": "Entfernen Sie eine bevorzugte Bestellung"
+  },
+  "replace_favorite_order": {
+    "order_and_replace": "Bestellen und ersetzen",
+    "order_without_changes": "Bestellen Sie ohne Änderungen",
+    "sub_title": "Sie haben bereits eine bevorzugte Bestellung ausgewählt. Wenn Sie diese Bestellung als Favorit speichern, wird die bestehende Bestellung gelöscht.",
+    "title": "Warnung"
+  },
+  "reported_by_filter": {
+    "apply": "Speichern",
+    "search": "Benutzer durchsuchen",
+    "title": "Gemeldet von"
+  },
+  "reports": {
+    "export": "Export",
+    "export_pdf": "PDF",
+    "export_powerpoint": "PPT",
+    "print": "Seitendruck",
+    "select_report": "Selecteer rapport"
+  },
+  "request_status": {
+    "hold": "in Wartestellung",
+    "inprogress": "In Bearbeitung",
+    "open": "Anfrage öffnen",
+    "resolved": "Gelöst am"
+  },
+  "request_tooltip": {
+    "attachments": "Bijlagen bekijken",
+    "download": "Digitaal formulier downloaden",
+    "new_message": "Nieuw bericht"
+  },
+  "search_bar": {
+    "search": "Suche",
+    "search_asset": "Zoek contracten",
+    "search_bookings": "Zoek boekingen",
+    "search_files": "Bestanden zoeken",
+    "search_requests": "Anfragensuche"
+  },
+  "shuttle": {
+    "my_rides": "meine Reisen",
+    "new_ride": "Neue Fahrt",
+    "powered_by": "Unterstützt von Appgrade ",
+    "schedule_ride": "Fahrt planen",
+    "title": "Wo dürfen wir Sie hinbringen?"
+  },
+  "sign_out": {
+    "cancel": "Stornierung",
+    "proceed": "Fortsetzung",
+    "text": "Sind Sie sicher, dass Sie sich abmelden möchten?",
+    "title": "Austragen"
+  },
+  "sites_filter": {
+    "apply": "Anwenden",
+    "clear": "Alles löschen",
+    "search": "Suchseiten",
+    "select_all": "Alle wählen",
+    "selected": "{{number}} ausgewählt",
+    "title": "Websites"
+  },
+  "space_choose_date": {
+    "continue": "Fortfahren",
+    "from": "Von",
+    "select_date": "Datum auswählen",
+    "select_time": "Zeit auswählen",
+    "to": "Für",
+    "when": "Wann?"
+  },
+  "space_management": {
+    "my_bookings": "Meine Reservationen",
+    "new_booking": "Neue Reservation",
+    "title": "Boekingsbeheer"
+  },
+  "space_not_available": {
+    "content": "Ihr gewählter Standort is nicht derzeit nicht verfügbar, bitte wählen Sie einen anderen Standort.",
+    "ok": "Ok",
+    "title": "Platz nicht verfügbar"
+  },
+  "spaces_summary": {
+    "booking_by": "Buchung von",
+    "booking_time": "Buchungszeitpunkt",
+    "comments": "Kommentare",
+    "location": "Locatie",
+    "submit": "einreichen",
+    "submitting": "einreichen…",
+    "title": "Bevestig uw boeking"
+  },
+  "status": {
+    "hold": "in Wartestellung",
+    "inprogress": "In Bearbeitung",
+    "open": "Anfrage öffnen",
+    "resolved": "Gelöst am {{resolved_date}}"
+  },
+  "status_filter": {
+    "active": "Aktiv",
+    "all": "Alle Anfragen",
+    "inprogress": "In Bearbeitung",
+    "onhold": "in Wartestellung",
+    "open": "Offen",
+    "resolved": "Aufgelöst",
+    "title": "Status"
+  },
+  "submit_error": {
+    "message_body": "Beim Senden Ihrer Daten ist etwas schief gelaufen. Bitte versuchen Sie es erneut.",
+    "oops": "Hoppla...",
+    "try_again": "Versuchen Sie es nochmal"
+  },
+  "suppliers_filter": {
+    "apply": "Anwenden",
+    "clear": "Alles löschen",
+    "search": "Suchen Sie nach Lieferanten",
+    "select_all": "Alle wählen",
+    "selected": "{{number}} ausgewählt",
+    "title": "Lieferanten"
+  },
+  "tab_navigation": {
+    "account": "Konto",
+    "home": "Heim",
+    "modules": "Module",
+    "notifications": "Benachrichtigungen"
+  },
+  "thank_you": {
+    "AssetManagement": "Ihre Bestellung wurde aufgegeben und wir arbeiten daran!",
+    "foodie_message": "Ihre Bestellung wurde aufgegeben und wir arbeiten daran! Wir werden Sie benachrichtigen, sobald es fertig ist.",
+    "Foodies": "Ihre Bestellung wurde aufgegeben und wir arbeiten daran! Wir werden Sie benachrichtigen, sobald es fertig ist.",
+    "Home": "Ihre Bestellung wurde aufgegeben und wir arbeiten daran!",
+    "message": "Ihre Anfrage wurde übermittelt und wir arbeiten dran!",
+    "Requests": "Ihre Anfrage wurde erfolgreich gesendet. Möchten Sie eine neue Anfrage eröffnen?",
+    "SpaceManagement": "Ihre Buchung wurde übermittelt. Überprüfen Sie Ihre Mailbox für die Reservierungsbestätigung",
+    "thank_you": "Danke {{name}}!"
+  },
+  "toast": {
+    "success": "Die vorgenommenen Änderungen wurden erfolgreich gespeichert"
+  },
+  "treatment_status": {
+    "completed": "sind vorbei",
+    "current_month": "aktueller Monat",
+    "inprogress": "In Bearbeitung",
+    "on_hold": "in Wartestellung",
+    "open": "öffnen",
+    "overdue": "Überfällig",
+    "planned": "Geplant",
+    "resolved": "Gelöst am"
+  },
+  "update_status": {
+    "attach_file": "Datei anhängen",
+    "attachment_mandatory_error": "U moet een bestand uploaden voordat u de zaak kunt oplossen",
+    "hold": "in Wartestellung",
+    "inprogress": "In Bearbeitung",
+    "leave_comment": "Schreiben Sie einen Grund",
+    "on_hold_error": "Die Anfrage kann nicht gehalten werden",
+    "open": "offen",
+    "other": "andere",
+    "overdue": "Überfällig",
+    "planned": "geplant",
+    "resolved": "Aufgelöst",
+    "save": "Speichern",
+    "submit": "einreichen",
+    "submitting": "Zuteilen ",
+    "title": "Status update"
+  },
+  "user_roles": {
+    "admin": "0",
+    "end_user": "Endbenutzer",
+    "site_manager": "Seitenverwalter",
+    "supplier": "Anbieter"
+  },
+  "wizard": {
+    "step": "Schritt {{step}} von {{totalSteps}}"
+  },
+  "work_plan": {
+    "agreements_button": "Jährlich",
+    "description": "beschreibung",
+    "files": "Dateien anhängen",
+    "form": "Digitales Formular hinzufügen",
+    "left_label": "jährlich",
+    "new_contract": "Neue Aufgabe",
+    "pdf": "Als PDF speichern",
+    "print": "drucken",
+    "right_label": "wöchentlich",
+    "search_category": "Kategorie",
+    "search_category_placeholder": "Suche nach Fall",
+    "search_description": "beschreibung",
+    "search_description_placeholder": "Suche nach Beschreibung",
+    "search_location": "Locatie",
+    "search_location_placeholder": "Suche nach Zimmer oder Stockwerk",
+    "search_po": "Serienummer",
+    "search_po_placeholder": "Serienummer zoeken",
+    "search_reported_by": "Geöffnet von",
+    "search_reported_by_placeholder": "Suche nach Namen",
+    "search_request_number": "Geval nr.",
+    "search_request_number_placeholder": "Fallnummer suchen",
+    "search_supplier": "Anbieter",
+    "search_supplier_placeholder": "Zoeken op leverancier",
+    "search_vendor": "Verkäufer",
+    "search_vendor_placeholder": "Zoeken op leverancier",
+    "service_agreement": "Dienstleistungsvertrag",
+    "service_agreement_label": "Jahresplan",
+    "sites": "Alle Standorte",
+    "status_drawer_title": "Status update",
+    "task_label": "Wöchentlicher Plan",
+    "tasks_button": "Wöchentlich",
+    "title": "Arbeitsplan"
+  },
+  "wpm_request": {
+    "contract_range": "Vertragslaufzeit",
+    "handling_date": "Handhabungsdatum"
+  }
+}

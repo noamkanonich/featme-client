@@ -1,0 +1,812 @@
+{
+  "account": {
+    "account_settings": "إعدادت الحساب",
+    "all_requests": "كل القراءات",
+    "assigned_requests": "الطلبات المعينة لي",
+    "developers": "المطورين",
+    "general": "عام",
+    "hi": "أهلاً",
+    "how_to_use_guide": "دليل \"كيفية الاستخدام\"",
+    "language": "لغة",
+    "my_location": "موقعي",
+    "my_parking": "موقفي",
+    "my_requests": "طلباتي",
+    "notifications": "إشعارات",
+    "personal_information": "معلومات شخصية",
+    "report_an_issue": "الإبلاغ عن مشكلة",
+    "share_your_feedback": "شارك بتعليقاتك",
+    "sign_out": "خروج",
+    "support": "",
+    "version": "الإصدار {{version}}"
+  },
+  "account_language": {
+    "save": "يحفظ",
+    "title": "لغة"
+  },
+  "account_location": {
+    "building": "موقع",
+    "change_floor": "تغيير الأرضية",
+    "floor": "أرضية",
+    "place": "مكان",
+    "save": "يحفظ",
+    "save_as_default": "حفظ كموقع افتراضي",
+    "subtitle": "حدد موقعك الافتراضي",
+    "title": "موقعي"
+  },
+  "account_notifications": {
+    "email": "البريد الإلكتروني",
+    "foodies": "عشاق الطعام",
+    "mmm": "خدمات",
+    "parking": "موقف سيارات",
+    "push": "دفع الإخطارات",
+    "save": "يحفظ",
+    "shuttle": "مواصلات",
+    "sms": "الرسالة النصية القصيرة",
+    "subtitle": "تحميل ملف",
+    "title": "إشعارات"
+  },
+  "account_parking": {
+    "agree_privacy_policy": "أمنح Appgrade الإذن بحفظ بياناتي واستخدامها فقط للأغراض القانونية والداخلية.",
+    "enter_plate_number": "أدخل رقم لوحة الترخيص",
+    "find_my_car": "جد عن سيارتي",
+    "floor": "أرضية",
+    "got_it": "فهمت",
+    "license_plate_number_1": "# 1 رقم لوحة الترخيص",
+    "license_plate_number_2": "# 2 رقم لوحة الترخيص",
+    "parking_info": "معلومات عن موقف السيارات الخاص بك",
+    "parking_lot": "موقف للسيارات",
+    "parking_status": "حالة الموقف",
+    "save": "يحفظ",
+    "send_updates": "أرسل لي تحديثات إشغال موقف السيارات",
+    "slot_id": "خانة",
+    "subtitle": "دعنا نعرف ما هي المركبات التي تقودها",
+    "title": "موقفي",
+    "we_value_privacy": "نحن نقدر خصوصيتك. سنستخدم بياناتك فقط للأغراض الداخلية والقانونية."
+  },
+  "add_treatments_range_options": {
+    "annual": "سنوي",
+    "bi_annual": "نصف سنوي",
+    "bi_monthly": "نصف شهري",
+    "daily": "يومي",
+    "monthly": "شهريا",
+    "multi_year": "ثلاثي السنوات",
+    "one_time": "مره واحده",
+    "quarterly": "ربعي",
+    "semi_annual": "نصف سنوي",
+    "twice_a_month": "مرتان شهريا",
+    "weekly": "أسبوعي"
+  },
+  "advanced_search_bar": {
+    "change": "متقدم",
+    "search": "بحث"
+  },
+  "asset_management_categories": {
+    "clear_all": "مسح الكل",
+    "recent": "الأخيرة",
+    "subtitle": "جميع الفئات",
+    "title": "اختر فئة"
+  },
+  "asset_management_description": {
+    "add": "ضف",
+    "additional_1": "نص إضافي 1",
+    "additional_2": "نص إضافي 2",
+    "additional_3": "نص إضافي 3",
+    "additional_comments": "الرجاء إدخال وصف",
+    "change": "تغيير",
+    "contact_types": "نوع التكرار",
+    "continue": "كمل",
+    "days_reminder": "أيام للتذكير",
+    "days_termination": "أيام لتذكير الإنهاء",
+    "description": "وصف",
+    "p_o_number": "رقم سري",
+    "proactive_task": "يومي وأسبوعي",
+    "responsible_contact": "المسؤول عن الاتصال",
+    "service_agreement": "شهري فما فوق",
+    "services_provider": "مزود الخدمات الداخلية",
+    "site": "الموقع",
+    "title": " تفاصيل",
+    "vendor": "مزود الخدمات الخارجية"
+  },
+  "asset_management_treatments": {
+    "assign": "عيين",
+    "assigned_to": "مخصص ل",
+    "cancel": "الغاء",
+    "closed_by": "مغلق من قبل",
+    "create": "تأكيد",
+    "description": "وصف",
+    "duration": "مدة العلاج",
+    "error_end_date_too_far": "لا يمكن أن يكون تاريخ الانتهاء اكبر من 10 سنوات بعد تاريخ البدء.",
+    "error_start_date_after_end_date": "لا يمكن أن يكون تاريخ البدء بعد تاريخ الانتهاء.",
+    "range": "معدل التكرار",
+    "read_more": " اقرأ ألمزيد",
+    "select_date": "حدد تاريخ",
+    "title": "أضف العلاجات",
+    "to": "ل"
+  },
+  "assign_picker": {
+    "assign": "عيين",
+    "assigning": "تعيين",
+    "title": "عيين مزود الخدمة"
+  },
+  "attachments": {
+    "add": "أرفق ملف",
+    "add_another": "أضف آخر",
+    "add_image": "زد صورة",
+    "attach": "اربط",
+    "camera": "آلة تصوير",
+    "cancel": "الغي",
+    "document": "وثيقة",
+    "gallery": "معرض",
+    "submit": "إرسل",
+    "title": "إرفاق ملفات",
+    "warning_file_too_big": "آسف ، هذا الملف كبير جدا. الحد الأقصى لحجم الملف هو {{maxFileSizeMb}}MB",
+    "warning_invalid_file_type": "عفوًا، هذا الملف غير مدعوم",
+    "warning_too_many_files": "عذرا ، عدد الملفات كبير جدا. الأعلى. عدد الملفات هو {{maxFileSizeMb}}."
+  },
+  "attachments_drawer": {
+    "added_by": "أضيف من قبل",
+    "group_title": "أضيف من قبل {{uploader}}, {{timestamp}}",
+    "title": "تحميل ملفات"
+  },
+  "authentication_error": {
+    "call_to_action_text": "تم قطع اتصالك بالخادم. اضغط/ي لإعادة الاتصال.",
+    "reauthenticate_button_text": "الاتصال من جديد",
+    "title": "تحميل ملف"
+  },
+  "booking_status": {
+    "complete": "انهاء",
+    "upcoming": "قريبا"
+  },
+  "bookings": {
+    "booked_by": "حجز من قبل {{name}}",
+    "cancel_booking": "إلغاء",
+    "MyBookingsMain_title": "حجوزاتي",
+    "new_booking": "حجز جديد",
+    "update_booking": "تحديث"
+  },
+  "building_picker": {
+    "save": "يحفظ",
+    "title": "موقع"
+  },
+  "chat": {
+    "conversation_read_only": "هذه المحادثة للقراءة فقط",
+    "write": "اكتب / اكتب رسالة"
+  },
+  "choose_space": {
+    "continue": "استمر",
+    "title": "اختر الفئة المناسبة"
+  },
+  "choose_space_list": {
+    "comments": "التعليقات",
+    "continue": "استمر",
+    "facilities": "مرافق",
+    "large": "كبير",
+    "location": "مكان",
+    "medium": "متوسط",
+    "participants": "ما يصل إلى {{participants_number}} مشارك",
+    "size": "حجم",
+    "small": "صغير",
+    "title": "يختار"
+  },
+  "cmp_community": {
+    "home": "الصفحة الرئيسية",
+    "title": "اكتشف التجارب من حولك"
+  },
+  "cmp_restaurant_profile": {
+    "accessible": "يمكن الوصول",
+    "address": "عنوانك",
+    "away": "متر",
+    "contact": "اتصل"
+  },
+  "confirmation_popup": {
+    "allow_contact": "اسمح لمزود الخدمة بالاتصال بي إذا لزم الأمر",
+    "enter_name": "أدخل الاسم الأول والأخير",
+    "first_name": "الاسم الاول",
+    "last_name": "الكنية",
+    "message_body_end": "الشخصية أو التجارية.",
+    "message_body_start": "من خلال الإرسال ، فإنك تؤكد أن المحتوى الذي تشاركه لا يحتوي على أي",
+    "sensitive_data": "بيانات حساسة",
+    "submit": "إرسال",
+    "title": "قبل الاستمرار"
+  },
+  "contract_details": {
+    "additional_1": "نص إضافي 1",
+    "additional_2": "نص إضافي ٢",
+    "additional_3": "نص إضافي ٣",
+    "attach": "إضافة ملف",
+    "days": "أيام",
+    "description": "وصف",
+    "details": "التفاصيل",
+    "digital_form": "الشكل الرقمي",
+    "duration": "مدة الاتفاقية",
+    "internale_service": "مزود داخلي",
+    "po_number": "رقم سري",
+    "range": "معدل التكرار",
+    "renewal": "تذكير التجديد",
+    "responsible_contact": "المسؤول عن الاتصال",
+    "site": "موقع",
+    "termination": "تذكير أخير",
+    "treatments": "معالجات ({{عدد}})",
+    "type": "نوع التكرار",
+    "vendor": "بائع"
+  },
+  "contract_details_menu": {
+    "duplicate": "نسخ متماثل",
+    "edit": "حرر",
+    "print": "طبع",
+    "remove": "أبعد",
+    "share": "تقاسم"
+  },
+  "contract_range": {
+    "annual": "سنوي",
+    "bi_annual": "كل عامين",
+    "bi_monthly": "كل شهرين",
+    "daily": "يومي",
+    "monthly": "شهري",
+    "multi_year": "متعدد السنوات",
+    "one_time": "مرة",
+    "quarterly": "ربع سنوي",
+    "semi_annual": "نصف سنوي",
+    "twice_a_month": "مرتين في الشهر",
+    "weekly": "أسبوعي"
+  },
+  "date_filter": {
+    "apply": "طبق",
+    "clear": "اختيار الملف",
+    "title": "تاريخ الاستحقاق"
+  },
+  "developers": {
+    "select_user": "اختر المستخدم",
+    "title": "المطورين",
+    "user": "{{firstName}} {{lastName}}",
+    "user_role": "دور المستخدم"
+  },
+  "digital_form": {
+    "attach_file": "أرفق ملف",
+    "attachments": "يجب عليك تحميل ملف قبل حل الحالة",
+    "attachments_title": "هل ترغب في إضافة صور إلى طلبك؟",
+    "check": "نعم ، لقد أرسلت النموذج الرقمي",
+    "continue": "اكمل",
+    "done": "هذا كل شئ حاليا",
+    "message": "قبل المتابعة ، يرجى التأكد من إرسال النموذج الرقمي المذكور أعلاه. حدد الزر \"إرسال\" أسفل النموذج وانتظر حتى تتلقى رسالة \"شكرًا لك\".",
+    "new_request": "طلب خدمة جديدة",
+    "skip": "القفز",
+    "submitted_request": "تم تقديم طلبك. هل ترغب في تقديم طلب جديد؟",
+    "thank_you_title": "شكرا لك",
+    "title": "شكل رقمي",
+    "upload_warning": "تحميل ملفات"
+  },
+  "documents_filters_bar": {
+    "created_by": "ارسل من قبل",
+    "modified": "تم التعديل",
+    "name": "اسم"
+  },
+  "documents_table_item": {
+    "created_by": "ارسل من قبل",
+    "delete": "حذف",
+    "download": "تحميل",
+    "info": "معلومات",
+    "modified": "تم التعديل",
+    "rename": "إعادة تسمية"
+  },
+  "drawer": {
+    "floor": "أرضية",
+    "hi": "أهلاً"
+  },
+  "dropdown": {
+    "select": "يختار"
+  },
+  "favorite_order_details": {
+    "edit": "تعديل",
+    "my_favorite": "طلبي المفضل",
+    "order_items": "عناصر الطلب",
+    "remove": "ازالة"
+  },
+  "favorite_orders": {
+    "edit_order": "تعديل",
+    "items": "العناصر",
+    "order_again": "اطلب مرة أخرى",
+    "remove_order": "ازالة",
+    "title": "الطلبات المفضلة"
+  },
+  "files_management": {
+    "my_documents": "مستنداتي",
+    "my_inventory": "مخزوني",
+    "title": "إدارة الملفات"
+  },
+  "filter_tabs": {
+    "all": "الكل",
+    "hold": "في الانتظار",
+    "inprogress": "قيد التنفيذ",
+    "open": "مفتوح",
+    "resolved": "حل"
+  },
+  "filters": {
+    "all_sites": "كل المواقع",
+    "all_suppliers": "جميع مقدمي الخدمة",
+    "clear": "امسح الكل",
+    "date": "تاريخ الاستحقاق",
+    "note": "سيتم تطبيق هذه التصفيات تلقائيًا في المرة القادمة",
+    "save": "احفظ المرشحات",
+    "select": "تحديد",
+    "selected": "تم تحديد {{number}}",
+    "show": "عرض النتائج",
+    "sites": "مواقع {{sitesCount}}",
+    "suppliers": "{{selectedSuppliers}} الموردين",
+    "title": "تصفيات"
+  },
+  "foodies": {
+    "all_orders": "جميع الطلبات",
+    "assigned_orders": "الطلبات المعينة لي",
+    "my_orders": "طلبي",
+    "new_order": "طلب جديد",
+    "title": "ماذا يمكننا أن نفعل من اجلكم؟"
+  },
+  "home_screen": {
+    "add": "اطلب إضافة",
+    "all_requests_title": "كل القراءات",
+    "assigned_requests_title": "الطلبات المعينة لي",
+    "favorite": "مفضل",
+    "my_requests": "طلباتي",
+    "popular": "شعبي",
+    "powered_by": "مدعوم من Appgrade ",
+    "request_new_service": "طلب خدمة جديدة",
+    "title": "كيف يمكن أن نساعد؟"
+  },
+  "info-page-templates": {
+    "visit": "زيارة"
+  },
+  "input_error": {
+    "email": "الرجاء إدخال عنوان بريد إلكتروني صحيح",
+    "required": "هذه الخانة مطلوبه"
+  },
+  "list_empty": {
+    "description": "لا يمكننا العثور على أي نتيجة تطابق بحثك.",
+    "title": "لا توجد نتائج"
+  },
+  "loading_error": {
+    "category_error": "عذرا ، لم نجد نتائج في هذه الفئة",
+    "message_body": "حدث خطأ ما عند تحميل البيانات الخاصة بك. حاول مرة اخرى.",
+    "oops": "عفوًا...",
+    "try_again": "حاول مرة اخرى"
+  },
+  "location_label": {
+    "label": "{{building}}, أرضية {{floor}}, {{place}}"
+  },
+  "login": {
+    "company": "اسم شركتك",
+    "error": "عذرا ، اسم الشركة غير موجود. من فضلك ، تأكد من كتابة الاسم بشكل صحيح وحاول مرة أخرى.",
+    "log_in": "تسجيل الدخول",
+    "title": "مرحبًا بك في Appgrade"
+  },
+  "menu": {
+    "account": "إعدادت الحساب",
+    "allrequests": "كل القراءات",
+    "assetmanagement": "إدارة الأصول",
+    "assignedrequests": "الطلبات المعينة لي",
+    "community": "تواصل اجتماعي",
+    "filesmanagement": "إدارة الملفات",
+    "foodies": "عشاق الطعام",
+    "home": "دار",
+    "my_account": "إعدادات",
+    "myrequests": "طلباتي",
+    "parking": "موقف سيارات",
+    "reports": "لوحات المعلومات عبر الإنترنت",
+    "services": "خدمات",
+    "shuttle": "مواصلات",
+    "spacemanagement": "إدارة الحجز"
+  },
+  "mmm_categories": {
+    "clear_all": "مسح الكل",
+    "recent": "الأخيرة",
+    "subtitle": "جميع الفئات",
+    "title": "كيف يمكن أن نساعد؟"
+  },
+  "mmm_description": {
+    "attach_file": "أرفق ملف",
+    "digital_form": "أضف النموذج الرقمي",
+    "form": "شكل رقمي",
+    "location_add": "ضف",
+    "location_change": "غيير",
+    "reported_by": "تم الإرسال بواسطة",
+    "request_description": "قدم تفاصيل الطلب وأكمل النموذج الرقمي، إذا كان متاحاً.",
+    "service_location": "موقع الخدمة",
+    "submit": "إرسال",
+    "submitting": "تقديم…",
+    "title": "أرسل طلبك"
+  },
+  "mmm_request_details": {
+    "assigned": "مخصص ل",
+    "attachments": "المرفقات",
+    "by": "من قبل {{name}}",
+    "contact": "اتصل",
+    "digital": "شكل رقمي",
+    "due_date": "تاريخ الاستحقاق",
+    "fill": "اكمل",
+    "handling_date": "تاريخ المناولة",
+    "location": "موقع",
+    "messages": "رسائل",
+    "resolution": "تفاصيل القرار",
+    "resolution_time": "وقت الحل",
+    "resolved_by": "تم الحل بواسطة",
+    "start_chat": "ابدأ محادثة",
+    "submitted": "تم الإرسال بتاريخ  {{date}}",
+    "unassigned": "غيرمعتمد",
+    "update_status": "تحديث الحالة"
+  },
+  "mmm_requests": {
+    "add": "اضف طلب جديد",
+    "AllRequestsMain_title": "كل القراءات",
+    "assign": "عيين",
+    "assigned": "مخصص لـ {{name}}",
+    "AssignedRequestsMain_title": "الطلبات المعينة لي",
+    "by": "من قبل {{name}}",
+    "due_date": "تاريخ الاستحقاق {{date}}",
+    "handling_date": "تاريخ المناولة {{date}}",
+    "more": "اكثر",
+    "MyRequestsMain_title": "طلباتي",
+    "on": "عند",
+    "refresh": "ينعش",
+    "search_category": "فئه ",
+    "search_category_placeholder": "فئة البحث أو الفئة الفرعية",
+    "search_description": "وصف",
+    "search_description_placeholder": "البحث حسب الوصف",
+    "search_location": "مكان",
+    "search_location_placeholder": "البحث حسب الغرفة او الطابق",
+    "search_reported_by": "فتحه",
+    "search_reported_by_placeholder": "البحث حسب ‏الاسم",
+    "search_request_number": "الحالة رقم",
+    "search_request_number_placeholder": "رقم حالة البحث",
+    "start_work": "ابدأ العمل",
+    "stop_work": "توقف عن العمل",
+    "submitted": "ارسل من قبل {{name}}",
+    "submitted_by": "مقدم من {{name}}",
+    "submitted_on": "تم الإرسال في {{date}}",
+    "unassigned": "غيرمعتمد",
+    "update_status": "تحديث الحالة"
+  },
+  "mmm_subcategories": {
+    "subtitle": "اختيار الفئة الفرعية"
+  },
+  "mobile_app_link": {
+    "call_to_action_text": "ليس لديك التطبيق؟",
+    "download_appstore": "تحميل من متجر التطبيقات",
+    "download_googleplay": "تحميل من Google Play",
+    "open_button_text": "افتح تطبيق Appgrade",
+    "popup_title": "تطبيق Appgrade"
+  },
+  "module_filter": {
+    "all": "جميع الوحدات",
+    "mmm": "خدمات",
+    "title": "الوحدات",
+    "wpm": "لها  المهمة"
+  },
+  "my_documents": {
+    "all_files": "جميع الملفات",
+    "new_folder": "مجلد جديد",
+    "no_files_title": "هذا المجلد فارغ",
+    "no_folders_subtitle": "ضف مجلدات جديدة وقم بتحميل المستندات. ستظهر جميع ملفاتك",
+    "no_folders_title": "حافظ على تنظيم مستنداتك في مكان واحد",
+    "title": "مستنداتي",
+    "upload_file": "تحميل ملف"
+  },
+  "my_documents_delete_modal": {
+    "cancel": "الغاء",
+    "delete": "حذف",
+    "title": "هل أنت متأكد أنك تريد حذف هذا العنصر؟"
+  },
+  "my_documents_info_modal": {
+    "created_by": "ارسل من قبل",
+    "modified": "تم التعديل"
+  },
+  "my_documents_rename_modal": {
+    "cancel": "الغاء",
+    "name": "اسم",
+    "save": "يحفظ",
+    "title": "إعادة تسمية المجلد"
+  },
+  "my_documents_upload_modal": {
+    "cancel": "الغاء",
+    "drag": "سحب وإفلات",
+    "or": "أو",
+    "select_file": "اختيار الملف",
+    "title": "تحميل ملفات",
+    "upload": "تحميل"
+  },
+  "new_order": {
+    "add_another": "أضف آخر",
+    "add_comment": "أضف تعليق",
+    "add_to_favorite": "أضف إلى المفضلة",
+    "add_to_order": "اضف للأمر",
+    "comment_suggestions": "اقتراحات للرد",
+    "continue": "اكمل",
+    "order_items": "عناصر الطلب",
+    "place_order": "احجز",
+    "save": "احفظ التغييرات",
+    "save_as_default": "حفظ كمطعم الافتراضي الخاص بي",
+    "save_preferences_later_time": "يمكنك حفظ هذا الطلب مع الاحتفاظ بنفس التفضيلات لاستخدامه لاحقًا.",
+    "search": "بحث",
+    "select_site": "اختر المكان",
+    "what_get": "ماذا يمكننا أن نقدم لك؟",
+    "your_order": "طلبك"
+  },
+  "new_order_item": {
+    "edit": "حرر",
+    "remove": "أبعد"
+  },
+  "order_again": {
+    "cancel": "الغاء",
+    "order_again": "طلب متكرر",
+    "sub_title": "يرجى ملاحظة أنه لا يمكنك تعديل الطلب",
+    "title": "هل تريد عمل طلب متكرر؟"
+  },
+  "order_details": {
+    "assigned": "مخصص ل",
+    "by": "من قبل {{name}}",
+    "contact": "اتصل",
+    "location": "موقع",
+    "unassigned": "غيرمعتمد"
+  },
+  "order_status": {
+    "completed": " إكتمل",
+    "inprogress": "قيد التنفيذ",
+    "open": "طلب مفتوح",
+    "overdue": " متأخر",
+    "resolved": "حل"
+  },
+  "orders": {
+    "add": "طلب جديد",
+    "AllOrdersMain_title": "جميع الطلبات",
+    "assigned": "مخصص لـ {{name}}",
+    "AssignedOrdersMain_title": "الطلبات المعينة لي",
+    "by": "من قبل {{name}}",
+    "favorites": "المفضلة",
+    "items": "عناصر الطلب",
+    "MyOrdersMain_title": "طلبي",
+    "order_again": "اطلب مرة أخرى",
+    "submitted": "تم الطلب في {{date}}",
+    "unassigned": "غيرمعتمد"
+  },
+  "personal_information": {
+    "email": "البريد الإلكتروني",
+    "first_name": "الاسم الاول",
+    "last_name": "الكنية",
+    "save": "يحفظ",
+    "title": "معلومات شخصية"
+  },
+  "phone_input": {
+    "invalid_number": "رقم غير صالح",
+    "phone_number": "رقم الهاتف"
+  },
+  "popular": {
+    "community": "تواصل اجتماعي",
+    "foodies": "عشاق الطعام",
+    "parking": "موقف سيارات",
+    "shuttle": "مواصلات"
+  },
+  "privacy_conditions": {
+    "agree": "وافق وتابع",
+    "content": "للوصول إلى خدمتنا والاستمرار في استخدامها ، يرجى الموافقة على",
+    "log_out": "خروج",
+    "terms": "شروط الاستخدام",
+    "title": "قبل أن نبدأ",
+    "url": "https://appgrade.com/terms-of-use/"
+  },
+  "remove_booking": {
+    "cancel": "الغاء",
+    "keep_booking": "حافظ على حجزي",
+    "sub_title": "حافظ على حجزي",
+    "title": "يرجى تأكيد رغبتك في إلغاء حجزك. لا يمكن التراجع عن هذا الإجراء."
+  },
+  "remove_favorite_order": {
+    "cancel": "الغاء",
+    "remove": "ازالة",
+    "sub_title": "هل أنت متأكد من رغبتك في إزالة هذا الطلب من قائمة المفضلة الخاصة بك؟",
+    "title": "إزالة طلب مفضل"
+  },
+  "replace_favorite_order": {
+    "order_and_replace": "اطلب واستبدل",
+    "order_without_changes": "اطلب بدون تغييرات",
+    "sub_title": "لقد قمت بالفعل بتحديد طلب مفضل. سيؤدي حفظ هذا الطلب كمفضل إلى حذف الطلب الحالي.",
+    "title": "تحذير"
+  },
+  "reported_by_filter": {
+    "apply": "يحفظ",
+    "search": "ابحث عن مستخدمين",
+    "title": "تم الإرسال بواسطة"
+  },
+  "reports": {
+    "export": "تصدير",
+    "export_pdf": "PDF",
+    "export_powerpoint": "PPT",
+    "print": "طباعة الصفحة",
+    "select_report": "حدد التقرير"
+  },
+  "request_status": {
+    "hold": "في الانتظار",
+    "inprogress": "قيد التنفيذ",
+    "open": "فتح الطلب",
+    "resolved": "حل في"
+  },
+  "request_tooltip": {
+    "attachments": "عرض المرفقات",
+    "download": "تنزيل النموذج الرقمي",
+    "new_message": "رسالة جديدة"
+  },
+  "search_bar": {
+    "search": "بحث",
+    "search_asset": "البحث عن العقود",
+    "search_bookings": "البحث عن الحجوزات",
+    "search_files": "البحث في الملفات",
+    "search_requests": "قراءة البحث"
+  },
+  "shuttle": {
+    "my_rides": "رحلاتي",
+    "new_ride": "رحلة جديدة",
+    "powered_by": "مدعوم من Appgrade ",
+    "schedule_ride": "جدول الرحلة",
+    "title": "إلى أين يمكننا أن نأخذك؟"
+  },
+  "sign_out": {
+    "cancel": "الغاء",
+    "proceed": "اكمل",
+    "text": "هل أنت متأكد أنك تريد الخروج؟",
+    "title": "خروج"
+  },
+  "sites_filter": {
+    "apply": "طبق",
+    "clear": "هذا المجلد فارغ",
+    "search": "مواقع البحث",
+    "select_all": "اختر الكل",
+    "selected": "تم تحديد {{number}}",
+    "title": "المواقع"
+  },
+  "space_choose_date": {
+    "continue": "استمر",
+    "from": "من",
+    "select_date": "اختر التاريخ",
+    "select_time": "اختر الوقت",
+    "to": "ل",
+    "when": "متى؟"
+  },
+  "space_management": {
+    "my_bookings": "حجوزاتي",
+    "new_booking": "حجز جديد",
+    "title": "إدارة الحجز"
+  },
+  "space_not_available": {
+    "content": "المساحة التي اخترتها غير متوفرة حاليا ، يرجى اختيار مساحة أخرى.",
+    "ok": "موافق",
+    "title": "المساحة غير متوفرة"
+  },
+  "spaces_summary": {
+    "booking_by": "الحجز عن طريق",
+    "booking_time": "وقت الحجز",
+    "comments": "التعليقات",
+    "location": "مكان",
+    "submit": "إرسال",
+    "submitting": "تقديم...",
+    "title": "تأكيد الحجز الخاص بك"
+  },
+  "status": {
+    "hold": "في الانتظار",
+    "inprogress": "قيد التنفيذ",
+    "open": "فتح الطلب",
+    "resolved": "حل في {{resolved_date}}"
+  },
+  "status_filter": {
+    "active": "نشيط",
+    "all": "كل الطلبات",
+    "inprogress": "قيد التنفيذ",
+    "onhold": "في الانتظار",
+    "open": "مفتوح",
+    "resolved": "حل",
+    "title": "حالة"
+  },
+  "submit_error": {
+    "message_body": "حدث خطأ ما عند إرسال البيانات الخاصة بك. حاول مرة اخرى.",
+    "oops": "عفوًا...",
+    "try_again": "حاول مرة اخرى"
+  },
+  "suppliers_filter": {
+    "apply": "طبق",
+    "clear": "تحميل",
+    "search": "ابحث عن الموردين",
+    "select_all": "اختر الكل",
+    "selected": "تم تحديد {{number}}",
+    "title": "الموردين"
+  },
+  "tab_navigation": {
+    "account": "حساب",
+    "home": "بيت",
+    "modules": "الوحدات النمطية",
+    "notifications": "إشعارات"
+  },
+  "thank_you": {
+    "AssetManagement": "تم تقديم طلبك ونحن بصدده!",
+    "foodie_message": "تم تقديم طلبك وهو قيد المعالجة! سنعلمك عندما يجهز",
+    "Foodies": "تم تقديم طلبك ونحن بصدده! سنقوم بإعلامك بمجرد أن يصبح جاهزا.",
+    "Home": "تم تقديم طلبك ونحن بصدده!",
+    "message": "تم تقديم طلبك ونحن بصدده!",
+    "Requests": "تم تقديم طلبك. هل ترغب في فتح طلب جديد؟",
+    "SpaceManagement": "تم تقديم حجزك. تحقق من صندوق البريد الخاص بك لتأكيد الحجز.",
+    "thank_you": "شكرا لك {{name}}!"
+  },
+  "toast": {
+    "success": "تم حفظ التغييرات التي أجريتها بنجاح"
+  },
+  "treatment_status": {
+    "completed": "اكمل",
+    "current_month": " الشهر الحالي",
+    "inprogress": "قيد التنفيذ",
+    "on_hold": "في الانتظار",
+    "open": "مفتوح",
+    "overdue": "متأخر",
+    "planned": "مخطط",
+    "resolved": "حل في"
+  },
+  "update_status": {
+    "attach_file": "أرفق ملف",
+    "attachment_mandatory_error": "يجب عليك تحميل ملف قبل حل الحالة",
+    "hold": "في الانتظار",
+    "inprogress": "قيد التنفيذ",
+    "leave_comment": "اكتب سببًا",
+    "on_hold_error": "لا يمكن تعليق الطلب",
+    "open": "مفتوح",
+    "other": "آخر",
+    "overdue": "متأخر",
+    "planned": "مخطط",
+    "resolved": "حل",
+    "save": "يحفظ",
+    "submit": "إرسال",
+    "submitting": " تقديم...",
+    "title": "تحديث الحالة"
+  },
+  "user_roles": {
+    "admin": "0",
+    "end_user": "المستخدم النهائي",
+    "site_manager": "مدير الموقع",
+    "supplier": "المورد"
+  },
+  "wizard": {
+    "step": "الخطوة {{step}} من {{totalSteps}}"
+  },
+  "work_plan": {
+    "agreements_button": "سنوي",
+    "description": "وصف",
+    "files": "إرفاق ملفات",
+    "form": "أضف النموذج الرقمي",
+    "left_label": "سنوي",
+    "new_contract": "مهمة جديدة",
+    "pdf": " احفظ كملف PDF",
+    "print": " طباعة",
+    "right_label": "أسبوعي",
+    "search_category": "فئه ",
+    "search_category_placeholder": "فئة البحث أو الفئة الفرعية",
+    "search_description": "وصف",
+    "search_description_placeholder": "البحث حسب الوصف",
+    "search_location": "مكان",
+    "search_location_placeholder": "البحث حسب الغرفة او الطابق",
+    "search_po": "رقم سري",
+    "search_po_placeholder": "البحث عن الرقم التسلسلي",
+    "search_reported_by": "فتحه",
+    "search_reported_by_placeholder": "البحث حسب ‏الاسم",
+    "search_request_number": "الحالة رقم",
+    "search_request_number_placeholder": "رقم حالة البحث",
+    "search_supplier": "المورد",
+    "search_supplier_placeholder": "البحث عن طريق المورد",
+    "search_vendor": "بائع",
+    "search_vendor_placeholder": "البحث عن طريق البائع",
+    "service_agreement": "اتفاقية خدمات",
+    "service_agreement_label": "الخطة السنوية",
+    "sites": "كل المواقع",
+    "status_drawer_title": "تحديث الحالة",
+    "task_label": "خطة أسبوعية",
+    "tasks_button": "أسبوعي",
+    "title": "خطة العمل"
+  },
+  "wpm_request": {
+    "contract_range": "مدة العقد",
+    "handling_date": "تاريخ المناولة"
+  }
+}

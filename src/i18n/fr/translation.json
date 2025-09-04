@@ -1,0 +1,812 @@
+{
+  "account": {
+    "account_settings": "Paramètres du compte",
+    "all_requests": "Toutes les demandes",
+    "assigned_requests": "Requêtes affectées",
+    "developers": "Développeurs",
+    "general": "Général",
+    "hi": "Salut",
+    "how_to_use_guide": "guide 'comment utiliser'",
+    "language": "Langue",
+    "my_location": "ma position",
+    "my_parking": "Mon stationnement",
+    "my_requests": "mes demandes",
+    "notifications": "Avis",
+    "personal_information": "Informations personnelles",
+    "report_an_issue": "Signaler un problème",
+    "share_your_feedback": "Partagez vos commentaires",
+    "sign_out": "Déconnecter",
+    "support": "",
+    "version": "version {{version}}"
+  },
+  "account_language": {
+    "save": "Sauver",
+    "title": "Langue"
+  },
+  "account_location": {
+    "building": "Bâtiment",
+    "change_floor": "Changer d'étage",
+    "floor": "Étage",
+    "place": "Endroit",
+    "save": "Sauver",
+    "save_as_default": "Enregistrer comme emplacement par défaut",
+    "subtitle": "Définir votre emplacement par défaut",
+    "title": "ma position"
+  },
+  "account_notifications": {
+    "email": "e-mail",
+    "foodies": "les gourmands",
+    "mmm": "Prestations de service",
+    "parking": "parking",
+    "push": "Notifications push",
+    "save": "Sauver",
+    "shuttle": "Transport",
+    "sms": "SMS",
+    "subtitle": "Recevez des notifications et des mises à jour d'applications",
+    "title": "Avis"
+  },
+  "account_parking": {
+    "agree_privacy_policy": "J'autorise Appgrade à enregistrer mes informations uniquement à des fins légales et internes.",
+    "enter_plate_number": "Entrez le numéro de plaque d'immatriculation",
+    "find_my_car": "Trouver ma voiture",
+    "floor": "Étage",
+    "got_it": "Compris",
+    "license_plate_number_1": "#1 Numéro de plaque d'immatriculation",
+    "license_plate_number_2": "#2 Numéro de plaque d'immatriculation",
+    "parking_info": "Informations sur votre stationnement",
+    "parking_lot": "Terrain de stationnement",
+    "parking_status": "Statut de stationnement",
+    "save": "Sauver",
+    "send_updates": "Envoyez-moi des mises à jour sur l'occupation du parking",
+    "slot_id": "emplacement",
+    "subtitle": "Faites-nous savoir quels véhicules vous conduisez",
+    "title": "Mon stationnement",
+    "we_value_privacy": "nous apprécions votre vie privée. Nous utilisons vos informations uniquement à des fins internes et légales."
+  },
+  "add_treatments_range_options": {
+    "annual": "Annuel",
+    "bi_annual": "Bi-annuel",
+    "bi_monthly": "Bimensuel",
+    "daily": "du quotidien",
+    "monthly": "mensuel",
+    "multi_year": "Triennal",
+    "one_time": "Une fois",
+    "quarterly": "Trimestriel",
+    "semi_annual": "Semestrielle",
+    "twice_a_month": "Deux fois par mois",
+    "weekly": "Hebdomadaire"
+  },
+  "advanced_search_bar": {
+    "change": "change",
+    "search": "Rechercher"
+  },
+  "asset_management_categories": {
+    "clear_all": "Tout effacer",
+    "recent": "Récent",
+    "subtitle": "toutes les catégories",
+    "title": "Sélectionnez une catégorie"
+  },
+  "asset_management_description": {
+    "add": "Ajouter",
+    "additional_1": "Texte supplémentaire 1",
+    "additional_2": "Texte supplémentaire 2",
+    "additional_3": "Texte supplémentaire 3",
+    "additional_comments": "Veuillez saisir une description",
+    "change": "monnaie",
+    "contact_types": "Type de récurrence",
+    "continue": "continuez",
+    "days_reminder": "jours de rappel",
+    "days_termination": "jours de rappel de résiliation",
+    "description": "la description",
+    "p_o_number": "Numéro de série",
+    "proactive_task": "Quotidien et hebdomadaire",
+    "responsible_contact": "Conact responsible ",
+    "service_agreement": "Mensuel ou plus",
+    "services_provider": "fournisseur interner",
+    "site": "Site",
+    "title": "details",
+    "vendor": "fournisseur externe"
+  },
+  "asset_management_treatments": {
+    "assign": "Attribuer ",
+    "assigned_to": "Assigné à",
+    "cancel": "annulation",
+    "closed_by": "Fermé",
+    "create": "Confirmer",
+    "description": "La description",
+    "duration": "Durée du traitement",
+    "error_end_date_too_far": "le date de fin ne peu pas etre postérieure de plus de 10 ans à la date de début",
+    "error_start_date_after_end_date": "Le date de début ne peu pas etre postérieure du date de fin",
+    "range": "Taux de récurrence",
+    "read_more": "En savoir plus",
+    "select_date": "Sélectionner une date",
+    "title": "Ajouter des traitements",
+    "to": "a"
+  },
+  "assign_picker": {
+    "assign": "Attribuer ",
+    "assigning": "Affecter ",
+    "title": "Attribuer un fournisseur de services"
+  },
+  "attachments": {
+    "add": "joindre un fichier",
+    "add_another": "Ajouter un autre",
+    "add_image": "Ajouter un image",
+    "attach": "Attacher",
+    "camera": "Appareil photo",
+    "cancel": "annuler",
+    "document": "Document",
+    "gallery": "Galerie",
+    "submit": "Nous faire parvenir",
+    "title": "Joindre des fichiers",
+    "warning_file_too_big": "Désolé, ce fichier est trop volumineux. Max. la taille du fichier est de {{maxFileSizeMb}} Mo",
+    "warning_invalid_file_type": "Oups, ce fichier n'est pas pris en charge",
+    "warning_too_many_files": "Désolé, le nombre de fichiers est trop grand. Max. le nombre de fichiers est {{maxFileSizeMb}}."
+  },
+  "attachments_drawer": {
+    "added_by": "Ajouté par",
+    "group_title": "Ajouté par {{uploader}}, {{timestamp}}",
+    "title": "Pièces jointes"
+  },
+  "authentication_error": {
+    "call_to_action_text": "Voud avez été déconnecté du serveur. Appuyer pour se reconnecter",
+    "reauthenticate_button_text": "reconnecter",
+    "title": "Déconnecter"
+  },
+  "booking_status": {
+    "complete": "Complet",
+    "upcoming": "A venir"
+  },
+  "bookings": {
+    "booked_by": "Réservé par {{name}}",
+    "cancel_booking": "annuler",
+    "MyBookingsMain_title": "Mes commandes",
+    "new_booking": "nouvelle commande",
+    "update_booking": "Mise à jour"
+  },
+  "building_picker": {
+    "save": "Sauver",
+    "title": "l'emplacement"
+  },
+  "chat": {
+    "conversation_read_only": "cette conversation est en lecture seule",
+    "write": "Écrire/écrire un message"
+  },
+  "choose_space": {
+    "continue": "continuer",
+    "title": "Choisissez la catégorie pertinente"
+  },
+  "choose_space_list": {
+    "comments": "commentaires",
+    "continue": "continuer",
+    "facilities": "installations",
+    "large": "grand",
+    "location": "Emplacement",
+    "medium": "moyen",
+    "participants": "jusqu'à",
+    "size": "Taille",
+    "small": "Petit",
+    "title": "Choisir"
+  },
+  "cmp_community": {
+    "home": "Page d'accueil",
+    "title": "Découvrez les expériences autour de vous"
+  },
+  "cmp_restaurant_profile": {
+    "accessible": "Accessible",
+    "address": "Adresse",
+    "away": "mètre",
+    "contact": "prendre contact"
+  },
+  "confirmation_popup": {
+    "allow_contact": "autoriser le prestataire à me contacter si nécessaire",
+    "enter_name": "Entrez le prénom et le nom",
+    "first_name": "Prénom",
+    "last_name": "Nom de famille",
+    "message_body_end": ", personnel ou professionnel.",
+    "message_body_start": "en soumettant, vous confirmez que le contenu que vous partagez ne contient aucun",
+    "sensitive_data": "données sensibles",
+    "submit": "soumettre",
+    "title": "avant de continuer"
+  },
+  "contract_details": {
+    "additional_1": "Texte supplémentaire 1",
+    "additional_2": "Texte supplémentaire 2",
+    "additional_3": "Texte supplémentaire 3",
+    "attach": "Pièce jointe",
+    "days": "jours",
+    "description": "déscription",
+    "details": "detailles",
+    "digital_form": "Formulaire numérique",
+    "duration": "Durée de l'accord",
+    "internale_service": "prestataire de services interne",
+    "po_number": "Numéro de série",
+    "range": "Taux de récurrence",
+    "renewal": "Gamme",
+    "responsible_contact": "Conact responsible ",
+    "site": "Site",
+    "termination": "rappel de résiliation",
+    "treatments": "traitements ({{number}})",
+    "type": "Type de récurrence",
+    "vendor": "fournisseur"
+  },
+  "contract_details_menu": {
+    "duplicate": "dupliquer",
+    "edit": "modifier",
+    "print": "imprimer",
+    "remove": "retirer",
+    "share": "partager"
+  },
+  "contract_range": {
+    "annual": "annuel",
+    "bi_annual": "Bi-annuel",
+    "bi_monthly": "bimensuel",
+    "daily": "quotidien",
+    "monthly": "mensuel",
+    "multi_year": "Pluriannuel",
+    "one_time": "Une fois",
+    "quarterly": "Trimestriel",
+    "semi_annual": "semi-annuel",
+    "twice_a_month": "Deux fois par mois",
+    "weekly": "Hebdomadaire"
+  },
+  "date_filter": {
+    "apply": "Ajouter",
+    "clear": "Dégager",
+    "title": "Date"
+  },
+  "developers": {
+    "select_user": "sélectionner l'utilisateur",
+    "title": "Développeurs",
+    "user": "{{firstName}} {{lastName}}",
+    "user_role": "Rôle d'utilisateur"
+  },
+  "digital_form": {
+    "attach_file": "joindre un fichier",
+    "attachments": "Pièces jointes",
+    "attachments_title": "Voulez-vous ajouter des images à votre demande?",
+    "check": "Oui, j'ai envoyé le formulaire numérique",
+    "continue": "A continué",
+    "done": "C'est tout pour le moment",
+    "message": "Avant de continuer, assurez-vous d'avoir envoyé le formulaire numérique susmentionné. Sélectionnez le bouton \"envoyer\" au bas du formulaire et attendez de recevoir un message de remerciement.",
+    "new_request": "Demander un nouveau service",
+    "skip": "Sauter",
+    "submitted_request": "Votre demande a été envoyée avec succès. Souhaitez-vous ouvrir une nouvelle demande ?",
+    "thank_you_title": "Merci",
+    "title": "Formulaire numérique",
+    "upload_warning": "Vous pouvez télécharger max. {{maxAttachments}} images. Max. la taille du fichier est de {{maxFileSizeMb}} Mo."
+  },
+  "documents_filters_bar": {
+    "created_by": "Soumis par",
+    "modified": "Modifié",
+    "name": "Nom"
+  },
+  "documents_table_item": {
+    "created_by": "Soumis par",
+    "delete": "Supprimer",
+    "download": "Télécharger",
+    "info": "Informations",
+    "modified": "Modifié",
+    "rename": "Rebaptiser"
+  },
+  "drawer": {
+    "floor": "étage",
+    "hi": "Salut"
+  },
+  "dropdown": {
+    "select": "Choisir"
+  },
+  "favorite_order_details": {
+    "edit": "Éditer",
+    "my_favorite": "Ma commande préférée",
+    "order_items": "Items commandés",
+    "remove": "suppression"
+  },
+  "favorite_orders": {
+    "edit_order": "Éditer",
+    "items": "Articles",
+    "order_again": "Commander à nouveau",
+    "remove_order": "suppression",
+    "title": "Commandes préférées"
+  },
+  "files_management": {
+    "my_documents": "Mes documents",
+    "my_inventory": "Mon inventaire",
+    "title": "Gestion des fichiers"
+  },
+  "filter_tabs": {
+    "all": "Tous",
+    "hold": "en attente",
+    "inprogress": "En cours",
+    "open": "Ouvrir",
+    "resolved": "Résolu"
+  },
+  "filters": {
+    "all_sites": "Tous les sites",
+    "all_suppliers": "Tous les fournisseurs",
+    "clear": "Tout effacer",
+    "date": "Date",
+    "note": "Ces filtres seront appliqués automatiquement la prochaine fois",
+    "save": "Enregistrer les filtres",
+    "select": "sélectionner",
+    "selected": "{{number}} sélectionné",
+    "show": "Affichage des résultats",
+    "sites": "{{sitesCount}} emplacements",
+    "suppliers": "{{selectedSuppliers}} fournisseurs",
+    "title": "Filtres"
+  },
+  "foodies": {
+    "all_orders": "Tous les ordres",
+    "assigned_orders": "Commandes attribuées",
+    "my_orders": "Mes commandes",
+    "new_order": "nouvelle commande",
+    "title": "Que pouvons-nous faire pour vous?"
+  },
+  "home_screen": {
+    "add": "Ajouter une demande",
+    "all_requests_title": "Toutes les demandes",
+    "assigned_requests_title": "Requêtes affectées",
+    "favorite": "Favori",
+    "my_requests": "mes demandes",
+    "popular": "Populaire",
+    "powered_by": "Propulsé par Appgrade ",
+    "request_new_service": "Demander un nouveau service",
+    "title": "Comment pouvons nous aider?"
+  },
+  "info-page-templates": {
+    "visit": "visite"
+  },
+  "input_error": {
+    "email": "S'il vous plaît, mettez une adresse email valide",
+    "required": "Ce champ est obligatoire"
+  },
+  "list_empty": {
+    "description": "Nous n'avons pas trouvé de résultat correspondant à la recherche.",
+    "title": "Aucun resultat n'a été trouvé"
+  },
+  "loading_error": {
+    "category_error": "Désolé, nous n'avons pas trouvé de résultats dans cette catégorie",
+    "message_body": "Une erreur s'est produite lors du chargement de vos données. Veuillez réessayer.",
+    "oops": "Oops...",
+    "try_again": "Essayer à nouveau"
+  },
+  "location_label": {
+    "label": "{{building}}, sol {{floor}}, {{place}}"
+  },
+  "login": {
+    "company": "Le nom de votre société",
+    "error": "Désolé, le nom de l'entreprise est introuvable. Assurez-vous d'avoir correctement orthographié le nom et réessayez.",
+    "log_in": "Connecter",
+    "title": "Bienvenue sur Appgrade"
+  },
+  "menu": {
+    "account": "Paramètres du compte",
+    "allrequests": "Toutes les demandes",
+    "assetmanagement": "La gestion d'actifs",
+    "assignedrequests": "Requêtes affectées",
+    "community": "Communauté",
+    "filesmanagement": "Gestion des fichiers",
+    "foodies": "Les gourmands",
+    "home": "maison",
+    "my_account": "paramètres",
+    "myrequests": "mes demandes",
+    "parking": "parking",
+    "reports": "tableaux de bord en ligne",
+    "services": "Prestations de service",
+    "shuttle": "Transport",
+    "spacemanagement": "Gestion des réservations"
+  },
+  "mmm_categories": {
+    "clear_all": "Tout effacer",
+    "recent": "Récent",
+    "subtitle": "toutes les catégories",
+    "title": "Comment pouvons nous aider?"
+  },
+  "mmm_description": {
+    "attach_file": "joindre un fichier",
+    "digital_form": "Ajouter un formulaire digital",
+    "form": "Formulaire numérique",
+    "location_add": "Ajouter",
+    "location_change": "Changement",
+    "reported_by": "Signalé par",
+    "request_description": "Fournissez les détails de la demande et complétez le formulaire numérique, si disponible.",
+    "service_location": "Lieu de service",
+    "submit": "soumettre",
+    "submitting": "Soumet",
+    "title": "Soumettez votre demande"
+  },
+  "mmm_request_details": {
+    "assigned": "Assigné à",
+    "attachments": "Pièces jointes",
+    "by": "{{name}}",
+    "contact": "prendre contact",
+    "digital": "Formulaire numérique",
+    "due_date": "Date d'échéance",
+    "fill": "Remplir",
+    "handling_date": "Date de traitement",
+    "location": "Emplacement",
+    "messages": "messages",
+    "resolution": "Détails de la résolution",
+    "resolution_time": "Temps de résolution",
+    "resolved_by": "Résolu par",
+    "start_chat": "Démarrer une conversation",
+    "submitted": "Soumis le {{date}}",
+    "unassigned": "Non attribué",
+    "update_status": "État de mise à jour"
+  },
+  "mmm_requests": {
+    "add": "Ajouter une nouvelle demande",
+    "AllRequestsMain_title": "Toutes les demandes",
+    "assign": "Attribuer ",
+    "assigned": "Attribué à {{name}}",
+    "AssignedRequestsMain_title": "Requêtes affectées",
+    "by": "{{name}}",
+    "due_date": "Date d'échéance {{date}}",
+    "handling_date": "Date de traitement {{date}}",
+    "more": "plus",
+    "MyRequestsMain_title": "mes demandes",
+    "on": "en",
+    "refresh": "Rafraîchir",
+    "search_category": "catégorie",
+    "search_category_placeholder": "catégorie de recherche",
+    "search_description": "Description",
+    "search_description_placeholder": "rechercher la description",
+    "search_location": "Emplacement",
+    "search_location_placeholder": "Rechercher la salle ou l'étage",
+    "search_reported_by": "ouvert par",
+    "search_reported_by_placeholder": "rechercher le nom",
+    "search_request_number": "cas no.",
+    "search_request_number_placeholder": "Rechercher le numero du cas",
+    "start_work": "Commencer à travailler",
+    "stop_work": "Arrêter le travail",
+    "submitted": "Soumis par {{name}}",
+    "submitted_by": "soumis {{name}}",
+    "submitted_on": "soumis le  {{date}}",
+    "unassigned": "Non attribué",
+    "update_status": "État de mise à jour"
+  },
+  "mmm_subcategories": {
+    "subtitle": "Séleccioner une sous-catégorie"
+  },
+  "mobile_app_link": {
+    "call_to_action_text": "Vous n'avey pas l'application?",
+    "download_appstore": "télécharger depuis l'AppStore",
+    "download_googleplay": "télécharger depuis le Google Play",
+    "open_button_text": "Ouvrez l'application de Appgrade",
+    "popup_title": "application de Appgrade"
+  },
+  "module_filter": {
+    "all": "Tous les modules",
+    "mmm": "Prestations de service",
+    "title": "modules",
+    "wpm": "Tâche planifiée"
+  },
+  "my_documents": {
+    "all_files": "Tous les fichiers",
+    "new_folder": "Nouveau dossier",
+    "no_files_title": "Ce dossier est vide",
+    "no_folders_subtitle": "Ajoutez de nouveaux dossiers et téléchargez des documents. Tous vos fichiers s'afficheront ici.",
+    "no_folders_title": "Gardez vos documents organisés en un seul endroit",
+    "title": "Mes documents",
+    "upload_file": "Télécharger le fichier"
+  },
+  "my_documents_delete_modal": {
+    "cancel": "annulation",
+    "delete": "Supprimer",
+    "title": "Etes-vous sûr de vouloir supprimer cet élément ?"
+  },
+  "my_documents_info_modal": {
+    "created_by": "Soumis par",
+    "modified": "Modifié"
+  },
+  "my_documents_rename_modal": {
+    "cancel": "annulation",
+    "name": "Nom",
+    "save": "Sauver",
+    "title": "Renommer le dossier"
+  },
+  "my_documents_upload_modal": {
+    "cancel": "annulation",
+    "drag": "Glisser-déposer",
+    "or": "ou",
+    "select_file": "Sélectionner le fichier",
+    "title": "Télécharger des fichiers",
+    "upload": "Télécharger"
+  },
+  "new_order": {
+    "add_another": "Ajouter un autre",
+    "add_comment": "Ajouter un commentaire",
+    "add_to_favorite": "Ajouter aux Favoris",
+    "add_to_order": "Ajouter à la commande",
+    "comment_suggestions": "Suggestions de commentaire",
+    "continue": "A continué",
+    "order_items": "Items commandés",
+    "place_order": "Faire une réservation",
+    "save": "Sauvegarder les modifications",
+    "save_as_default": "Enregistrer comme mon restaurant par défaut",
+    "save_preferences_later_time": "Vous pouvez enregistrer cette commande avec les mêmes préférences ultérieurement.",
+    "search": "Rechercher",
+    "select_site": "sélectionner un lieu",
+    "what_get": "Que pouvons-nous vous apporter ?",
+    "your_order": "Votre commande"
+  },
+  "new_order_item": {
+    "edit": "Modifier",
+    "remove": "Retirer"
+  },
+  "order_again": {
+    "cancel": "annulation",
+    "order_again": "Commander à nouveau",
+    "sub_title": "Veuillez noter que vous ne pouvez pas modifier la commande",
+    "title": "Voulez-vous passer une commande récurrente?"
+  },
+  "order_details": {
+    "assigned": "Assigné à",
+    "by": "{{name}}",
+    "contact": "prendre contact",
+    "location": "Emplacement",
+    "unassigned": "Non attribué"
+  },
+  "order_status": {
+    "completed": "complété",
+    "inprogress": "En cours",
+    "open": "Commande ouverte",
+    "overdue": "en retart",
+    "resolved": "Résolu"
+  },
+  "orders": {
+    "add": "nouvelle commande",
+    "AllOrdersMain_title": "Tous les ordres",
+    "assigned": "Attribué à {{name}}",
+    "AssignedOrdersMain_title": "Commandes attribuées",
+    "by": "{{name}}",
+    "favorites": "favoris",
+    "items": "Items commandés",
+    "MyOrdersMain_title": "Mes commandes",
+    "order_again": "Commander à nouveau",
+    "submitted": "Commandé le {{date}}",
+    "unassigned": "Non attribué"
+  },
+  "personal_information": {
+    "email": "e-mail",
+    "first_name": "Prénom",
+    "last_name": "Nom de famille",
+    "save": "Sauver",
+    "title": "Informations personnelles"
+  },
+  "phone_input": {
+    "invalid_number": "Numéro invalide",
+    "phone_number": "Numéro de téléphone"
+  },
+  "popular": {
+    "community": "Communauté",
+    "foodies": "Les gourmands",
+    "parking": "parking",
+    "shuttle": "Transport"
+  },
+  "privacy_conditions": {
+    "agree": "D‘accord et continuer",
+    "content": "Pour accéder et continuer à utiliser notre service, veuillez accepter les..",
+    "log_out": "Déconnecter",
+    "terms": "Conditions d’utilisation",
+    "title": "avant de commencer",
+    "url": "https://appgrade.com/terms-of-use/"
+  },
+  "remove_booking": {
+    "cancel": "annulation",
+    "keep_booking": "garder ma réservation",
+    "sub_title": "garder ma réservation",
+    "title": "Veuillez confirmer que vous souhaitez annuler votre réservation. Cette action ne peut pas etre annulée."
+  },
+  "remove_favorite_order": {
+    "cancel": "annulation",
+    "remove": "suppression",
+    "sub_title": "Etes-vous sûr de vouloir supprimer cette commande de votre liste de favoris ?",
+    "title": "Supprimer une commande préférée"
+  },
+  "replace_favorite_order": {
+    "order_and_replace": "Commander et remplacer",
+    "order_without_changes": "Commandez sans modifications",
+    "sub_title": "Vous avez déjà sélectionné une commande préférée. L'enregistrement de cette commande en tant que favori supprimera la commande existante.",
+    "title": "Attention"
+  },
+  "reported_by_filter": {
+    "apply": "Sauver",
+    "search": "recherches des utilisateurs",
+    "title": "Signalé par"
+  },
+  "reports": {
+    "export": "exporter",
+    "export_pdf": "PDF",
+    "export_powerpoint": "PPT",
+    "print": "Imprimer la page",
+    "select_report": "sélectionner le rapport"
+  },
+  "request_status": {
+    "hold": "en attente",
+    "inprogress": "En cours",
+    "open": "Ouvrir la demande",
+    "resolved": "Résolu le"
+  },
+  "request_tooltip": {
+    "attachments": "Afficher les pièces jointes",
+    "download": "télécharger le formulaire numérique",
+    "new_message": "nouvelle message"
+  },
+  "search_bar": {
+    "search": "Rechercher",
+    "search_asset": "Rechercher des contacts",
+    "search_bookings": "Rechercher les commandes",
+    "search_files": "Rechercher des fichiers",
+    "search_requests": "Recherche de demandes"
+  },
+  "shuttle": {
+    "my_rides": "mes voyages",
+    "new_ride": "Nouvelle glisse",
+    "powered_by": "Propulsé par Appgrade ",
+    "schedule_ride": "Programmer un trajet",
+    "title": "Où peut-on vous emmener?"
+  },
+  "sign_out": {
+    "cancel": "annulation",
+    "proceed": "A continué",
+    "text": "Êtes-vous certain de vouloir vous déconnecter?",
+    "title": "Déconnecter"
+  },
+  "sites_filter": {
+    "apply": "Appliquer",
+    "clear": "Tout effacer",
+    "search": "Sites de recherche",
+    "select_all": "sélectionner tout",
+    "selected": "{{number}} sélectionné",
+    "title": "des sites"
+  },
+  "space_choose_date": {
+    "continue": "continuer",
+    "from": "de",
+    "select_date": "sélectionner un date",
+    "select_time": "sélectionner un temps",
+    "to": "pour",
+    "when": "Quand?"
+  },
+  "space_management": {
+    "my_bookings": "Mes commandes",
+    "new_booking": "nouvelle commande",
+    "title": "Gestion des réservations"
+  },
+  "space_not_available": {
+    "content": "votre espace sélectionné n'est actuellement pas disponible, veuillez réserver un autre espace",
+    "ok": "Ok",
+    "title": "L'espace n'est pas disponible"
+  },
+  "spaces_summary": {
+    "booking_by": "commander par",
+    "booking_time": "temps du commande",
+    "comments": "commentaires",
+    "location": "Emplacement",
+    "submit": "Soumettre",
+    "submitting": "soumission",
+    "title": "Confirmez votre réservation"
+  },
+  "status": {
+    "hold": "en attente",
+    "inprogress": "En cours",
+    "open": "Ouvrir la demande",
+    "resolved": "Résolu le {{resolved_date}}"
+  },
+  "status_filter": {
+    "active": "Actif",
+    "all": "Toutes les demandes",
+    "inprogress": "En cours",
+    "onhold": "en attente",
+    "open": "Ouvrir",
+    "resolved": "Résolu",
+    "title": "Statut"
+  },
+  "submit_error": {
+    "message_body": "Une erreur s'est produite lors de la soumission de vos données. Veuillez réessayer.",
+    "oops": "Oops...",
+    "try_again": "Essayer à nouveau"
+  },
+  "suppliers_filter": {
+    "apply": "Appliquer",
+    "clear": "Tout effacer",
+    "search": "Recherche de fournisseurs",
+    "select_all": "sélectionner tout",
+    "selected": "{{number}} sélectionné",
+    "title": "Fournisseurs"
+  },
+  "tab_navigation": {
+    "account": "Compte",
+    "home": "D'ACCUEIL",
+    "modules": "Modules",
+    "notifications": "Avis"
+  },
+  "thank_you": {
+    "AssetManagement": "votre commande a été passée et nous y travaillons!",
+    "foodie_message": "votre commande a été passée et nous y travaillons! Nous vous informerons dès qu'il sera prêt.",
+    "Foodies": "votre commande a été passée et nous y travaillons! Nous vous informerons dès qu'il sera prêt.",
+    "Home": "votre commande a été passée et nous y travaillons!",
+    "message": "Votre demande a été soumise et nous y travaillons !",
+    "Requests": "votre commande a été passée et nous y travaillons! Nous vous informerons dès qu'il sera prêt.",
+    "SpaceManagement": "votre commande a été passée et nous y travaillons!",
+    "thank_you": "Merci {{name}} !"
+  },
+  "toast": {
+    "success": "Les modifications que vous avez apportées ont été enregistrées avec succès"
+  },
+  "treatment_status": {
+    "completed": "sont finis",
+    "current_month": "mois en cours",
+    "inprogress": "En cours",
+    "on_hold": "en attente",
+    "open": "ouvert",
+    "overdue": "en retard",
+    "planned": "Prévu",
+    "resolved": "Résolu le"
+  },
+  "update_status": {
+    "attach_file": "joindre un fichier",
+    "attachment_mandatory_error": "Vous devez télécharger un fichier avant de résoudre le cas",
+    "hold": "en attente",
+    "inprogress": "En cours",
+    "leave_comment": "Écrivez une raison",
+    "on_hold_error": "La demande ne peut pas être mise en attente",
+    "open": "ouvrir",
+    "other": "autre",
+    "overdue": "en retart",
+    "planned": "prévu",
+    "resolved": "Résolu",
+    "save": "Sauver",
+    "submit": "soumettre",
+    "submitting": "Soumet",
+    "title": "État de mise à jour"
+  },
+  "user_roles": {
+    "admin": "0",
+    "end_user": "Utilisateur final",
+    "site_manager": "Gestionnaire de site",
+    "supplier": "Le fournisseur"
+  },
+  "wizard": {
+    "step": "Étape {{step}} sur {{totalSteps}}"
+  },
+  "work_plan": {
+    "agreements_button": "Annuel",
+    "description": "description",
+    "files": "joindre des fichiers",
+    "form": "Ajouter un formulaire numérique",
+    "left_label": "Annuel",
+    "new_contract": "Nouvelle tâche",
+    "pdf": "enregistrer au format pdf",
+    "print": "imprimer",
+    "right_label": "hebdomadaire",
+    "search_category": "catégorie",
+    "search_category_placeholder": "catégorie de recherche",
+    "search_description": "description",
+    "search_description_placeholder": "rechercher la description",
+    "search_location": "Emplacement",
+    "search_location_placeholder": "Rechercher la salle ou l'étage",
+    "search_po": "Numéro de série",
+    "search_po_placeholder": "Rechercher un numéro de série",
+    "search_reported_by": "ouvert par",
+    "search_reported_by_placeholder": "rechercher le nom",
+    "search_request_number": "cas no.",
+    "search_request_number_placeholder": "Rechercher le numero du cas",
+    "search_supplier": "Le fournisseur",
+    "search_supplier_placeholder": "Recherche par fournisseur",
+    "search_vendor": "fournisseur",
+    "search_vendor_placeholder": "Recherche par fournisseur",
+    "service_agreement": "contrat de service",
+    "service_agreement_label": "Plan annuel",
+    "sites": "tous les emplacements",
+    "status_drawer_title": "mise à jour du statut",
+    "task_label": "Plan hebdomadaire",
+    "tasks_button": "Hebdomadaire",
+    "title": "Plan de travail"
+  },
+  "wpm_request": {
+    "contract_range": "terme du contrat",
+    "handling_date": "Date de traitement"
+  }
+}

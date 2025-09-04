@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		019298D7EB194B269ED03272 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3804EB2D405F4DAE968B56C3 /* Rubik-BoldItalic.ttf */; };
+		0B5341E612FB42D1B7A22D62 /* Circular20WebAra-Medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 07BD7A261D1F4A1BB8441AC1 /* Circular20WebAra-Medium.woff2 */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1577B5B43E2B41BF8E4B5A69 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA66AC303C047C9B998C462 /* Rubik-Regular.ttf */; };
+		16E3F331DEFF444ABB314954 /* Circular20WebCyr-Book.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = BD33F1575EE442E88BC0BCF8 /* Circular20WebCyr-Book.woff2 */; };
+		1A7D903574AE431CA73D28D6 /* circular.css in Resources */ = {isa = PBXBuildFile; fileRef = EB592599BB4743FBBC21CBCD /* circular.css */; };
+		1BC8DFFADC9841AB9859CBAD /* Circular20WebAra-Book.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 280D9118C38F48788105ADA4 /* Circular20WebAra-Book.woff2 */; };
+		2917881C12504206BA639023 /* Circular20Heb-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D82C10961DCA45888F06F626 /* Circular20Heb-Book.otf */; };
+		33662BCDAAE544A9A6AE4D13 /* Circular20Ara-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 297D081550274B86B1042B4D /* Circular20Ara-Medium.otf */; };
+		3AFBF0780EEF443A8668DD07 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99CBD1C1F26D43CB9A7542D4 /* Rubik-ExtraBold.ttf */; };
+		431C0A9FC8704D2FBE1586DD /* Circular20WebAra-Medium.woff in Resources */ = {isa = PBXBuildFile; fileRef = 5FBDFDA429574C8BB1A6857E /* Circular20WebAra-Medium.woff */; };
+		4322BF5B89E6A5698421C03D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		448DEA31E7E449128C571FEA /* Circular20WebCyr-Medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5A84C9EE9FC1406B9D9891E3 /* Circular20WebCyr-Medium.woff2 */; };
+		48912FA64E164F428A28E945 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC32821008814E99A1EC4C79 /* Rubik-Light.ttf */; };
+		4EEED5BBB52A4BDE9A147885 /* Circular20-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 258B5567C29A4D3A9CE2B8BA /* Circular20-Book.otf */; };
+		4F43F7CC55E14C3ABB305DEB /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D31A3A4A3B4D00877C36EB /* Rubik-Black.ttf */; };
+		55B07E82824B4CA4A1CEE3FF /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32E0AEAD1CA64A31B724F250 /* Rubik-SemiBold.ttf */; };
+		65CD4D90F4624588A25CE472 /* Circular20Web-Book.woff in Resources */ = {isa = PBXBuildFile; fileRef = F5D04DA869464756966DF19E /* Circular20Web-Book.woff */; };
+		66BB8730E16A4F12910A717E /* Circular20WebCyr-Medium.woff in Resources */ = {isa = PBXBuildFile; fileRef = DF0821DDE88C498FBD9A6A1E /* Circular20WebCyr-Medium.woff */; };
+		67E57EE81949449E8CB404D3 /* Circular20Cyr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6F219DC9143258AEC6DCE /* Circular20Cyr-Medium.otf */; };
+		72EDB705FB714A0A8A7AA278 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18A20377553142A5B39C7966 /* Rubik-LightItalic.ttf */; };
+		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		920C4D47D0C545698510E04F /* Circular20-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90C443E9E9C24DEE9750B197 /* Circular20-Medium.otf */; };
+		9211DD9EA14142DB85C40364 /* Circular20WebHeb-Medium.woff in Resources */ = {isa = PBXBuildFile; fileRef = 3A99D6D6EEE84263A2C3D2F1 /* Circular20WebHeb-Medium.woff */; };
+		92F8DFF6E22D4C3E97C7B6E6 /* Circular20Ara-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = A094BBFFDB684D6191FBB964 /* Circular20Ara-Book.otf */; };
+		98BAF14DDD5A4C0B9A9F9A6E /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81DE4E0592544E2495D65A56 /* Rubik-Bold.ttf */; };
+		99DD8097B4CE497793E4E335 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51FF5CA60F0B444EA7241045 /* Rubik-BlackItalic.ttf */; };
+		9D3D06F6042047DEB5AAAD6C /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EECB803BAE848A99987FEAD /* Rubik-MediumItalic.ttf */; };
+		9DCABAC04BFD4E22ACCAD298 /* Circular20WebHeb-Medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = C970BBED84294FCFB9EA2FF4 /* Circular20WebHeb-Medium.woff2 */; };
+		A3CF7F3B523F45699043192B /* Circular20WebCyr-Book.woff in Resources */ = {isa = PBXBuildFile; fileRef = 4967B13C7DD44B4D8811E527 /* Circular20WebCyr-Book.woff */; };
+		A422834CC59749A19A1B0AD9 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4882762BAC21492A82B146C1 /* Rubik-Medium.ttf */; };
+		ABD5D11BB2284DAFBBB0E4B7 /* Circular20Heb-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DEFDC8F992F74A58ACEF3874 /* Circular20Heb-Medium.otf */; };
+		AFAD6A35A11643B185B48F7A /* Circular20WebHeb-Book.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 433C74A37BAE4FCFA37A4C00 /* Circular20WebHeb-Book.woff2 */; };
+		AFF96B8A124E4E6A804A3837 /* Circular20WebAra-Book.woff in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF49275605486883A57719 /* Circular20WebAra-Book.woff */; };
+		BBC01082B04F465DA4EEAF6B /* Circular20Cyr-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA270B110B1D4F039BD0D8F4 /* Circular20Cyr-Book.otf */; };
+		C0D14DBEACA346209B9E01B4 /* Circular20Web-Medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3A2CB32C7B449BB23A727D /* Circular20Web-Medium.woff2 */; };
+		C18126ED6E3D47D49E1D3F9D /* Circular20WebHeb-Book.woff in Resources */ = {isa = PBXBuildFile; fileRef = FEE6CEF069DB494D85B14549 /* Circular20WebHeb-Book.woff */; };
+		C51F88F62128473487FA9C44 /* Circular20Web-Medium.woff in Resources */ = {isa = PBXBuildFile; fileRef = 1FEB6E698CC34FB99CB3EA27 /* Circular20Web-Medium.woff */; };
+		C72517F2472100A341F513B9 /* Pods_cali.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9177AFF6E9497F514F63636 /* Pods_cali.framework */; };
+		C7F37D025BB0427AA632A2A5 /* Circular20Web-Book.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 4C2219EA636E43D88DF614D9 /* Circular20Web-Book.woff2 */; };
+		E75F35361D1547558825CB13 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B87EA8C287E444F8625400C /* Rubik-ExtraBoldItalic.ttf */; };
+		ED6687FF107945E994D38137 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 497C8CE4C5DF421DB0C3AC63 /* Rubik-SemiBoldItalic.ttf */; };
+		F6E4D00DA3874E75B8A02233 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35165076A63A4DC99074A7D2 /* Rubik-Italic.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07BD7A261D1F4A1BB8441AC1 /* Circular20WebAra-Medium.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebAra-Medium.woff2"; path = "../assets/fonts/circular/Circular20WebAra-Medium.woff2"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* cali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cali.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = cali/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cali/Info.plist; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = cali/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		18A20377553142A5B39C7966 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-LightItalic.ttf"; path = "../assets/fonts/rubik/Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		1FEB6E698CC34FB99CB3EA27 /* Circular20Web-Medium.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Web-Medium.woff"; path = "../assets/fonts/circular/Circular20Web-Medium.woff"; sourceTree = "<group>"; };
+		258B5567C29A4D3A9CE2B8BA /* Circular20-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20-Book.otf"; path = "../assets/fonts/circular/Circular20-Book.otf"; sourceTree = "<group>"; };
+		280D9118C38F48788105ADA4 /* Circular20WebAra-Book.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebAra-Book.woff2"; path = "../assets/fonts/circular/Circular20WebAra-Book.woff2"; sourceTree = "<group>"; };
+		297D081550274B86B1042B4D /* Circular20Ara-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Ara-Medium.otf"; path = "../assets/fonts/circular/Circular20Ara-Medium.otf"; sourceTree = "<group>"; };
+		2DBF49275605486883A57719 /* Circular20WebAra-Book.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebAra-Book.woff"; path = "../assets/fonts/circular/Circular20WebAra-Book.woff"; sourceTree = "<group>"; };
+		2EECB803BAE848A99987FEAD /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-MediumItalic.ttf"; path = "../assets/fonts/rubik/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2FA66AC303C047C9B998C462 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../assets/fonts/rubik/Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		32E0AEAD1CA64A31B724F250 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBold.ttf"; path = "../assets/fonts/rubik/Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		35165076A63A4DC99074A7D2 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic.ttf"; path = "../assets/fonts/rubik/Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		3804EB2D405F4DAE968B56C3 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BoldItalic.ttf"; path = "../assets/fonts/rubik/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3A99D6D6EEE84263A2C3D2F1 /* Circular20WebHeb-Medium.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebHeb-Medium.woff"; path = "../assets/fonts/circular/Circular20WebHeb-Medium.woff"; sourceTree = "<group>"; };
+		3F3A2CB32C7B449BB23A727D /* Circular20Web-Medium.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Web-Medium.woff2"; path = "../assets/fonts/circular/Circular20Web-Medium.woff2"; sourceTree = "<group>"; };
+		433C74A37BAE4FCFA37A4C00 /* Circular20WebHeb-Book.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebHeb-Book.woff2"; path = "../assets/fonts/circular/Circular20WebHeb-Book.woff2"; sourceTree = "<group>"; };
+		4846C879F5F4D7A28E56A98E /* Pods-cali.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cali.release.xcconfig"; path = "Target Support Files/Pods-cali/Pods-cali.release.xcconfig"; sourceTree = "<group>"; };
+		4882762BAC21492A82B146C1 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../assets/fonts/rubik/Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		4967B13C7DD44B4D8811E527 /* Circular20WebCyr-Book.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebCyr-Book.woff"; path = "../assets/fonts/circular/Circular20WebCyr-Book.woff"; sourceTree = "<group>"; };
+		497C8CE4C5DF421DB0C3AC63 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBoldItalic.ttf"; path = "../assets/fonts/rubik/Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		4C2219EA636E43D88DF614D9 /* Circular20Web-Book.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Web-Book.woff2"; path = "../assets/fonts/circular/Circular20Web-Book.woff2"; sourceTree = "<group>"; };
+		51FF5CA60F0B444EA7241045 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BlackItalic.ttf"; path = "../assets/fonts/rubik/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5A84C9EE9FC1406B9D9891E3 /* Circular20WebCyr-Medium.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebCyr-Medium.woff2"; path = "../assets/fonts/circular/Circular20WebCyr-Medium.woff2"; sourceTree = "<group>"; };
+		5FBDFDA429574C8BB1A6857E /* Circular20WebAra-Medium.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebAra-Medium.woff"; path = "../assets/fonts/circular/Circular20WebAra-Medium.woff"; sourceTree = "<group>"; };
+		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = cali/AppDelegate.swift; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = cali/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81DE4E0592544E2495D65A56 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../assets/fonts/rubik/Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		8AD6F219DC9143258AEC6DCE /* Circular20Cyr-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Cyr-Medium.otf"; path = "../assets/fonts/circular/Circular20Cyr-Medium.otf"; sourceTree = "<group>"; };
+		90C443E9E9C24DEE9750B197 /* Circular20-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20-Medium.otf"; path = "../assets/fonts/circular/Circular20-Medium.otf"; sourceTree = "<group>"; };
+		99CBD1C1F26D43CB9A7542D4 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-ExtraBold.ttf"; path = "../assets/fonts/rubik/Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9B87EA8C287E444F8625400C /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-ExtraBoldItalic.ttf"; path = "../assets/fonts/rubik/Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A094BBFFDB684D6191FBB964 /* Circular20Ara-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Ara-Book.otf"; path = "../assets/fonts/circular/Circular20Ara-Book.otf"; sourceTree = "<group>"; };
+		BD33F1575EE442E88BC0BCF8 /* Circular20WebCyr-Book.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebCyr-Book.woff2"; path = "../assets/fonts/circular/Circular20WebCyr-Book.woff2"; sourceTree = "<group>"; };
+		C970BBED84294FCFB9EA2FF4 /* Circular20WebHeb-Medium.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebHeb-Medium.woff2"; path = "../assets/fonts/circular/Circular20WebHeb-Medium.woff2"; sourceTree = "<group>"; };
+		D2D31A3A4A3B4D00877C36EB /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../assets/fonts/rubik/Rubik-Black.ttf"; sourceTree = "<group>"; };
+		D82C10961DCA45888F06F626 /* Circular20Heb-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Heb-Book.otf"; path = "../assets/fonts/circular/Circular20Heb-Book.otf"; sourceTree = "<group>"; };
+		DA270B110B1D4F039BD0D8F4 /* Circular20Cyr-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Cyr-Book.otf"; path = "../assets/fonts/circular/Circular20Cyr-Book.otf"; sourceTree = "<group>"; };
+		DEFDC8F992F74A58ACEF3874 /* Circular20Heb-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Heb-Medium.otf"; path = "../assets/fonts/circular/Circular20Heb-Medium.otf"; sourceTree = "<group>"; };
+		DF0821DDE88C498FBD9A6A1E /* Circular20WebCyr-Medium.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebCyr-Medium.woff"; path = "../assets/fonts/circular/Circular20WebCyr-Medium.woff"; sourceTree = "<group>"; };
+		EB592599BB4743FBBC21CBCD /* circular.css */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = circular.css; path = ../assets/fonts/circular/circular.css; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F5D04DA869464756966DF19E /* Circular20Web-Book.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20Web-Book.woff"; path = "../assets/fonts/circular/Circular20Web-Book.woff"; sourceTree = "<group>"; };
+		F9177AFF6E9497F514F63636 /* Pods_cali.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cali.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC32821008814E99A1EC4C79 /* Rubik-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Light.ttf"; path = "../assets/fonts/rubik/Rubik-Light.ttf"; sourceTree = "<group>"; };
+		FE822E0C216922AE7B35D83A /* Pods-cali.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cali.debug.xcconfig"; path = "Target Support Files/Pods-cali/Pods-cali.debug.xcconfig"; sourceTree = "<group>"; };
+		FEE6CEF069DB494D85B14549 /* Circular20WebHeb-Book.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Circular20WebHeb-Book.woff"; path = "../assets/fonts/circular/Circular20WebHeb-Book.woff"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72517F2472100A341F513B9 /* Pods_cali.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13B07FAE1A68108700A75B9A /* cali */ = {
+			isa = PBXGroup;
+			children = (
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				761780EC2CA45674006654EE /* AppDelegate.swift */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+			);
+			name = cali;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				F9177AFF6E9497F514F63636 /* Pods_cali.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* cali */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				FA9B9CBD42B340C6A3DEAC13 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* cali.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE822E0C216922AE7B35D83A /* Pods-cali.debug.xcconfig */,
+				4846C879F5F4D7A28E56A98E /* Pods-cali.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA9B9CBD42B340C6A3DEAC13 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				258B5567C29A4D3A9CE2B8BA /* Circular20-Book.otf */,
+				90C443E9E9C24DEE9750B197 /* Circular20-Medium.otf */,
+				A094BBFFDB684D6191FBB964 /* Circular20Ara-Book.otf */,
+				297D081550274B86B1042B4D /* Circular20Ara-Medium.otf */,
+				DA270B110B1D4F039BD0D8F4 /* Circular20Cyr-Book.otf */,
+				8AD6F219DC9143258AEC6DCE /* Circular20Cyr-Medium.otf */,
+				D82C10961DCA45888F06F626 /* Circular20Heb-Book.otf */,
+				DEFDC8F992F74A58ACEF3874 /* Circular20Heb-Medium.otf */,
+				F5D04DA869464756966DF19E /* Circular20Web-Book.woff */,
+				4C2219EA636E43D88DF614D9 /* Circular20Web-Book.woff2 */,
+				1FEB6E698CC34FB99CB3EA27 /* Circular20Web-Medium.woff */,
+				3F3A2CB32C7B449BB23A727D /* Circular20Web-Medium.woff2 */,
+				2DBF49275605486883A57719 /* Circular20WebAra-Book.woff */,
+				280D9118C38F48788105ADA4 /* Circular20WebAra-Book.woff2 */,
+				5FBDFDA429574C8BB1A6857E /* Circular20WebAra-Medium.woff */,
+				07BD7A261D1F4A1BB8441AC1 /* Circular20WebAra-Medium.woff2 */,
+				4967B13C7DD44B4D8811E527 /* Circular20WebCyr-Book.woff */,
+				BD33F1575EE442E88BC0BCF8 /* Circular20WebCyr-Book.woff2 */,
+				DF0821DDE88C498FBD9A6A1E /* Circular20WebCyr-Medium.woff */,
+				5A84C9EE9FC1406B9D9891E3 /* Circular20WebCyr-Medium.woff2 */,
+				FEE6CEF069DB494D85B14549 /* Circular20WebHeb-Book.woff */,
+				433C74A37BAE4FCFA37A4C00 /* Circular20WebHeb-Book.woff2 */,
+				3A99D6D6EEE84263A2C3D2F1 /* Circular20WebHeb-Medium.woff */,
+				C970BBED84294FCFB9EA2FF4 /* Circular20WebHeb-Medium.woff2 */,
+				EB592599BB4743FBBC21CBCD /* circular.css */,
+				D2D31A3A4A3B4D00877C36EB /* Rubik-Black.ttf */,
+				51FF5CA60F0B444EA7241045 /* Rubik-BlackItalic.ttf */,
+				81DE4E0592544E2495D65A56 /* Rubik-Bold.ttf */,
+				3804EB2D405F4DAE968B56C3 /* Rubik-BoldItalic.ttf */,
+				99CBD1C1F26D43CB9A7542D4 /* Rubik-ExtraBold.ttf */,
+				9B87EA8C287E444F8625400C /* Rubik-ExtraBoldItalic.ttf */,
+				35165076A63A4DC99074A7D2 /* Rubik-Italic.ttf */,
+				FC32821008814E99A1EC4C79 /* Rubik-Light.ttf */,
+				18A20377553142A5B39C7966 /* Rubik-LightItalic.ttf */,
+				4882762BAC21492A82B146C1 /* Rubik-Medium.ttf */,
+				2EECB803BAE848A99987FEAD /* Rubik-MediumItalic.ttf */,
+				2FA66AC303C047C9B998C462 /* Rubik-Regular.ttf */,
+				32E0AEAD1CA64A31B724F250 /* Rubik-SemiBold.ttf */,
+				497C8CE4C5DF421DB0C3AC63 /* Rubik-SemiBoldItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13B07F861A680F5B00A75B9A /* cali */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cali" */;
+			buildPhases = (
+				B966C706A1EE0CDBE93CA59F /* [CP] Check Pods Manifest.lock */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				DFC5C82A749011189AD75215 /* [CP] Embed Pods Frameworks */,
+				A84B0374304D8C6A8E430B4B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cali;
+			productName = cali;
+			productReference = 13B07F961A680F5B00A75B9A /* cali.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "cali" */;
+			compatibilityVersion = "Xcode 15.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* cali */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				4322BF5B89E6A5698421C03D /* PrivacyInfo.xcprivacy in Resources */,
+				4EEED5BBB52A4BDE9A147885 /* Circular20-Book.otf in Resources */,
+				920C4D47D0C545698510E04F /* Circular20-Medium.otf in Resources */,
+				92F8DFF6E22D4C3E97C7B6E6 /* Circular20Ara-Book.otf in Resources */,
+				33662BCDAAE544A9A6AE4D13 /* Circular20Ara-Medium.otf in Resources */,
+				BBC01082B04F465DA4EEAF6B /* Circular20Cyr-Book.otf in Resources */,
+				67E57EE81949449E8CB404D3 /* Circular20Cyr-Medium.otf in Resources */,
+				2917881C12504206BA639023 /* Circular20Heb-Book.otf in Resources */,
+				ABD5D11BB2284DAFBBB0E4B7 /* Circular20Heb-Medium.otf in Resources */,
+				65CD4D90F4624588A25CE472 /* Circular20Web-Book.woff in Resources */,
+				C7F37D025BB0427AA632A2A5 /* Circular20Web-Book.woff2 in Resources */,
+				C51F88F62128473487FA9C44 /* Circular20Web-Medium.woff in Resources */,
+				C0D14DBEACA346209B9E01B4 /* Circular20Web-Medium.woff2 in Resources */,
+				AFF96B8A124E4E6A804A3837 /* Circular20WebAra-Book.woff in Resources */,
+				1BC8DFFADC9841AB9859CBAD /* Circular20WebAra-Book.woff2 in Resources */,
+				431C0A9FC8704D2FBE1586DD /* Circular20WebAra-Medium.woff in Resources */,
+				0B5341E612FB42D1B7A22D62 /* Circular20WebAra-Medium.woff2 in Resources */,
+				A3CF7F3B523F45699043192B /* Circular20WebCyr-Book.woff in Resources */,
+				16E3F331DEFF444ABB314954 /* Circular20WebCyr-Book.woff2 in Resources */,
+				66BB8730E16A4F12910A717E /* Circular20WebCyr-Medium.woff in Resources */,
+				448DEA31E7E449128C571FEA /* Circular20WebCyr-Medium.woff2 in Resources */,
+				C18126ED6E3D47D49E1D3F9D /* Circular20WebHeb-Book.woff in Resources */,
+				AFAD6A35A11643B185B48F7A /* Circular20WebHeb-Book.woff2 in Resources */,
+				9211DD9EA14142DB85C40364 /* Circular20WebHeb-Medium.woff in Resources */,
+				9DCABAC04BFD4E22ACCAD298 /* Circular20WebHeb-Medium.woff2 in Resources */,
+				1A7D903574AE431CA73D28D6 /* circular.css in Resources */,
+				4F43F7CC55E14C3ABB305DEB /* Rubik-Black.ttf in Resources */,
+				99DD8097B4CE497793E4E335 /* Rubik-BlackItalic.ttf in Resources */,
+				98BAF14DDD5A4C0B9A9F9A6E /* Rubik-Bold.ttf in Resources */,
+				019298D7EB194B269ED03272 /* Rubik-BoldItalic.ttf in Resources */,
+				3AFBF0780EEF443A8668DD07 /* Rubik-ExtraBold.ttf in Resources */,
+				E75F35361D1547558825CB13 /* Rubik-ExtraBoldItalic.ttf in Resources */,
+				F6E4D00DA3874E75B8A02233 /* Rubik-Italic.ttf in Resources */,
+				48912FA64E164F428A28E945 /* Rubik-Light.ttf in Resources */,
+				72EDB705FB714A0A8A7AA278 /* Rubik-LightItalic.ttf in Resources */,
+				A422834CC59749A19A1B0AD9 /* Rubik-Medium.ttf in Resources */,
+				9D3D06F6042047DEB5AAAD6C /* Rubik-MediumItalic.ttf in Resources */,
+				1577B5B43E2B41BF8E4B5A69 /* Rubik-Regular.ttf in Resources */,
+				55B07E82824B4CA4A1CEE3FF /* Rubik-SemiBold.ttf in Resources */,
+				ED6687FF107945E994D38137 /* Rubik-SemiBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		A84B0374304D8C6A8E430B4B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cali/Pods-cali-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cali/Pods-cali-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cali/Pods-cali-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B966C706A1EE0CDBE93CA59F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cali-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC5C82A749011189AD75215 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cali/Pods-cali-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cali/Pods-cali-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cali/Pods-cali-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE822E0C216922AE7B35D83A /* Pods-cali.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = cali/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = cali;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4846C879F5F4D7A28E56A98E /* Pods-cali.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = cali/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = cali;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				USE_HERMES = true;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cali" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "cali" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

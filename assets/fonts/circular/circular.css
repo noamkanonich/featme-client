@@ -1,0 +1,89 @@
+/*
+ * Legal Disclaimer
+ *
+  * These web fonts are licensed exclusively for use on the following:
+ * servicesapp.com
+ *
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2021
+ */
+
+@font-face {
+  font-family: 'Circular20-Book';
+  src:
+    url('./Circular20Web-Book.woff2') format('woff2'),
+    url('./Circular20Web-Book.woff') format('woff'),
+    url('./Circular20-Book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Circular20-Book';
+  src:
+    url('./Circular20WebHeb-Book.woff2') format('woff2'),
+    url('./Circular20WebHeb-Book.woff') format('woff'),
+    url('./Circular20Heb-Book.otf') format('opentype');
+  unicode-range: U+0590-05FF;
+}
+
+@font-face {
+  font-family: 'Circular20-Book';
+  src:
+    url('./Circular20WebAra-Book.woff2') format('woff2'),
+    url('./Circular20WebAra-Book.woff') format('woff'),
+    url('./Circular20Ara-Book.otf') format('opentype');
+  unicode-range: U+0600-06FF;
+}
+
+@font-face {
+  font-family: 'Circular20-Book';
+  src:
+    url('./Circular20WebCyr-Book.woff2') format('woff2'),
+    url('./Circular20WebCyr-Book.woff') format('woff'),
+    url('./Circular20Cyr-Book.otf') format('opentype');
+  unicode-range: U+0400-052F;
+}
+
+@font-face {
+  font-family: 'Circular20-Medium';
+  src:
+    url('./Circular20Web-Medium.woff2') format('woff2'),
+    url('./Circular20Web-Medium.woff') format('woff'),
+    url('./Circular20-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Circular20-Medium';
+  src:
+    url('./Circular20WebHeb-Medium.woff2') format('woff2'),
+    url('./Circular20WebHeb-Medium.woff') format('woff'),
+    url('./Circular20Heb-Medium.otf') format('opentype');
+  unicode-range: U+0590-05FF;
+}
+
+@font-face {
+  font-family: 'Circular20-Medium';
+  src:
+    url('./Circular20WebAra-Medium.woff2') format('woff2'),
+    url('./Circular20WebAra-Medium.woff') format('woff'),
+    url('./Circular20Ara-Medium.otf') format('opentype');
+  unicode-range: U+0600-06FF;
+}
+
+@font-face {
+  font-family: 'Circular20-Medium';
+  src:
+    url('./Circular20WebCyr-Medium.woff2') format('woff2'),
+    url('./Circular20WebCyr-Medium.woff') format('woff'),
+    url('./Circular20Cyr-Medium.otf') format('opentype');
+  unicode-range: U+0400-052F;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

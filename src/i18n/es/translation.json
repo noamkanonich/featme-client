@@ -1,0 +1,281 @@
+{
+  "bottom_tab": {
+    "dashboard": "Panel",
+    "history": "Historial",
+    "profile": "Perfil"
+  },
+  "nutrition": {
+    "calories": "Calorías",
+    "protein": "Proteína",
+    "fat": "Grasa",
+    "carbs": "Carbohidratos"
+  },
+  "profile_screen": {
+    "title": "Perfil",
+    "subtitle": "Personaliza tus preferencias nutricionales",
+    "daily_goals": "Objetivos diarios de nutrición",
+    "daily_calories": "Calorías diarias",
+    "daily_protein": "Proteína (g)",
+    "daily_fat": "Grasa (g)",
+    "daily_carbs": "Carbohidratos (g)",
+    "activity_prefs": "Actividad y preferencias",
+    "height_metric": "Altura (cm)",
+    "height_imperial": "Altura (ft)",
+    "weight_metric": "Peso (kg)",
+    "weight_imperial": "Peso (lbs)",
+    "weight_goal": "Objetivo de peso",
+    "weight_goal_options": {
+      "lose_weight": "Perder peso",
+      "maintain_weight": "Mantener peso",
+      "gain_weight": "Ganar peso"
+    },
+    "activity_level": "Nivel de actividad",
+    "activity_level_options": {
+      "sedentary": "Sedentario (poco o ningún ejercicio)",
+      "lightly_active": "Ligeramente activo (ejercicio ligero 1–3 días/semana)",
+      "moderately_active": "Moderadamente activo (ejercicio moderado 3–5 días/semana)",
+      "very_active": "Muy activo (ejercicio intenso 6–7 días a la semana)",
+      "extra_active": "Extra activo (trabajo físico intenso y ejercicio 2 veces/día)"
+    },
+    "preferred_units": "Unidades preferidas",
+    "preferred_units_options": {
+      "metric": "Métricas (kg, cm)",
+      "imperial": "Imperiales (lbs, ft)"
+    },
+    "language": "Idioma",
+    "save_changes": "Guardar cambios"
+  },
+  "history_screen": {
+    "title": "Historial",
+    "subtitle": "Tu camino nutricional",
+    "this_week": "Esta semana",
+    "total_entries": "Entradas totales",
+    "avg_calories": "Calorías promedio",
+    "days_tracked": "Días registrados",
+    "daily_breakdown_title": "Desglose diario",
+    "go_to_this_week": "Ir a esta semana",
+    "entries": "entradas",
+    "calories_progress": "Progreso de calorías",
+    "no_entries": "No hay entradas disponibles para hoy"
+  },
+  "onboarding_first_screen": {
+    "title": "Personalicemos tu experiencia.",
+    "subtitle": "Configuraremos tu perfil para ofrecerte los mejores objetivos nutricionales.",
+    "bullet_personalized": "Objetivos nutricionales personalizados",
+    "bullet_ai": "Análisis de alimentos con IA",
+    "bullet_track": "Registra tu progreso diariamente",
+    "start": "Comenzar",
+    "skip_for_now": "Omitir por ahora"
+  },
+  "onboarding_second_screen": {
+    "title": "Cuéntanos sobre ti.",
+    "subtitle": "Necesitamos medidas básicas para calcular tus objetivos.",
+    "weight_kg": "Peso (kg)",
+    "weight_lbs": "Peso (lbs)",
+    "height_cm": "Altura (cm)",
+    "height_ft": "Altura (ft)",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "skip_for_now": "Omitir por ahora"
+  },
+  "onboarding_third_screen": {
+    "title": "Un poco más sobre ti.",
+    "subtitle": "Esto nos ayuda a personalizar tus recomendaciones.",
+    "gender": "Género",
+    "gender_female": "Mujer",
+    "gender_male": "Hombre",
+    "gender_other": "Otro",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "skip_for_now": "Omitir por ahora",
+    "birth_date": "Fecha de nacimiento"
+  },
+  "onboarding_forth_screen": {
+    "title": "¿Qué tan activo eres?",
+    "subtitle": "Esto afecta tus necesidades calóricas diarias.",
+    "sedentary_label": "Sedentario",
+    "sedentary_desc": "Poco o ningún ejercicio",
+    "lightly_active_label": "Ligeramente activo",
+    "lightly_active_desc": "1–3 días por semana",
+    "moderately_active_label": "Moderadamente activo",
+    "moderately_active_desc": "3–5 días por semana",
+    "very_active_label": "Muy activo",
+    "very_active_desc": "6–7 días por semana",
+    "athlete_label": "Atleta",
+    "athlete_desc": "Entrenamiento intenso diario",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "skip": "Omitir por ahora"
+  },
+  "onboarding_fifth_screen": {
+    "title": "¿Cuál es tu objetivo?",
+    "subtitle": "Ajustaremos tus objetivos nutricionales en consecuencia.",
+    "lose_fat_label": "Perder grasa",
+    "lose_fat_desc": "Reducir el porcentaje de grasa corporal",
+    "maintain_weight_label": "Mantener peso",
+    "maintain_weight_desc": "Permanecer en tu peso actual",
+    "gain_muscle_label": "Ganar músculo",
+    "gain_muscle_desc": "Construir masa muscular magra",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "skip": "Omitir por ahora"
+  },
+  "onboarding_final_screen": {
+    "title": "¡Tus objetivos personalizados!",
+    "subtitle": "Según tu perfil, estos son tus objetivos diarios.",
+    "daily_goals_title": "Tus objetivos diarios",
+    "daily_goals_note": "Puedes actualizarlos en cualquier momento en tu perfil.",
+    "card_calories": "Calorías",
+    "card_protein": "Proteína",
+    "card_fat": "Grasa",
+    "card_carbs": "Carbohidratos",
+    "btn_lets_go": "¡Vamos!",
+    "back": "Atrás"
+  },
+  "day_slider": {
+    "today": "Hoy",
+    "go_to_today": "Ir a hoy"
+  },
+  "dates": {
+    "days": {
+      "sun": "Domingo",
+      "mon": "Lunes",
+      "tue": "Martes",
+      "wed": "Miércoles",
+      "thu": "Jueves",
+      "fri": "Viernes",
+      "sat": "Sábado"
+    },
+    "months": {
+      "jan": "Enero",
+      "feb": "Febrero",
+      "mar": "Marzo",
+      "apr": "Abril",
+      "may": "Mayo",
+      "june": "Junio",
+      "jun": "Junio",
+      "july": "Julio",
+      "jul": "Julio",
+      "aug": "Agosto",
+      "sep": "Septiembre",
+      "oct": "Octubre",
+      "nov": "Noviembre",
+      "dec": "Diciembre"
+    },
+    "formats": {
+      "title": "{{month}} {{day}}",
+      "subtitle": "{{weekday}}, {{year}}"
+    }
+  },
+  "daily_breakdown": {
+    "title": "Desglose diario",
+    "this_week": "Esta semana",
+    "progress": "Progreso de calorías",
+    "entries": "entradas"
+  },
+  "add_food_screen": {
+    "title": "Agregar comida",
+    "subtitle": "Usa IA para analizar tu comida",
+    "scan_with_camera_title": "Escanear con la cámara",
+    "scan_with_camera_subtitle": "Captura tu comida para un análisis instantáneo con IA",
+    "open_camera": "Abrir cámara",
+    "pick_from_gallery": "Elegir de la galería",
+    "describe_food_title": "Describe tu comida",
+    "describe_food_subtitle": "Escribe lo que comiste para el análisis con IA",
+    "text_input_placeholder": "p. ej., pollo a la parrilla con verduras, porción mediana.",
+    "analyze_food": "Analizar comida",
+    "food_details": "Detalles del alimento",
+    "food_name": "Nombre del alimento",
+    "serving_size": "Tamaño de la porción",
+    "date": "Fecha",
+    "time": "Hora",
+    "description": "Descripción",
+    "meal_type": "Tipo de comida",
+    "save": "Guardar",
+    "back": "Atrás",
+    "quick_add": "Añadir rápido",
+    "nutrition_facts": "Información nutricional",
+    "calories": "Calorías",
+    "protein": "Proteína (g)",
+    "fat": "Grasa (g)",
+    "carbs": "Carbohidratos (g)"
+  },
+  "settings_screen": {
+    "title": "Ajustes",
+    "subtitle": "Administra tus preferencias de la app",
+    "personal_info": "Información personal",
+    "full_name": "Nombre completo",
+    "email": "Correo electrónico",
+    "language": "Idioma",
+    "theme": "Tema",
+    "theme_options": {
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system_default": "Predeterminado del sistema"
+    },
+    "notifications": "Notificaciones",
+    "notifications_text": "Habilitar notificaciones de la app",
+    "notifications_subtext": "Recibe recordatorios para registrar tus comidas y seguir tu progreso",
+    "privacy": "Privacidad",
+    "privacy_text": "Compartir datos para mejorar",
+    "privacy_subtext": "Ayúdanos a mejorar la app compartiendo datos de uso anónimos",
+    "about": "Acerca de",
+    "about_text_one": "FeatMe v1.0.0",
+    "about_text_two": "Rastreador nutricional con IA",
+    "about_text_three": "Desarrollado con ❤️ por el equipo de FeatMe",
+    "save_changes": "Guardar cambios",
+    "logout": "Cerrar sesión"
+  },
+  "meals": {
+    "breakfast": "Desayuno",
+    "lunch": "Almuerzo",
+    "dinner": "Cena",
+    "snacks": "Snacks",
+    "snack": "Snacks",
+    "dessert": "Postre",
+    "Breakfast": "Desayuno",
+    "Lunch": "Almuerzo",
+    "Dinner": "Cena",
+    "Snack": "Snacks",
+    "Dessert": "Postre"
+  },
+  "dashboard_screen": {
+    "title": "Panel",
+    "daily_progress": "Progreso diario"
+  },
+  "button": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Añadir",
+    "close": "Cerrar",
+    "update": "Actualizar",
+    "quick_add": "Añadir rápido"
+  },
+  "meal_item": {
+    "calories": " kcal",
+    "protein": "Proteína",
+    "fat": "Grasa",
+    "carbs": "Carbohidratos"
+  },
+  "quick_add": {
+    "title": "Añadir rápido a",
+    "subtitle": "Añade calorías y macros rápidamente",
+    "food_name": "Nombre del alimento",
+    "description": "Descripción",
+    "calories": "Calorías",
+    "protein": "Proteína",
+    "fat": "Grasa",
+    "carbs": "Carbohidratos",
+    "add_image": "Añadir imagen"
+  },
+  "toast": {
+    "food_added": "¡Comida añadida con éxito!",
+    "food_updated": "¡Comida actualizada con éxito!",
+    "food_deleted": "¡Comida eliminada con éxito!",
+    "profile_updated": "¡Perfil actualizado con éxito!",
+    "settings_saved": "¡Ajustes guardados con éxito!",
+    "error_occurred": "Se produjo un error. Intenta de nuevo."
+  }
+}
