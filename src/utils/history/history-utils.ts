@@ -1,15 +1,23 @@
+// src/utils/history-utils.ts (or your original file)
 import { addDays, endOfDay, format, startOfDay } from 'date-fns';
-
-import { supabase } from '../lib/supabase/supabase';
-import { DailyData } from '../components/cards/DailyBreakdownCard';
+import { supabase } from '../../lib/supabase/supabase';
+import { DailyData } from '../../components/cards/DailyBreakdownCard';
 
 type MealRowForHistory = {
   meal_time: string;
-  food_items: any[] | null;
-  total_calories: number | null;
+  total_calories: number; // aggregated from meal_items
+  items_count: number; // number of meal_items for that meal
 };
 
-/** Fetch meals for a user within a date range (inclusive day bounds). */
+type MealDbRow = { id: string; meal_time: string };
+type MealItemDbRow = { meal_id: string; calories?: number | null };
+
+const toNum = (v: unknown) => {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : 0;
+};
+
+/** Fetch meals for a user within a date range (inclusive day bounds) and aggregate their items. */
 export const fetchMealsForRange = async (
   userId: string,
   rangeStart: Date,
@@ -18,19 +26,54 @@ export const fetchMealsForRange = async (
   const fromIso = startOfDay(rangeStart).toISOString();
   const toIso = endOfDay(rangeEnd).toISOString();
 
-  const { data, error } = await supabase
+  // 1) Meals in range
+  const { data: meals, error: mealsErr } = await supabase
     .from('meals')
-    .select('meal_time, food_items, total_calories')
+    .select('id, meal_time')
     .eq('user_id', userId)
     .gte('meal_time', fromIso)
     .lte('meal_time', toIso)
     .order('meal_time', { ascending: true });
 
-  if (error) {
-    console.log('fetchMealsForRange error:', error);
+  if (mealsErr) {
+    console.log('fetchMealsForRange meals error:', mealsErr);
     return [];
   }
-  return (data ?? []) as MealRowForHistory[];
+  if (!meals || meals.length === 0) return [];
+
+  const mealIds = (meals as MealDbRow[]).map(m => m.id);
+
+  // 2) Items for those meals
+  const { data: items, error: itemsErr } = await supabase
+    .from('meal_items')
+    .select('meal_id, calories')
+    .in('meal_id', mealIds);
+
+  if (itemsErr) {
+    console.log('fetchMealsForRange meal_items error:', itemsErr);
+    return [];
+  }
+
+  // 3) Aggregate per meal
+  const agg = new Map<string, { total: number; count: number }>();
+  for (const it of (items ?? []) as MealItemDbRow[]) {
+    const k = it.meal_id;
+    if (!k) continue;
+    const entry = agg.get(k) ?? { total: 0, count: 0 };
+    entry.total += toNum(it.calories);
+    entry.count += 1;
+    agg.set(k, entry);
+  }
+
+  // 4) Return rows shaped for the UI aggregators
+  return (meals as MealDbRow[]).map(m => {
+    const a = agg.get(m.id) ?? { total: 0, count: 0 };
+    return {
+      meal_time: m.meal_time,
+      total_calories: a.total,
+      items_count: a.count,
+    };
+  });
 };
 
 /** Build 7 days starting from `rangeStart`, bucket + aggregate calories & entries. */
@@ -56,15 +99,11 @@ export const buildWeekData = (
   meals.forEach(row => {
     const d = new Date(row.meal_time);
     const key = format(d, 'yyyy-MM-dd');
-    if (!bucket[key]) return;
+    const day = bucket[key];
+    if (!day) return;
 
-    const addCals = Number(row.total_calories ?? 0);
-    const addEntries = Array.isArray(row.food_items)
-      ? row.food_items.length
-      : 0;
-
-    bucket[key].calories += addCals;
-    bucket[key].entries += addEntries;
+    day.calories += toNum(row.total_calories);
+    day.entries += row.items_count ?? 0;
   });
 
   // back to array in chronological order

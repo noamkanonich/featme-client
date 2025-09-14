@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Image, ViewStyle, Animated, Easing } from 'react-native';
+import { Image, ViewStyle, Animated, Easing, View } from 'react-native';
 import styled from 'styled-components/native';
-import { HeadingM, TextM, TextS, TextSLight } from '../../theme/typography';
+import { TextL, TextM, TextS, TextSLight } from '../../theme/typography';
 import { FoodItem } from '../../data/food/FoodItem';
 import { MEAL_BADGE } from './utils';
 import { MealType } from '../../data/meals/MealType';
@@ -9,14 +9,17 @@ import MainSliderCard from '../cards/slide-card/MainSliderCard';
 import { useTranslation } from 'react-i18next';
 import StarIcon from '../../../assets/icons/star.svg';
 import ClockIcon from '../../../assets/icons/clock.svg';
-import { Gray1, White, Yellow } from '../../theme/colors';
+import { Gray1, Green, White, Yellow } from '../../theme/colors';
 import Spacer from '../spacer/Spacer';
+import SparklesIcon from '../../../assets/icons/sparkles.svg';
+import UpdateFoodModal from '../../screens/home/UpdateFoodModal';
 
 interface IFoodCard {
   entry: FoodItem;
   mealType: MealType;
   style?: ViewStyle;
   onPress: (id: string) => void;
+  onUpdate: (updatedFoodItem: Partial<FoodItem>, mealId: string) => void;
   onDelete: (id: string, mealId: string) => void;
   onToggleFavorite?: (foodItem: FoodItem) => void;
 }
@@ -35,6 +38,7 @@ const FoodCard = ({
   entry,
   mealType,
   onPress,
+  onUpdate,
   onDelete,
   onToggleFavorite,
 }: IFoodCard) => {
@@ -42,8 +46,8 @@ const FoodCard = ({
   const meal = MEAL_BADGE[mealType];
   const time = formatTime(entry.createdAt);
   const [isFavorite, setIsFavorite] = useState(entry.isFavorite);
+  const [isUpdateVisible, setIsUpdateVisible] = useState(false);
 
-  // --- Star animation ---
   const scale = useRef(new Animated.Value(1)).current;
   const spinV = useRef(new Animated.Value(0)).current;
   const spin = spinV.interpolate({
@@ -84,11 +88,14 @@ const FoodCard = ({
     ]).start();
   };
 
-  // Give a subtle pop when item becomes favorited via prop changes
   useEffect(() => {
     if (entry.isFavorite) pop();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entry.isFavorite]);
+
+  const handleUpdateItem = (updatedFoodItem: Partial<FoodItem>) => {
+    onUpdate(updatedFoodItem, entry.mealId);
+  };
 
   const handleDeleteItem = () => onDelete(entry.id, entry.mealId);
 
@@ -100,7 +107,20 @@ const FoodCard = ({
   };
 
   return (
-    <MainSliderCard onDelete={handleDeleteItem} onPress={onPress}>
+    <MainSliderCard
+      onUpdate={() => {
+        setIsUpdateVisible(true);
+      }}
+      onDelete={handleDeleteItem}
+      onPress={onPress}
+    >
+      <UpdateFoodModal
+        visible={isUpdateVisible}
+        onUpdate={handleUpdateItem}
+        onRequestClose={() => {
+          setIsUpdateVisible(false);
+        }}
+      />
       <Container>
         <Left>
           <Thumb>
@@ -117,8 +137,17 @@ const FoodCard = ({
 
         <Mid>
           <TitleRow>
-            <Title numberOfLines={1}>{entry.name}</Title>
-
+            <TitleContainer>
+              <IconRow>
+                <Title numberOfLines={1}>{entry.name}</Title>
+                {entry.aiGenerated && (
+                  <>
+                    <Spacer direction="horizontal" size="xs" />
+                    <SparklesIcon width={18} height={18} fill={Green} />
+                  </>
+                )}
+              </IconRow>
+            </TitleContainer>
             {onToggleFavorite && (
               <Action
                 onPress={() => {
@@ -201,6 +230,10 @@ const ThumbEmoji = styled.Text`
   font-size: 18px;
 `;
 
+const TitleContainer = styled.View`
+  flex: 1;
+`;
+
 const Mid = styled.View`
   flex: 1;
 `;
@@ -208,11 +241,12 @@ const Mid = styled.View`
 const TitleRow = styled.View`
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const Title = styled.Text`
   flex: 1;
-  ${HeadingM};
+  ${TextL};
   line-height: 26px;
   font-weight: bold;
 `;
@@ -269,6 +303,12 @@ const StatVal = styled.Text`
 
 const StatLabel = styled.Text`
   ${TextSLight};
+`;
+
+const IconRow = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 `;
 
 export default FoodCard;

@@ -7,7 +7,7 @@ import Spacer from '../../components/spacer/Spacer';
 import SkeletonScreen from '../skeleton-screen/SkeletonScreen';
 import NutritionCard from '../../components/cards/NutritionCard';
 import { TextL } from '../../theme/typography';
-import { Gray7, Green } from '../../theme/colors';
+import { Gray7, Green, Red } from '../../theme/colors';
 import CaloriesIcon from '../../../assets/icons/calories.svg';
 import GrainIcon from '../../../assets/icons/grain.svg';
 import DripIcon from '../../../assets/icons/drip.svg';
@@ -17,10 +17,12 @@ import MealsList from '../../components/meals/MealsList';
 import { useTranslation } from 'react-i18next';
 import useUserData from '../../lib/user-data/useUserData';
 import { IMeal } from '../../data/meals/IMeal';
-import { getMealsByDate } from '../../utils/meals-utils';
+import {
+  getMealsByDate,
+  getMealsWithItemsByDate,
+} from '../../utils/meals/meals-utils';
 import useAuth from '../../lib/auth/useAuth';
 import FadeInView from '../../components/animations/FadeInView';
-import { removeFoodFromMeal } from '../../utils/food-utils';
 import { useToast } from 'react-native-toast-notifications';
 import useDate from '../../lib/date/useDate';
 import { FoodItem } from '../../data/food/FoodItem';
@@ -30,6 +32,7 @@ import {
   removeFavorite,
 } from '../../utils/favorites-utils';
 import CustomTopBar from '../../components/custom-top-bar/CustomTopBar';
+import { removeFoodItemFromMeal } from '../../utils/food/food-utils-new';
 
 const HomeScreen = () => {
   const { user } = useAuth();
@@ -57,8 +60,9 @@ const HomeScreen = () => {
       if (!user) return;
       setFetchingMeals(true);
       try {
-        const todayMeals = await getMealsByDate(user.id, date);
-        setMealsForDay(todayMeals ?? []);
+        // const todayMeals = await getMealsByDate(user.id, date);
+        const foodItems = await getMealsWithItemsByDate(user.id, date);
+        setMealsForDay(foodItems ?? []);
       } catch (e) {
         console.error('getMealsByDate failed:', e);
         setMealsForDay([]);
@@ -75,11 +79,11 @@ const HomeScreen = () => {
 
   const totals = useMemo(() => {
     const sum = { calories: 0, protein: 0, fat: 0, carbs: 0 };
-    for (const meal of mealsForDay) {
-      sum.calories += Number(meal.totalCalories || 0);
-      sum.protein += Number(meal.totalProtein || 0);
-      sum.fat += Number(meal.totalFat || 0);
-      sum.carbs += Number(meal.totalCarbs || 0);
+    for (const foodItem of mealsForDay) {
+      sum.calories += Number(foodItem.totalCalories || 0);
+      sum.protein += Number(foodItem.totalProtein || 0);
+      sum.fat += Number(foodItem.totalFat || 0);
+      sum.carbs += Number(foodItem.totalCarbs || 0);
 
       // for (const item of meal.foodItems ?? []) {
       //   sum.calories += Number(item.calories || 0);
@@ -99,19 +103,38 @@ const HomeScreen = () => {
     carbs: userGoals?.dailyCarbs || 0,
   };
 
+  const handleUpdateFoodItem = async (
+    updatedFoodItem: FoodItem,
+    mealId: string,
+  ) => {
+    try {
+      setLoading(true);
+      // await updateFoodItem(updatedFoodItem, mealId);
+      await loadMeals(selectedDate);
+      setLoading(false);
+    } catch (err) {
+      console.error('Error updating food item:', err);
+    }
+  };
+
   const handleDeleteFoodItem = async (foodItemId: string, mealId: string) => {
     try {
       setLoading(true);
-      await removeFoodFromMeal(mealId, foodItemId);
-      await loadMeals(selectedDate);
+      await removeFoodItemFromMeal(foodItemId, mealId);
       toast.show(t('toast.food_deleted'), {
         type: 'success',
         textStyle: { color: Green },
         placement: 'bottom',
       });
+      await loadMeals(selectedDate);
       setLoading(false);
     } catch (err) {
       console.error('Error deleting food item:', err);
+      toast.show(t('toast.food_deleted_failed'), {
+        type: 'danger',
+        textStyle: { color: Red },
+        placement: 'bottom',
+      });
     }
   };
 
@@ -141,6 +164,7 @@ const HomeScreen = () => {
       console.error('Error toggling favorite:', err);
     }
   };
+
   const handleQuickAddPress = async () => {
     try {
       await refreshData();
@@ -220,16 +244,14 @@ const HomeScreen = () => {
             </DailyProgressCardsContainer>
 
             <MealsListContainer>
-              {/* <MainSliderCard
-              item={{ id: '1', displayName: 'Noam' }}
-              icon={MeatIcon}
-              onPress={() => null}
-            /> */}
               <MealsList
                 meals={mealsForDay}
                 loading={fetchingMeals}
                 onQuickAddPress={handleQuickAddPress}
                 onPressItem={id => console.log('open', id)}
+                onUpdateItem={(updatedFoodItem, mealId) =>
+                  handleUpdateFoodItem(updatedFoodItem, mealId)
+                }
                 onDeleteItem={(id, mealId) => handleDeleteFoodItem(id, mealId)}
                 onToggleFavorite={foodItem => handleToggleFavorite(foodItem)}
               />

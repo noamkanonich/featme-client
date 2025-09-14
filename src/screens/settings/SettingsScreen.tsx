@@ -1,5 +1,5 @@
 import { View, Text, Pressable, ScrollView } from 'react-native';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from '../../../styled-components';
 import {
   Blue,
@@ -49,6 +49,10 @@ import LogoutModal from '../../components/logout/LogoutModal';
 import CalendarIcon from '../../../assets/icons/calendar.svg';
 import { format } from 'date-fns';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import CalendarPicker from '../../components/calendar-picker/CalendarPicker.native';
+import Modal from '../../components/modal/Modal';
+import { ProfileStackParams } from '../../lib/routes/profile/ProfileStack';
+import { RootStackParamList } from '../../lib/routes/Router';
 
 const SettingsScreen = () => {
   const { user, updateUser, signOut } = useAuth();
@@ -72,14 +76,18 @@ const SettingsScreen = () => {
   const [dateBirth, setDateBirth] = useState<string | number | Date>(
     user?.dateBirth || new Date(),
   );
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+
+  const [isSelectingDate, setIsSelectingDate] = useState(false); // New flag to track selection in progress
 
   const [openDatePicker, setOpenDatePicker] = useState(false);
 
   const navigation =
-    useNavigation<NativeStackNavigationProp<RootTabParamList>>();
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const isRtl = i18n.dir() === 'rtl';
-  const ChevronIcon = isRtl ? ChevronRightIcon : ChevronLeftIcon;
+  const ChevronBackIcon = isRtl ? ChevronRightIcon : ChevronLeftIcon;
+  const ChevronIcon = isRtl ? ChevronLeftIcon : ChevronRightIcon;
 
   const handleUpdate = async () => {
     try {
@@ -119,16 +127,50 @@ const SettingsScreen = () => {
     }
   };
 
+  // const handleDateSelection = useCallback(
+  //   (date?: Date) => {
+  //     console.log('SS');
+  //     if (!date || isSelectingDate) return; // Prevent repeated calls
+  //     setIsSelectingDate(true); // Set flag to prevent loop
+  //     console.log('Date selected:', date); // For debugging
+  //     setDateBirth(date);
+  //     setOpenDatePicker(false);
+  //     // setIsCalendarOpen(false); // Close modal after date selection
+  //     // onSelectedDateChanged(date);
+  //     setTimeout(() => setIsSelectingDate(false), 300);
+  //   },
+  //   [isSelectingDate],
+  // );
+
+  const handleDateChange = (date: Date) => {
+    console.log('Date selected:', format(date, 'dd-MM-yyyy')); // For debugging
+    setDateBirth(date);
+    setOpenDatePicker(false);
+    setIsSelectingDate(false);
+  };
+
   return (
     <Root>
+      <Modal
+        visible={openDatePicker}
+        onRequestClose={() => setOpenDatePicker(false)}
+      >
+        <CalendarPicker
+          date={dateBirth ? new Date(dateBirth) : new Date()}
+          color={Orange}
+          onChange={value => {
+            handleDateChange(value);
+          }}
+        />
+      </Modal>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Container>
           <Spacer direction="vertical" size="xxs" />
 
           <TitleContainer>
             <Row>
-              <Pressable onPress={() => navigation.navigate('Profile')}>
-                <ChevronIcon width={24} height={24} fill={Dark} />
+              <Pressable onPress={() => navigation.goBack()}>
+                <ChevronBackIcon width={24} height={24} fill={Dark} />
               </Pressable>
 
               <Spacer direction="horizontal" size="xxl" />
@@ -163,7 +205,7 @@ const SettingsScreen = () => {
                 <Label>{t('onboarding_third_screen.birth_date')}</Label>
 
                 <Spacer direction="vertical" size="xs" />
-                {openDatePicker && (
+                {false && (
                   <DateTimePicker
                     mode="date"
                     display="spinner"
@@ -179,6 +221,7 @@ const SettingsScreen = () => {
                 <Pressable
                   onPress={() => {
                     setOpenDatePicker(true);
+                    // isSelectingDate(true);
                   }}
                 >
                   <DateInputContainer>
@@ -331,6 +374,7 @@ const SettingsScreen = () => {
               <Spacer direction="horizontal" size="s" />
               <CardTitle>{t('settings_screen.notifications')}</CardTitle>
             </CardTitleRow>
+
             <Spacer direction="vertical" size="m" />
 
             <CardRow>
@@ -369,7 +413,33 @@ const SettingsScreen = () => {
             <Spacer direction="vertical" size="m" />
 
             <CardSubtext>{t('settings_screen.privacy_subtext')}</CardSubtext>
+
+            <Spacer direction="vertical" size="m" />
+
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Profile', { screen: 'PrivacyPolicy' });
+              }}
+            >
+              <ButtonRow>
+                <Label>Privacy policy</Label>
+                <ChevronIcon width={24} height={24} fill={Dark} />
+              </ButtonRow>
+            </Pressable>
+            <Spacer direction="vertical" size="m" />
+
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Terms');
+              }}
+            >
+              <ButtonRow>
+                <Label>Terms & Conditions</Label>
+                <ChevronIcon width={24} height={24} fill={Dark} />
+              </ButtonRow>
+            </Pressable>
           </Card>
+
           <Spacer direction="vertical" size="xxl" />
           <Card>
             <CardTitleRow>
@@ -442,6 +512,12 @@ const Row = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+`;
+
+const ButtonRow = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const Title = styled.Text`

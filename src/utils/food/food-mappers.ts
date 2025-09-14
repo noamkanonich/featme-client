@@ -18,11 +18,14 @@ export const toFoodItem = (raw: FoodItemRaw): FoodItem => {
     imageUri: raw.image_uri ?? null,
     createdAt: raw.created_at ?? undefined,
     updatedAt: raw.updated_at ?? undefined,
+    aiGenerated: raw.ai_generated ?? false,
+    isFavorite: raw.is_favorite ?? false,
+    healthLevel: raw.health_level ?? undefined,
   };
 };
 
 /** App (camelCase) -> Raw (DB) */
-export const toFoodItemRow = (item: FoodItem): FoodItemRaw => {
+export const toFoodItemRaw = (item: FoodItem): FoodItemRaw => {
   console.log(item);
   return {
     id: item.id,
@@ -37,6 +40,9 @@ export const toFoodItemRow = (item: FoodItem): FoodItemRaw => {
     image_uri: item.imageUri ?? null,
     created_at: item.createdAt ?? undefined, // יושמט ב-JSON.stringify אם undefined
     updated_at: item.updatedAt ?? undefined,
+    ai_generated: item.aiGenerated ?? false,
+    is_favorite: item.isFavorite ?? false,
+    health_level: item.healthLevel ?? undefined,
   };
 };
 
@@ -47,5 +53,5 @@ export const foodItemsFromRaw = (rows: FoodItemRaw[] = []): FoodItem[] => {
 
 /** מערכים: App[] -> Raw[] */
 export const foodItemsToRaw = (items: FoodItem[] = []): FoodItemRaw[] => {
-  return items.map(toFoodItemRow);
+  return items.map(toFoodItemRaw);
 };

@@ -17,7 +17,7 @@ const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 // ---------- IMAGE ----------
 export async function analyzeImageWithGroq(
-  imageDataUrl: string, // data:image/jpeg;base64,....
+  imageDataUrl: string,
   apiKey: string,
   language = 'en',
 ): Promise<NutritionResult> {
@@ -58,7 +58,6 @@ export async function analyzeTextWithGroq(
   language = 'en',
 ): Promise<NutritionResult> {
   try {
-    console.log(buildNutritionTextPrompt(language, text));
     const payload = {
       model: 'llama-3.1-8b-instant',
       response_format: { type: 'json_object' },

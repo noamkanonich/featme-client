@@ -31,6 +31,7 @@ import CustomInput from '../../components/input/CustomInput';
 import CustomButton from '../../components/buttons/CustomButton';
 import FadeInView from '../../components/animations/FadeInView';
 import useKeyboardVisible from '../../lib/keyboard/useKeyboardVisible';
+import SegmentedSwitch from '../../components/buttons/SegmentedSwitch';
 
 const OnboardingSecondScreen = () => {
   const { t } = useTranslation();
@@ -100,7 +101,21 @@ const OnboardingSecondScreen = () => {
               </TopContainer>
 
               <BottomContainer>
-                <SwitchButton value={unitType} onChange={setUnitType} />
+                <SegmentedSwitch
+                  value={unitType}
+                  options={[
+                    {
+                      value: UnitType.Metric,
+                      label: t('onboarding_second_screen.metric'),
+                    },
+                    {
+                      value: UnitType.Imperial,
+                      label: t('onboarding_second_screen.imperial'),
+                    },
+                  ]}
+                  onChange={setUnitType}
+                />
+                {/* <SwitchButton value={unitType} onChange={setUnitType} /> */}
                 <Spacer direction="vertical" size="xl" />
 
                 <InputsContainer>

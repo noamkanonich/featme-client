@@ -1,5 +1,5 @@
-import { UserSettingsRow } from '../data/user-settings/UserSettingsRow';
-import { supabase } from '../lib/supabase/supabase';
+import { UserSettingsRaw } from '../../data/user-settings/UserSettingsRaw';
+import { supabase } from '../../lib/supabase/supabase';
 
 export const getUserSettingsByUserId = async (userId: string) => {
   try {
@@ -21,7 +21,7 @@ export const getUserSettingsByUserId = async (userId: string) => {
 
 export const updateUserSettingsByUserId = async (
   userId: string,
-  patch: Partial<UserSettingsRow>,
+  patch: Partial<UserSettingsRaw>,
 ) => {
   const { data, error } = await supabase
     .from('user_settings')
@@ -31,5 +31,5 @@ export const updateUserSettingsByUserId = async (
     .single();
 
   if (error) throw error;
-  return data as UserSettingsRow;
+  return data as UserSettingsRaw;
 };

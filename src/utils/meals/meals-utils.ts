@@ -1,19 +1,12 @@
 // utils/meals.ts
 import { endOfDay, startOfDay } from 'date-fns';
-import { supabase } from '../lib/supabase/supabase';
-
-// ממפים חדשים
-import { toMeal, toMealRowInsert } from '../utils/mappers/mealMapper';
-import { MealType } from '../data/meals/MealType';
-import { IMeal } from '../data/meals/IMeal';
-
-type CreateDefaults = Partial<{
-  name: string;
-  description: string | null;
-  notes: string | null;
-  food_items: any[]; // if you store JSONB items on the meal
-  meal_time: string; // override timestamp
-}>;
+import { MealType } from '../../data/meals/MealType';
+import { supabase } from '../../lib/supabase/supabase';
+import { IMeal } from '../../data/meals/IMeal';
+import { toMeal } from '../mappers/mealMapper';
+import { FoodItem } from '../../data/food/FoodItem';
+import { FoodItemRaw } from '../../data/food/FoodItemRaw';
+import { toFoodItem } from '../food/food-mappers';
 
 export const getMealByHour = (): MealType => {
   const hour = new Date().getHours();
@@ -79,6 +72,56 @@ export const getMealsByDate = async (
   }
 };
 
+export const getMealsWithItemsByDate = async (
+  userId: string,
+  selectedDate: Date,
+): Promise<IMeal[]> => {
+  const todayMeals = await getMealsByDate(userId, selectedDate);
+  if (todayMeals.length === 0) return [];
+
+  const from = startOfDay(selectedDate).toISOString();
+  const to = endOfDay(selectedDate).toISOString();
+
+  try {
+    // Fetch meals with embedded food items
+    const { data: meals, error: mealsErr } = await supabase
+      .from('meals')
+      .select('*')
+      .eq('user_id', userId)
+      .gte('meal_time', from)
+      .lte('meal_time', to)
+      .order('meal_time', { ascending: true });
+
+    if (mealsErr) throw mealsErr;
+
+    const mealIds = (meals ?? []).map(m => m.id);
+    const { data: items, error: itemsErr } = await supabase
+      .from('meal_items')
+      .select('*')
+      .in('meal_id', mealIds);
+
+    if (itemsErr) throw itemsErr;
+
+    const itemsByMeal = new Map<string, any[]>();
+    (items ?? []).forEach(it => {
+      if (!itemsByMeal.has(it.meal_id)) itemsByMeal.set(it.meal_id, []);
+      itemsByMeal.get(it.meal_id)!.push(it);
+    });
+
+    const mealsWithItems = (meals ?? []).map(m => ({
+      ...m,
+      meal_items: itemsByMeal.get(m.id) ?? [],
+    }));
+    return mealsWithItems.map(m => ({
+      ...toMeal(m),
+      foodItems: (m.meal_items as FoodItemRaw[]).map(toFoodItem),
+    }));
+  } catch (err) {
+    console.error('Error fetching meals with items:', err);
+    return [];
+  }
+};
+
 // ----------------------------------------------------
 // CRUD (מיושרים ל-mappers החדשים)
 // ----------------------------------------------------
@@ -98,11 +141,6 @@ export const getMealsByDate = async (
 //     return null;
 //   }
 // };
-
-export const updateMeal = async (meal: Partial<IMeal> & { id: string }) => {
-  // אופציונלי: השתמש ב-toMealRowUpdate אם בנית אותו
-  // נשאיר ריק כי לא ביקשת מימוש כאן
-};
 
 export const deleteMeal = async (mealId: string) => {
   try {

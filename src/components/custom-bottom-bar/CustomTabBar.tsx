@@ -82,7 +82,10 @@ const CustomTabBar = ({ state, navigation }: BottomTabBarProps) => {
       {tabs.map((tab, index) => {
         const isFocused = state.index === index;
         const onPress = () => {
-          navigation.navigate(tab.name as never);
+          navigation.reset({
+            index: 0,
+            routes: [{ name: tab.name }],
+          });
         };
 
         return (

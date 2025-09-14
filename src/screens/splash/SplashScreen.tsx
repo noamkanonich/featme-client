@@ -3,8 +3,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Animated, Easing, Platform, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import styled from 'styled-components/native';
-import { HeadingL, HeadingXL, TextL } from '../../theme/typography';
-import { White } from '../../theme/colors';
+import { HeadingXL, TextL } from '../../theme/typography';
+import { DarkGreen, Green, White, Yellow } from '../../theme/colors';
+import SparklesIcon from '../../../assets/icons/sparkles.svg';
 
 type Props = {
   onComplete?: () => void;
@@ -210,7 +211,8 @@ const SplashScreen: React.FC<Props> = ({
   return (
     <Root
       as={Animated.createAnimatedComponent(LinearGradient)}
-      colors={['#34D399', '#34D399', '#14B8A6']}
+      // colors={['#34D399', '#34D399', '#14B8A6']}
+      colors={[DarkGreen, Green, Green]}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       style={{ opacity: rootOpacity }}
@@ -230,7 +232,7 @@ const SplashScreen: React.FC<Props> = ({
               ...(Platform.OS === 'android' ? { elevation: 10 } : {}),
             }}
           >
-            {logo ?? <Emoji>✨</Emoji>}
+            <SparklesIcon width={54} height={54} fill={Yellow} />
           </LogoCircle>
         </LogoWrap>
 
@@ -283,7 +285,7 @@ const Ring = styled.View`
   width: 100%;
   height: 100%;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
 `;
 
 const LogoCircle = styled.View`
@@ -293,17 +295,6 @@ const LogoCircle = styled.View`
   background: #ffffff;
   align-items: center;
   justify-content: center;
-
-  /* iOS shadow */
-  shadow-color: #000;
-  shadow-opacity: 0.25;
-  shadow-radius: 16px;
-  shadow-offset: 0px 8px;
-`;
-
-const Emoji = styled(Text)`
-  font-size: 36px;
-  color: #10b981;
 `;
 
 const AppName = styled(Text)`

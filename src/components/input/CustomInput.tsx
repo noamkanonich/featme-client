@@ -25,6 +25,7 @@ type CustomInputProps = Omit<
   numeric?: boolean; // show numeric keypad
   onPressEndIcon?: () => void;
   type?: 'text' | 'password' | 'numeric' | 'date' | 'email';
+  dirty?: boolean;
 };
 
 const CustomInput = forwardRef<RNTextInput, CustomInputProps>(
@@ -39,6 +40,7 @@ const CustomInput = forwardRef<RNTextInput, CustomInputProps>(
       numeric = false,
       onPressEndIcon,
       type,
+      dirty = false,
       ...rest
     },
     ref,
@@ -50,7 +52,11 @@ const CustomInput = forwardRef<RNTextInput, CustomInputProps>(
       <Root>
         <Label>{label}</Label>
         <Spacer direction="vertical" size="xs" />
-        <Field $focused={focused} hasIcons={!!StartIcon || !!EndIcon}>
+        <Field
+          focused={focused}
+          hasIcons={!!StartIcon || !!EndIcon}
+          dirty={dirty}
+        >
           <Input
             ref={ref}
             isRtl={isRtl}
@@ -112,24 +118,20 @@ const Label = styled.Text`
   font-weight: 600;
 `;
 
-const Field = styled.View<{ $focused: boolean; hasIcons?: boolean }>`
+const Field = styled.View<{
+  focused: boolean;
+  hasIcons?: boolean;
+  dirty?: boolean;
+}>`
   background-color: ${White};
 
   border-radius: 8px;
-  border-width: ${p => (p.$focused ? 2 : 1)}px;
-  border-color: ${p => (p.$focused ? '#111827' : '#E5E7EB')}; /* gray-100 */
+  border-width: ${focused => (focused ? 2 : 1)}px;
+  border-color: ${({ focused, dirty }) =>
+    dirty && !focused ? 'red' : focused ? '#111827' : '#E5E7EB'}; /* gray-100 */
   padding: ${({ hasIcons }) => (hasIcons ? '6px 14px' : '6px 10px')};
 
   justify-content: center;
-
-  /* iOS shadow when focused */
-  shadow-color: ${Dark};
-  shadow-opacity: ${p => (p.$focused ? 0.12 : 0)};
-  shadow-radius: 8px;
-  shadow-offset: 0px 4px;
-
-  /* Android */
-  elevation: ${p => (p.$focused ? 2 : 0)};
 `;
 
 const Input = styled.TextInput<{ isRtl?: boolean; hasIcons?: boolean }>`

@@ -1,11 +1,11 @@
 import { createContext } from 'react';
-import { IUser } from '../../data/IUser';
+import { IUser } from '../../data/user/IUser';
 
 interface IAuthContext {
   user: IUser | undefined;
   updateUser: (user: IUser | undefined) => Promise<void>;
   signIn: (user?: IUser) => Promise<void>;
-  loginUser: (email: string, password: string) => Promise<void>;
+  loginUser: (email: string, password: string) => Promise<Error | void>;
   signOut: () => Promise<void>;
   isSignedIn: boolean;
   isLoading: boolean;

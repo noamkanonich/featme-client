@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BarChart } from 'react-native-gifted-charts';
 import styled from '../../../styled-components';
+import { useTranslation } from 'react-i18next';
 
 const C = {
   emerald: '#10B981',
@@ -13,6 +14,7 @@ const C = {
 type DailyPoint = { date: string; calories: number };
 
 const CaloriesBar = ({ points }: { points: DailyPoint[] }) => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const barData = points.map(p => ({
@@ -47,7 +49,9 @@ const CaloriesBar = ({ points }: { points: DailyPoint[] }) => {
       showTooltip={activeIndex !== null}
       renderTooltip={item => (
         <TooltipWrap>
-          <TooltipText>{`${Math.round(item.value)} kcal`}</TooltipText>
+          <TooltipText>{`${Math.round(item.value)} ${t(
+            'insights_screen.calories',
+          )}`}</TooltipText>
         </TooltipWrap>
       )}
       // optional: brings the selected bar forward for clarity

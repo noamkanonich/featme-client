@@ -1,11 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { ActivityIndicator, Image, Pressable } from 'react-native';
-import styled from 'styled-components/native';
-import LinearGradient from 'react-native-linear-gradient';
-import Spacer from '../spacer/Spacer';
-import CameraIcon from '../../../assets/icons/camera.svg';
-import { TextM, TextS } from '../../theme/typography';
-import { Dark, Gray1, Gray4, Green, White } from '../../theme/colors';
+import { Image, Pressable } from 'react-native';
+import styled, { css } from 'styled-components/native';
 import {
   launchCamera,
   launchImageLibrary,
@@ -13,54 +8,52 @@ import {
   ImageLibraryOptions,
   Asset,
 } from 'react-native-image-picker';
-import PlusIcon from '../../../assets/icons/plus.svg';
-import { useTranslation } from 'react-i18next';
+import Spacer from '../spacer/Spacer';
 import Modal from '../modal/Modal';
 import CustomButton from '../buttons/CustomButton';
+import PlusIcon from '../../../assets/icons/plus.svg';
+import { Gray4, Green } from '../../theme/colors';
 
-interface ImagePickerCard {
+type ButtonSize = 'large' | 'medium';
+
+interface ImagePickerCardProps {
   onPicked: (uri: string, asset?: Asset) => void;
   initialUri?: string;
-  title?: string;
-  subtitle?: string;
   openCameraLabel?: string;
   openGalleryLabel?: string;
+  size?: ButtonSize;
+  rounded?: boolean;
 }
 
 const ImagePickerCard = ({
   onPicked,
   initialUri,
-  title = 'Add a photo',
-  subtitle = 'Take a picture or choose from gallery',
   openCameraLabel = 'Open Camera',
   openGalleryLabel = 'Pick from Gallery',
-}: ImagePickerCard) => {
+  size = 'medium',
+  rounded = true,
+}: ImagePickerCardProps) => {
   const [imageUri, setImageUri] = useState<string | undefined>(initialUri);
   const [visible, setVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const { t } = useTranslation();
+
+  console.log(rounded);
 
   const handleOpenCamera = useCallback(async () => {
-    setIsLoading(true);
     const options: CameraOptions = {
       mediaType: 'photo',
-      includeBase64: false, // no AI, keep it light
+      includeBase64: false,
       quality: 0.85,
       cameraType: 'back',
     };
     const res = await launchCamera(options);
     const a = res.assets?.[0];
     setVisible(false);
-    setIsLoading(false);
-
     if (!a?.uri) return;
     setImageUri(a.uri);
     onPicked(a.uri, a);
   }, [onPicked]);
 
   const handlePickFromGallery = useCallback(async () => {
-    setIsLoading(true);
-
     const options: ImageLibraryOptions = {
       mediaType: 'photo',
       includeBase64: false,
@@ -70,15 +63,13 @@ const ImagePickerCard = ({
     const res = await launchImageLibrary(options);
     const a = res.assets?.[0];
     setVisible(false);
-
     if (!a?.uri) return;
     setImageUri(a.uri);
     onPicked(a.uri, a);
-    setIsLoading(false);
   }, [onPicked]);
 
   return (
-    <Card>
+    <Root>
       <Modal visible={visible} onRequestClose={() => setVisible(false)}>
         <CustomButton
           label={openCameraLabel}
@@ -87,7 +78,6 @@ const ImagePickerCard = ({
             setVisible(false);
           }}
         />
-
         <Spacer direction="vertical" size="s" />
         <CustomButton
           label={openGalleryLabel}
@@ -98,102 +88,64 @@ const ImagePickerCard = ({
         />
       </Modal>
 
-      <Row>
-        <IconBox>
-          <CameraIcon width={24} height={24} />
-        </IconBox>
-        <Spacer direction="horizontal" size="xs" />
-        <AddImageLabel>{t('quick_add.add_image')}</AddImageLabel>
-      </Row>
-      <Spacer direction="vertical" size="s" />
-
       <Pressable
-        onPress={() => {
-          setVisible(true);
-        }}
+        onPress={() => setVisible(true)}
+        style={{ width: '100%', height: '100%' }}
       >
-        <PlusIconContainer>
-          <PlusIcon width={24} height={24} fill={Green} />
-        </PlusIconContainer>
+        {imageUri ? (
+          <Image
+            source={{ uri: imageUri }}
+            style={{ width: '100%', height: '100%' }}
+            resizeMode="cover"
+          />
+        ) : (
+          <EmptyCenter>
+            <PlusButton size={size} rounded={rounded}>
+              <PlusIcon
+                width={size === 'large' ? 36 : 28}
+                height={size === 'large' ? 36 : 28}
+                fill={Green}
+              />
+            </PlusButton>
+          </EmptyCenter>
+        )}
       </Pressable>
-
-      {imageUri && (
-        <>
-          <Spacer direction="vertical" size="m" />
-          {isLoading ? (
-            <ActivityIndicator size={24} color={Dark} />
-          ) : (
-            <Image
-              source={{ uri: imageUri }}
-              style={{ width: '100%', height: 200, borderRadius: 16 }}
-              resizeMode="cover"
-            />
-          )}
-        </>
-      )}
-    </Card>
+    </Root>
   );
 };
 
-const Card = styled.View`
-  width: 100%;
+export default ImagePickerCard;
 
-  background-color: ${White};
-  border-radius: 32px;
+/* ===== styles ===== */
+
+const Root = styled.View`
+  flex: 1;
+  width: 100%;
+  height: 100%;
 `;
 
-const IconBox = styled(LinearGradient).attrs({
-  colors: ['#34D399', '#8bcdb7'],
-  start: { x: 0, y: 0 },
-  end: { x: 1, y: 0 },
-})`
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+const EmptyCenter = styled.View`
+  flex: 1;
   align-items: center;
   justify-content: center;
 `;
 
-const CardTitle = styled.Text`
-  ${TextM};
-`;
-
-const CardSubtitle = styled.Text`
-  ${TextS};
-  color: ${Gray1};
-`;
-
-const Row = styled.View`
-  flex-direction: row;
-  align-items: center;
-`;
-
-const Pill = styled(LinearGradient).attrs({
-  colors: ['#34D399', '#8bcdb7'],
-  start: { x: 0, y: 0 },
-  end: { x: 1, y: 0 },
-})`
-  padding: 12px 24px;
-  border-radius: 9999px;
-  align-items: center;
-  justify-content: center;
-`;
-
-const PillLabel = styled.Text`
-  ${TextS};
-  color: ${White};
-`;
-
-const AddImageLabel = styled.Text`
-  ${TextM};
-`;
-const PlusIconContainer = styled.View`
-  width: 100%;
-  padding: 12px;
-  border-radius: 16px;
+const PlusButton = styled.View<{ size: ButtonSize; rounded: boolean }>`
   border-width: 2px;
   border-color: ${Gray4};
   align-items: center;
   justify-content: center;
+
+  ${({ size, rounded }) =>
+    size === 'large'
+      ? css`
+          width: 120px;
+          height: 120px;
+          border-radius: ${rounded ? '24px' : '0px'};
+        `
+      : css`
+          width: 100%;
+          height: 100%;
+          border-radius: ${rounded ? '16px' : '0px'};
+        `}
 `;
-export default ImagePickerCard;

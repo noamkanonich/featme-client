@@ -2,7 +2,7 @@
 
 import { IUserSettings } from '../../data/IUserSettings';
 import { UnitType } from '../../data/UnitType';
-import { UserSettingsRow } from '../../data/user-settings/UserSettingsRow';
+import { UserSettingsRow } from '../../data/user-settings/UserSettingsRaw';
 
 /** Raw (DB, snake_case) -> App (camelCase) */
 export const toUserSettings = (raw: UserSettingsRow): IUserSettings => {

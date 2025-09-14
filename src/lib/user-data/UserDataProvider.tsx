@@ -5,12 +5,17 @@ import { IUserGoals } from '../../data/IUserGoals';
 import { IMeal } from '../../data/meals/IMeal';
 import { IUserSettings } from '../../data/IUserSettings';
 import UserDataContext from './UserDataContext';
-import { ensureMealForDate, getMealsByDate } from '../../utils/meals-utils';
+
 import { MealType } from '../../data/meals/MealType';
-import { getUserGoalsByUserId } from '../../utils/user-goals-utils';
-import { getUserSettingsByUserId } from '../../utils/user-settings-utils';
+import { getUserGoalsByUserId } from '../../utils/user-goals/user-goals-utils';
+
 import useDate from '../date/useDate';
 import axios from 'axios';
+import {
+  ensureMealForDate,
+  getMealsWithItemsByDate,
+} from '../../utils/meals/meals-utils';
+import { getUserSettingsByUserId } from '../../utils/user-settings/user-settings-utils';
 
 interface Props {
   children: ReactNode;
@@ -34,7 +39,7 @@ export const UserDataProvider = ({ children }: Props) => {
       const [goalsRes, settingsRes, mealsRes] = await Promise.all([
         getUserGoalsByUserId(user.id),
         getUserSettingsByUserId(user.id),
-        getMealsByDate(user.id, selectedDate),
+        getMealsWithItemsByDate(user.id, selectedDate),
       ]);
 
       if (goalsRes) setUserGoals(goalsRes);

@@ -14,6 +14,8 @@ export const LightRed = '#FEE2E2';
 
 export const LightGreen = '#ECFDF5';
 
+export const DarkGreen = '#064e3b';
+
 export const Dark = '#032222';
 export const Gray1 = '#748585';
 export const Gray2 = '#9aa7a7';

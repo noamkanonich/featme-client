@@ -91,7 +91,7 @@ const DailyBreakdownCard = ({
 
       <SectionTitle>{t('history_screen.calories_progress')}</SectionTitle>
       <ProgressRow>
-        <ProgressBar percent={percent} />
+        <ProgressBar value={percent} maxValue={100} />
         <PercentText>{Math.round(percent)}%</PercentText>
       </ProgressRow>
 

@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
-import {
-  Blue,
-  Dark,
-  Gray3,
-  Gray4,
-  Gray7,
-  LightBlue,
-  White,
-} from '../../theme/colors';
+import { Blue, Dark, Gray3, Gray4, LightBlue, White } from '../../theme/colors';
 import styled from '../../../styled-components';
-import { TextL, TextM, TextS, TextSLight } from '../../theme/typography';
+import { TextL, TextM, TextSLight } from '../../theme/typography';
 import Spacer from '../../components/spacer/Spacer';
-import GlobalIcon from '../../../assets/icons/global.svg';
-import GoogleIcon from '../../../assets/icons/google.svg';
 import CustomInput from '../../components/input/CustomInput';
 import {
   ActivityIndicator,
@@ -25,14 +15,14 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParamList } from '../../lib/routes/Router';
-import { loginUser, registerUser } from '../../utils/auth-utils';
+import { loginUser, registerUser } from '../../utils/auth/auth-utils';
 import useAuth from '../../lib/auth/useAuth';
 import PhoneIcon from '../../../assets/icons/phone.svg';
 import AccountIcon from '../../../assets/icons/account.svg';
 import MainIcon from '../../../assets/icons/mail.svg';
 import LockIcon from '../../../assets/icons/lock.svg';
-import ShowPassIcon from '../../../assets/icons/show-pass.svg';
-import HidePassIcon from '../../../assets/icons/hide-pass.svg';
+import ShowPassIcon from '../../../assets/icons/eye-open.svg';
+import HidePassIcon from '../../../assets/icons/eye-close.svg';
 import uuid from 'react-native-uuid';
 import PasswordStrengthMeter from '../../components/password-strength-meter/PasswordStrengthMeter';
 import useKeyboardVisible from '../../lib/keyboard/useKeyboardVisible';
@@ -117,8 +107,12 @@ const RegisterScreen = () => {
 
               <GoogleButtonContainer>
                 <IconRow>
-                  <GoogleIcon width={32} height={32} fill={Blue} />
-                  <Spacer direction="horizontal" size="xs" />
+                  <Image
+                    source={require('../../../assets/images/google.png')}
+                    style={{ width: 32, height: 32 }}
+                  />
+                  {/* <GoogleIcon width={32} height={32} fill={Blue} /> */}
+                  <Spacer direction="horizontal" size="s" />
                   <GoogleButtonLabel>
                     {t('register_screen.google_register')}
                   </GoogleButtonLabel>
@@ -172,7 +166,9 @@ const RegisterScreen = () => {
                   endIcon={showPassword ? ShowPassIcon : HidePassIcon}
                   onPressEndIcon={() => setShowPassword(!showPassword)}
                 />
-                <PasswordStrengthMeter password={password} />
+                {password.length > 0 && (
+                  <PasswordStrengthMeter password={password} />
+                )}
                 <Spacer direction="vertical" size="m" />
 
                 <CustomInput
@@ -264,7 +260,7 @@ const GoogleButtonContainer = styled.View`
   width: 100%;
   border-radius: 8px;
   background: ${White};
-  padding: 10px;
+  padding: 12px;
   border: 1px solid ${Gray4};
   align-items: center;
 `;

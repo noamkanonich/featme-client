@@ -1,7 +1,7 @@
 import { ActivityLevel } from '../ActivityLevel';
 import { UserGoal } from '../UserGoal';
 
-export type UserGoalsRow = {
+export type UserGoalsRaw = {
   id: string | number;
   user_id: string | number;
   weight: number;

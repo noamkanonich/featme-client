@@ -6,7 +6,6 @@
  */
 
 import {
-  ActivityIndicator,
   SafeAreaView,
   StatusBar,
   StyleSheet,
@@ -14,7 +13,7 @@ import {
 } from 'react-native';
 import Router from './src/lib/routes/Router';
 import useTheme from './src/theme/useTheme';
-import styled, { ThemeProvider } from './styled-components';
+import { ThemeProvider } from './styled-components';
 import { useEffect, useRef, useState } from 'react';
 import i18n, { initI18n } from './src/i18n';
 import { Dark, White } from './src/theme/colors';
@@ -38,17 +37,16 @@ const App = () => {
       await initI18n({
         language: initialLanguage.current || 'he',
       });
-      // setTimeout(() => {
-      //   setI18nReady(true);
-      // }, 3000);
     };
-    // if (authReady) {
     init();
-    // }
   }, [setDir]);
 
   useEffect(() => {
     const onLanguageChanged = () => {
+      console.log('App - languageChanged: ', i18n.language, i18n.dir());
+      if (!initialLanguage.current) {
+        initialLanguage.current = i18n.language;
+      }
       setDir(i18n.dir());
     };
 
@@ -72,20 +70,14 @@ const App = () => {
           <DateProvider>
             <UserDataProvider>
               {!i18nReady ? (
-                // <LoadingContainer>
-                //   <ActivityIndicator size={64} color={Dark} />
-                // </LoadingContainer>
                 <SplashScreen
-                  stayMs={3000}
+                  stayMs={4000}
                   onComplete={() => {
                     setI18nReady(true);
                   }}
                 />
               ) : (
-                <>
-                  {/* <CustomTopBar /> */}
-                  <Router />
-                </>
+                <Router />
               )}
             </UserDataProvider>
           </DateProvider>
@@ -102,12 +94,5 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 });
-
-const LoadingContainer = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: ${White};
-`;
 
 export default App;

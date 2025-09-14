@@ -3,7 +3,7 @@
 import { IMeal } from '../../data/meals/IMeal';
 import { MealRow } from '../../data/meals/MealRaw';
 import { MealType } from '../../data/meals/MealType';
-import { foodItemsFromRaw, foodItemsToRaw } from './foodItemMapper';
+import { foodItemsFromRaw, foodItemsToRaw } from '../food/food-mappers';
 
 /* ========================
    Helpers: MealType <-> string

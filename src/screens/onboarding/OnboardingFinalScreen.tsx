@@ -41,13 +41,14 @@ import ArrowRightIcon from '../../../assets/icons/arrow-right.svg';
 import {
   calculateDailyTargets,
   createUserGoalsByUserId,
-} from '../../utils/user-goals-utils';
+} from '../../utils/user-goals/user-goals-utils';
 import useAuth from '../../lib/auth/useAuth';
-import { updateUserOnDB } from '../../utils/user-utils';
+
 import uuid from 'react-native-uuid';
 import { RootTabParamList } from '../../lib/routes/tab-navigator/TabNavigator';
 import { UnitType } from '../../data/UnitType';
 import useUserData from '../../lib/user-data/useUserData';
+import { updateUserOnDB } from '../../utils/user/user-utils';
 
 const STAGGER_MS = 120;
 const DURATION_MS = 350;

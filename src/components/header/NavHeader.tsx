@@ -26,7 +26,7 @@ const NavHeader = () => {
 const Root = styled.View`
   position: absolute;
   left: 10;
-  top: 10;
+  top: 15;
   z-index: 10;
 `;
 

@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { ActivityLevel } from '../data/ActivityLevel';
-import { Gender } from '../data/IUser';
-import { UnitType } from '../data/UnitType';
-import { UserGoalsRow } from '../data/user-goals/UserGoalsRow';
-import { UserGoal } from '../data/UserGoal';
-import { supabase } from '../lib/supabase/supabase';
-import { IUserGoals } from '../data/IUserGoals';
+import { ActivityLevel } from '../../data/ActivityLevel';
+import { Gender } from '../../data/user/IUser';
+import { UnitType } from '../../data/UnitType';
+import { UserGoalsRaw } from '../../data/user-goals/UserGoalsRaw';
+import { UserGoal } from '../../data/UserGoal';
+import { supabase } from '../../lib/supabase/supabase';
+import { IUserGoals } from '../../data/IUserGoals';
 
 export const createUserGoalsByUserId = async (
   userId: string,
@@ -54,7 +54,7 @@ export const getUserGoalsByUserId = async (userId: string) => {
 
 export const updateUserGoalsByUserId = async (
   userId: string,
-  patch: Partial<UserGoalsRow>,
+  patch: Partial<UserGoalsRaw>,
 ) => {
   const { data, error } = await supabase
     .from('user_goals')
@@ -64,7 +64,7 @@ export const updateUserGoalsByUserId = async (
     .single();
 
   if (error) throw error;
-  return data as UserGoalsRow;
+  return data as UserGoalsRaw;
 };
 
 export type DailyTargets = {
@@ -155,36 +155,95 @@ export const calculateDailyTargets = (params: Params): DailyTargets => {
   const weightKg = normalizeToMetricWeightKg(params.weight, params.unitType);
   const age = ageFromDOB(params.dateBirth);
 
+  // --- Helpers ---
+  const cmToInches = (cm: number) => cm / 2.54;
+  const inchesOver5ft = Math.max(cmToInches(heightCm) - 60, 0);
+
+  // Devine IBW (kg)
+  const ibwKg = String(params.gender).toLowerCase().includes('male')
+    ? (50 + 2.3 * inchesOver5ft) * 0.45359237
+    : (45.5 + 2.3 * inchesOver5ft) * 0.45359237;
+
+  // Adjusted BW for obesity (BMI>=30): AdjBW = IBW + 0.4*(Actual-IBW)
+  const bmi = weightKg / Math.pow(heightCm / 100, 2);
+  const adjustedBwKg = ibwKg + 0.4 * (weightKg - ibwKg);
+  const proteinRefKg =
+    bmi >= 30 ? Math.max(adjustedBwKg, ibwKg * 0.9) : weightKg;
+
+  // --- Energy (Mifflin–St Jeor) ---
   const bmr = mifflinStJeorBMR(weightKg, heightCm, age, params.gender);
-  const factor = getActivityFactor(params.activityLevel);
-  const tdee = Math.max(bmr * factor, 1200); // sanity floor
+  const activity = getActivityFactor(params.activityLevel);
+  const tdee = bmr * activity;
 
-  const adj =
-    params.goal === UserGoal.LoseFat
-      ? 0.65
-      : params.goal === UserGoal.GainMuscle
-      ? 1.1
-      : 1.0;
+  // Goal adjustment (typical evidence-based ranges)
+  const goal = params.goal;
+  let calorieTarget = tdee;
+  if (goal === UserGoal.LoseFat) {
+    // 15–25% deficit; aim 20%
+    calorieTarget = tdee * 0.8;
+  } else if (goal === UserGoal.GainMuscle) {
+    // 10–15% surplus; aim 10% (lean gain)
+    calorieTarget = tdee * 1.1;
+  }
 
-  const caloriesRaw = Math.max(tdee * 0.8, bmr * 1.05, tdee * adj);
-  const calories = roundTo(caloriesRaw, 10);
+  // Gender-aware safe floors (not medical advice, just guard rails)
+  const genderLower = String(params.gender).toLowerCase().includes('male')
+    ? 1500
+    : 1200;
+  // Ensure not below BMR*1.05 (to avoid extreme underfeeding when sedentary)
+  calorieTarget = Math.max(
+    calorieTarget,
+    Math.min(tdee * 0.85, bmr * 1.05),
+    genderLower,
+  );
 
-  const proteinPerKg =
-    params.goal === UserGoal.LoseFat
-      ? 2.2
-      : params.goal === UserGoal.GainMuscle
+  // --- Protein (g/kg) ---
+  // Base by activity
+  const baseByActivity =
+    params.activityLevel === ActivityLevel.Sedentary
+      ? 1.4
+      : params.activityLevel === ActivityLevel.LightlyActive
+      ? 1.6
+      : params.activityLevel === ActivityLevel.ModeratelyActive
+      ? 1.8
+      : params.activityLevel === ActivityLevel.VeryActive
       ? 2.0
-      : 1.6;
-  const proteinGrams = roundTo(clamp(proteinPerKg, 1.2, 2.4) * weightKg, 5);
+      : 2.2; // Athlete
 
-  const fatFromPct = (0.3 * calories) / 9;
-  const fatMin = 0.6 * weightKg;
+  // Goal tweak
+  const goalAdj =
+    goal === UserGoal.LoseFat ? 0.2 : goal === UserGoal.GainMuscle ? 0.2 : 0.0;
+
+  // Senior bump (≥60y): +0.2 g/kg
+  const seniorAdj = age >= 60 ? 0.2 : 0;
+
+  let proteinPerKg = clamp(baseByActivity + goalAdj + seniorAdj, 1.2, 2.4);
+  let proteinGrams = proteinPerKg * proteinRefKg;
+
+  // --- Fat (g) ---
+  // 25–35% of calories, clamped to 0.5–1.2 g/kg
+  const fatPct =
+    goal === UserGoal.LoseFat ? 0.25 : goal === UserGoal.GainMuscle ? 0.3 : 0.3;
+
+  let fatGramsFromPct = (calorieTarget * fatPct) / 9;
+  const fatMin = 0.5 * weightKg;
   const fatMax = 1.2 * weightKg;
-  const fatGrams = roundTo(clamp(fatFromPct, fatMin, fatMax), 5);
+  let fatGrams = clamp(fatGramsFromPct, fatMin, fatMax);
 
+  // --- Carbs (g) = remainder ---
   const usedCalories = proteinGrams * 4 + fatGrams * 9;
-  const carbsCalories = Math.max(calories - usedCalories, 0);
-  const carbsGrams = roundTo(carbsCalories / 4, 5);
+  let carbsGrams = Math.max((calorieTarget - usedCalories) / 4, 0);
 
-  return { calories, proteinGrams, fatGrams, carbsGrams };
+  // --- Rounding (pleasant UI) ---
+  const calories = roundTo(calorieTarget, 10);
+  proteinGrams = roundTo(proteinGrams, 5);
+  fatGrams = roundTo(fatGrams, 5);
+  carbsGrams = roundTo(carbsGrams, 5);
+
+  return {
+    calories,
+    proteinGrams,
+    fatGrams,
+    carbsGrams,
+  };
 };
