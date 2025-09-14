@@ -5,16 +5,8 @@ import { subDays, format } from 'date-fns';
 import { useTranslation } from 'react-i18next';
 import styled from '../../../styled-components';
 import useAuth from '../../lib/auth/useAuth';
-import useUserData from '../../lib/user-data/useUserData';
-import { BarChart, PieChart } from 'react-native-gifted-charts';
-import {
-  HeadingL,
-  HeadingM,
-  TextL,
-  TextM,
-  TextS,
-} from '../../theme/typography';
-import { Gray1, Green, White } from '../../theme/colors';
+import { HeadingL, HeadingM, TextM, TextS } from '../../theme/typography';
+import { Gray1, Green } from '../../theme/colors';
 import InsightsIcon from '../../../assets/icons/nav-bar/navigation-insights.svg';
 import TrendUpIcon from '../../../assets/icons/trend-up.svg';
 import CustomTopBar from '../../components/custom-top-bar/CustomTopBar';
@@ -24,7 +16,7 @@ import FadeInView from '../../components/animations/FadeInView';
 import {
   getNutritionRange,
   gramsToKcalDistribution,
-} from '../../utils/insights-utils';
+} from '../../utils/insights/insights-utils';
 import CaloriesBar from './CaloriesBar';
 import MacroPie, { MacroKey } from './MacroPie';
 
@@ -48,6 +40,7 @@ const C = {
 type DailyPoint = { date: string; calories: number };
 
 type Stats = {
+  totalCalories: number;
   avgCalories: number;
   avgProtein: number;
   avgFat: number;
@@ -56,7 +49,6 @@ type Stats = {
   dailyData: DailyPoint[];
 };
 
-/* ===== Small bits ===== */
 const StatCard = ({
   title,
   value,
@@ -85,12 +77,9 @@ const StatCard = ({
   </StatCardWrap>
 );
 
-/* ===== Gifted-Charts wrappers ===== */
-
 const InsightsScreen = () => {
   const { t } = useTranslation();
   const { user } = useAuth();
-  const { userGoals } = useUserData();
 
   const [timeRange, setTimeRange] = useState<7 | 30>(7);
   const [loading, setLoading] = useState(true);
@@ -110,13 +99,11 @@ const InsightsScreen = () => {
 
       const range = await getNutritionRange(user.id, start, end);
 
-      // Daily chart data
       const dailyPoints: DailyPoint[] = range.daily.map(d => ({
         date: format(d.date, 'MMM d'),
         calories: d.calories || 0,
       }));
 
-      // Macro kcal distribution
       const dist = gramsToKcalDistribution({
         protein: range.totalProtein,
         fat: range.totalFat,
@@ -124,12 +111,21 @@ const InsightsScreen = () => {
       });
 
       const macroDistribution = [
-        { key: 'protein' as const, value: dist.proteinKcal },
-        { key: 'fat' as const, value: dist.fatKcal },
-        { key: 'carbs' as const, value: dist.carbsKcal },
+        {
+          key: 'protein' as const,
+          label: t('nutrition.protein'),
+          value: dist.proteinKcal,
+        },
+        { key: 'fat' as const, label: t('nutrition.fat'), value: dist.fatKcal },
+        {
+          key: 'carbs' as const,
+          label: t('nutrition.carbs'),
+          value: dist.carbsKcal,
+        },
       ].filter(m => m.value > 0);
 
       setStats({
+        totalCalories: range.totalCalories,
         avgCalories: range.avgCalories,
         avgProtein: range.avgProtein,
         avgFat: range.avgFat,
@@ -143,7 +139,7 @@ const InsightsScreen = () => {
     } finally {
       setLoading(false);
     }
-  }, [user, timeRange]);
+  }, [user, timeRange, t]);
 
   useEffect(() => {
     load();
@@ -176,7 +172,10 @@ const InsightsScreen = () => {
                 onPress={() => setTimeRange(d as 7 | 30)}
               >
                 <ToggleText active={active}>
-                  {t(`last${d}days`, d === 7 ? 'Last 7 days' : 'Last 30 days')}
+                  {t(
+                    `insights_screen.last_${d}_days`,
+                    d === 7 ? 'Last 7 days' : 'Last 30 days',
+                  )}
                 </ToggleText>
               </ToggleBtn>
             );
@@ -198,23 +197,25 @@ const InsightsScreen = () => {
             {/* Average Intake */}
             <Card>
               <FadeInView delay={100}>
-                <CardTitle>{t('averageIntake', 'Average Intake')}</CardTitle>
+                <CardTitle>{t('insights_screen.average_intake')}</CardTitle>
               </FadeInView>
               <Spacer direction="vertical" size="m" />
               <Grid>
                 <Row>
                   <View style={{ flex: 1 }}>
-                    <StatCard
-                      title={t('calories', 'Calories')}
-                      value={stats.avgCalories}
-                      colorBg={C.emeraldSoft}
-                      colorText={C.emerald}
-                    />
+                    <FadeInView delay={200} direction="down">
+                      <StatCard
+                        title={t('insights_screen.calories')}
+                        value={stats.avgCalories}
+                        colorBg={C.emeraldSoft}
+                        colorText={C.emerald}
+                      />
+                    </FadeInView>
                   </View>
                   <Spacer direction="horizontal" size="m" />
                   <View style={{ flex: 1 }}>
                     <StatCard
-                      title={t('protein', 'Protein')}
+                      title={t('insights_screen.protein')}
                       value={stats.avgProtein}
                       unit="g"
                       colorBg={C.blueSoft}
@@ -226,7 +227,7 @@ const InsightsScreen = () => {
                 <Row>
                   <View style={{ flex: 1 }}>
                     <StatCard
-                      title={t('fat', 'Fat')}
+                      title={t('insights_screen.fat')}
                       value={stats.avgFat}
                       unit="g"
                       colorBg={C.purpleSoft}
@@ -236,7 +237,7 @@ const InsightsScreen = () => {
                   <Spacer direction="horizontal" size="m" />
                   <View style={{ flex: 1 }}>
                     <StatCard
-                      title={t('carbs', 'Carbs')}
+                      title={t('insights_screen.carbs')}
                       value={stats.avgCarbs}
                       unit="g"
                       colorBg={C.amberSoft}
@@ -250,17 +251,18 @@ const InsightsScreen = () => {
 
             {/* Macro Distribution (Pie) */}
             <Card>
-              <CardTitle>
-                {t('macroDistribution', 'Macro Distribution')}
-              </CardTitle>
+              <CardTitle>{t('insights_screen.macro_distribution')}</CardTitle>
               <Spacer direction="vertical" size="m" />
-              <MacroPie data={stats.macroDistribution} />
+              <MacroPie
+                data={stats.macroDistribution}
+                totalMainValue={stats.totalCalories}
+              />
             </Card>
             <Spacer direction="vertical" size="xl" />
 
             {/* Calorie Trend (BarChart) */}
             <Card>
-              <CardTitle>{t('calorieTrend', 'Calorie Trend')}</CardTitle>
+              <CardTitle>{t('insights_screen.calories_trend')}</CardTitle>
               <ChartContainer>
                 <CaloriesBar points={stats.dailyData} />
               </ChartContainer>
@@ -387,12 +389,6 @@ const SkeletonCard = styled.View`
 
 const SkeletonTall = styled(SkeletonCard)`
   height: 220px;
-`;
-
-const EmptyHintText = styled.Text`
-  font-size: 12px;
-  color: ${C.textDim};
-  text-align: center;
 `;
 
 export default InsightsScreen;

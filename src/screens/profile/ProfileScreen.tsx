@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   ScrollView,
   Animated,
@@ -211,6 +211,8 @@ const ProfileScreen = () => {
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <Container>
+          <AccountIcon width={40} height={40} fill={Green} />
+          <Spacer direction="vertical" size="xs" />
           <Title>{t('profile_screen.title')}</Title>
           <Subitle>{t('profile_screen.subtitle')}</Subitle>
 

@@ -18,19 +18,21 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootTabParamList } from '../../lib/routes/tab-navigator/TabNavigator';
 import QuickAddModal from '../../screens/home/QuickAddModal';
-import { addFoodToMeal } from '../../utils/food-utils';
+import { addFoodToMeal } from '../../utils/food/food-utils';
 import useDate from '../../lib/date/useDate';
 import useUserData from '../../lib/user-data/useUserData';
 import { useToast } from 'react-native-toast-notifications';
+import { addFoodItemToMeal } from '../../utils/food/food-utils-new';
 
-type Props = {
+interface IMealList {
   meals: IMeal[];
   loading?: boolean;
   onPressItem: (id: string) => void;
+  onUpdateItem: (item: FoodItem, mealId: string) => void;
   onDeleteItem: (id: string, mealId: string) => void;
   onToggleFavorite?: (foodItem: FoodItem) => void;
   onQuickAddPress: () => void;
-};
+}
 
 const ORDER: Array<{
   type: MealType;
@@ -48,10 +50,11 @@ const MealsList = ({
   meals,
   loading,
   onPressItem,
+  onUpdateItem,
   onDeleteItem,
   onToggleFavorite,
   onQuickAddPress,
-}: Props) => {
+}: IMealList) => {
   const toast = useToast();
   const { t } = useTranslation();
   const { refreshData } = useUserData();
@@ -96,14 +99,15 @@ const MealsList = ({
     }
     try {
       setIsLoading(true);
-      await addFoodToMeal(mealId, foodItem, selectedDate);
+      // await addFoodToMeal(mealId, foodItem, selectedDate);
+      await addFoodItemToMeal(mealId, foodItem, selectedDate);
       await refreshData();
       onQuickAddPress();
       setIsLoading(false);
       toast.show(t('toast.food_added'), {
         type: 'success',
         placement: 'bottom',
-        textStyle: { color: Green },
+        textStyle: { color: Dark },
       });
 
       setActiveModal(null);
@@ -143,11 +147,11 @@ const MealsList = ({
                   }
                 >
                   <ChevronIcon width={24} height={24} fill={Dark} />
-                  <Spacer direction="horizontal" size="xs" />
-                  <HeaderEmoji>{emoji}</HeaderEmoji>
-                  <Spacer direction="horizontal" size="xs" />
+                  {/* <Spacer direction="horizontal" size="xxs" />
+                  <HeaderEmoji>{emoji}</HeaderEmoji> */}
+                  <Spacer direction="horizontal" size="xxs" />
                   <HeaderTitle>{title}</HeaderTitle>
-                  <Spacer direction="horizontal" size="xs" />
+                  <Spacer direction="horizontal" size="xxs" />
                   <HeaderCount>({items.length})</HeaderCount>
                 </HeaderLeft>
 
@@ -194,9 +198,11 @@ const MealsList = ({
                   >
                     <CardWrap>
                       <MealCard
+                        key={idx}
                         entry={e as any}
                         mealType={type}
                         onPress={() => handlePressItem(e, String(type))}
+                        onUpdate={onUpdateItem}
                         onDelete={onDeleteItem}
                         onToggleFavorite={onToggleFavorite}
                       />

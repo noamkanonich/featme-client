@@ -34,7 +34,7 @@ import ArrowRightIcon from '../../../assets/icons/arrow-right.svg';
 import ArrowLeftIcon from '../../../assets/icons/arrow-left.svg';
 import i18n from '../../i18n';
 import CalendarIcon from '../../../assets/icons/calendar.svg';
-import { Gender } from '../../data/IUser';
+import { Gender } from '../../data/user/IUser';
 import CustomButton from '../../components/buttons/CustomButton';
 import { format } from 'date-fns';
 

@@ -7,59 +7,124 @@ import {
   Pressable,
   ScrollView,
 } from 'react-native';
-import {
-  Blue,
-  Dark,
-  Gray3,
-  Gray4,
-  Gray7,
-  LightBlue,
-  Red,
-  White,
-} from '../../theme/colors';
+import { Dark, Gray3, Gray4, Green, Red, White } from '../../theme/colors';
 import styled from '../../../styled-components';
-import { TextL, TextM, TextS, TextSLight } from '../../theme/typography';
+import {
+  HeadingL,
+  TextM,
+  TextMLight,
+  TextSLight,
+} from '../../theme/typography';
 import Spacer from '../../components/spacer/Spacer';
-import GlobalIcon from '../../../assets/icons/global.svg';
-import GoogleIcon from '../../../assets/icons/google.svg';
 import CustomInput from '../../components/input/CustomInput';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { AuthStackParamList } from '../../lib/routes/Router';
 import useAuth from '../../lib/auth/useAuth';
 import MailIcon from '../../../assets/icons/mail.svg';
-import ShowPassIcon from '../../../assets/icons/show-pass.svg';
-import HidePassIcon from '../../../assets/icons/hide-pass.svg';
+import ShowPassIcon from '../../../assets/icons/eye-open.svg';
+import HidePassIcon from '../../../assets/icons/eye-close.svg';
 import LockIcon from '../../../assets/icons/lock.svg';
 import useKeyboardVisible from '../../lib/keyboard/useKeyboardVisible';
 import { useTranslation } from 'react-i18next';
+import { AuthStackParams } from '../../lib/routes/auth/AuthStack';
+import { useToast } from 'react-native-toast-notifications';
 
 const LoginScreen = () => {
   const { t } = useTranslation();
+  const toast = useToast();
   const { signIn, loginUser } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+
   const navigation =
-    useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
+    useNavigation<NativeStackNavigationProp<AuthStackParams>>();
 
   const isKeyboardVisible = useKeyboardVisible();
 
+  const handleEmailChange = (value: string) => {
+    setEmail(value);
+
+    if (value.length > 0 && !value.includes('@')) {
+      setEmailError(true);
+    } else {
+      setEmailError(false);
+    }
+  };
+
+  const handlePasswordChange = (value: string) => {
+    setPassword(value);
+    if (value.length > 0 && value.length < 5) {
+      setPasswordError(true);
+    } else {
+      setPasswordError(false);
+    }
+  };
+
   const handleLogin = async () => {
-    if (!email || !password) {
+    if (emailError || passwordError) {
       setError(true);
       return;
     }
+
     try {
       setLoading(true);
-      await loginUser(email, password);
-      // await signIn(response);
+
+      const err = await loginUser(email, password);
+      if (err) handleErrorMessage(err);
       setLoading(false);
     } catch (err) {
-      console.log(err);
+      console.log('Login screen: ', err);
+      handleErrorMessage(err as Error);
       setLoading(false);
+    }
+  };
+
+  const handleErrorMessage = (err: Error) => {
+    switch (err.message) {
+      case 'auth/network-request-failed':
+        toast.show(t('toast.login_screen.error_network'), {
+          type: 'danger',
+          placement: 'bottom',
+          textStyle: { color: Red },
+        });
+
+        break;
+      case 'auth/invalid-email':
+        toast.show(t('toast.login_screen.error_invalid_email'), {
+          type: 'danger',
+          textStyle: { color: Red },
+          placement: 'bottom',
+        });
+
+        break;
+      case 'auth/user-not-found':
+        toast.show(t('toast.login_screen.error_user_not_found'), {
+          type: 'danger',
+          placement: 'bottom',
+          textStyle: { color: Red },
+        });
+        break;
+      case 'auth/invalid-credential':
+        toast.show(t('toast.login_screen.invalid_credential'), {
+          type: 'danger',
+          placement: 'bottom',
+          textStyle: { color: Red },
+        });
+
+        break;
+      default:
+        toast.show(err.message, {
+          type: 'danger',
+          placement: 'bottom',
+          textStyle: { color: Red },
+        });
+
+        break;
     }
   };
 
@@ -102,8 +167,12 @@ const LoginScreen = () => {
                 <Spacer direction="vertical" size="xxl-2" />
                 <GoogleButtonContainer>
                   <IconRow>
-                    <GoogleIcon width={32} height={32} fill={Red} />
-                    <Spacer direction="horizontal" size="xs" />
+                    <Image
+                      source={require('../../../assets/images/google.png')}
+                      style={{ width: 32, height: 32 }}
+                    />
+                    {/* <GoogleIcon width={32} height={32} fill={Red} /> */}
+                    <Spacer direction="horizontal" size="s" />
                     <GoogleButtonLabel>
                       {t('login_screen.google_login')}
                     </GoogleButtonLabel>
@@ -125,28 +194,36 @@ const LoginScreen = () => {
                     label={t('login_screen.email')}
                     placeholder={t('login_screen.email_placeholder')}
                     value={email}
-                    onChangeText={setEmail}
+                    onChangeText={handleEmailChange}
                     startIcon={MailIcon}
+                    dirty={emailError}
                   />
                   <Spacer direction="vertical" size="m" />
                   <CustomInput
                     label={t('login_screen.password')}
                     placeholder={t('login_screen.password_placeholder')}
                     value={password}
-                    onChangeText={setPassword}
+                    onChangeText={handlePasswordChange}
                     secureTextEntry={!showPassword}
                     startIcon={LockIcon}
                     endIcon={showPassword ? ShowPassIcon : HidePassIcon}
                     onPressEndIcon={() => setShowPassword(!showPassword)}
+                    dirty={passwordError}
                   />
                   <Spacer direction="vertical" size="xs" />
-                  <Pressable
-                    onPress={() => navigation.navigate('ForgotPassword')}
-                  >
-                    <ForgotPasswordLabel>
-                      {t('login_screen.forgot_password')}
-                    </ForgotPasswordLabel>
-                  </Pressable>
+                  <ForgotPasswordContainer>
+                    <Pressable
+                      onPress={() =>
+                        navigation.navigate('ForgotPassword', {
+                          screen: 'ForgotPassowrdMain',
+                        })
+                      }
+                    >
+                      <ForgotPasswordLabel>
+                        {t('login_screen.forgot_password')}
+                      </ForgotPasswordLabel>
+                    </Pressable>
+                  </ForgotPasswordContainer>
                 </InputContainer>
               </CardContent>
               <Spacer direction="vertical" size="m" />
@@ -159,7 +236,12 @@ const LoginScreen = () => {
                   ) : (
                     <Pressable
                       onPress={handleLogin}
-                      disabled={!email || !password || loading}
+                      disabled={
+                        passwordError ||
+                        emailError ||
+                        email.length === 0 ||
+                        password.length === 0
+                      }
                       style={{ width: '100%', alignItems: 'center' }}
                     >
                       <ButtonLabel>{t('login_screen.login')}</ButtonLabel>
@@ -204,6 +286,10 @@ const CardContent = styled.View`
   flex: 1;
   width: 100%;
 `;
+const ForgotPasswordContainer = styled.View`
+  flex: 1;
+  align-items: flex-start;
+`;
 
 const BottomSection = styled.View`
   width: 100%;
@@ -220,14 +306,13 @@ const IconBox = styled.View`
 `;
 
 const Title = styled.Text`
-  ${TextL};
-  font-size: 20px;
+  ${HeadingL};
   font-weight: bold;
   text-align: center;
 `;
 
 const Subitle = styled.Text`
-  ${TextSLight};
+  ${TextMLight};
   text-align: center;
 `;
 
@@ -279,7 +364,8 @@ const InputContainer = styled.View`
 const ButtonContainer = styled.View<{ disabled?: boolean }>`
   width: 100%;
   border-radius: 16px;
-  background: ${({ disabled }) => (disabled ? '#A3A3A3' : Dark)};
+  background: ${({ disabled }: { disabled: boolean }) =>
+    disabled ? '#A3A3A3' : Dark};
   padding: 16px;
   align-items: center;
   justify-content: center;
@@ -293,13 +379,13 @@ const ButtonLabel = styled.Text`
 
 const SignUpLabel = styled.Text`
   ${TextSLight};
-  color: ${Blue};
+  color: ${Green};
   font-weight: bold;
 `;
 
 const ForgotPasswordLabel = styled.Text`
-  ${TextSLight};
-  color: ${Blue};
+  ${TextM};
+  color: ${Green};
 `;
 
 export default LoginScreen;

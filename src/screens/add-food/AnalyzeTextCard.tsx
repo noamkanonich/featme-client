@@ -21,7 +21,6 @@ interface IAnalyzeTextCard {
 const AnalyzeTextCard = ({ language, apiKey, onResult }: IAnalyzeTextCard) => {
   const { t } = useTranslation();
   const [textValue, setTextValue] = useState('');
-  const [imageUri, setImageUri] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
   const handleAnalyze = async () => {
@@ -120,7 +119,7 @@ const AnalyzeButton = styled.View<{ disabled?: boolean }>`
 `;
 
 const AnalyzeLabel = styled.Text`
-  ${TextS};
+  ${TextM};
   color: ${White};
 `;
 

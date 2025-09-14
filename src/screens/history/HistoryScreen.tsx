@@ -25,8 +25,12 @@ import FadeInView from '../../components/animations/FadeInView';
 import CustomTopBar from '../../components/custom-top-bar/CustomTopBar';
 import useAuth from '../../lib/auth/useAuth';
 import useUserData from '../../lib/user-data/useUserData';
-import { computeWeekStats, loadWeekData } from '../../utils/history-utils';
+import {
+  computeWeekStats,
+  loadWeekData,
+} from '../../utils/history/history-utils';
 import CountUpNumber from '../../components/animations/CountUpNumber';
+import HistoryIcon from '../../../assets/icons/nav-bar/navigation-history.svg';
 
 const DAILY_GOAL = 2000; // TODO: replace with user's goal if you have it
 
@@ -90,6 +94,8 @@ const HistoryScreen = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <Container>
           <TitleContainer>
+            <HistoryIcon width={40} height={40} fill={Green} />
+            <Spacer direction="vertical" size="xs" />
             <Title>{t('history_screen.title')}</Title>
             <Subitle>{t('history_screen.subtitle')}</Subitle>
           </TitleContainer>

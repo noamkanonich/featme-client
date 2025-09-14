@@ -5,10 +5,22 @@ import Spacer from '../../components/spacer/Spacer';
 import CustomInput from '../../components/input/CustomInput';
 import CustomTextArea from '../../components/input/CustomTextArea';
 import { TextL, TextM } from '../../theme/typography';
-import { Gray4, White } from '../../theme/colors';
+import {
+  Dark,
+  DarkGreen,
+  Gray4,
+  Green,
+  LightGreen,
+  Red,
+  White,
+} from '../../theme/colors';
 import { Dropdown } from 'react-native-element-dropdown';
 import { MealType } from '../../data/meals/MealType';
 import { useTranslation } from 'react-i18next';
+import SparklesIcon from '../../../assets/icons/sparkles.svg';
+import { Image } from 'react-native';
+import CloseIcon from '../../../assets/icons/close.svg';
+import { IMealItemComponent } from '../../data/meal-item-component/IMealItemComponent';
 
 interface IFoodDetailsForm {
   mealsData: { label: string; value: MealType }[];
@@ -28,8 +40,60 @@ const FoodDetailsForm = ({
   getMealByType,
 }: IFoodDetailsForm) => {
   const { t } = useTranslation();
+  const { imageUri } = nutritionData.imageUri ? nutritionData : {};
+
+  const handleDeleteMealItemComponent = (component: IMealItemComponent) => {
+    const mealComponents = [...nutritionData.mealComponents];
+
+    const updatedComponents = mealComponents.filter(
+      comp => comp.name !== component.name,
+    );
+    setNutritionData((p: any) => ({
+      ...p,
+      calories:
+        nutritionData.calories > 0
+          ? nutritionData.calories - component.calories
+          : 0,
+      protein:
+        nutritionData.protein > 0
+          ? nutritionData.protein - component.protein
+          : 0,
+      fat: nutritionData.fat > 0 ? nutritionData.fat - component.fat : 0,
+      carbs:
+        nutritionData.carbs > 0 ? nutritionData.carbs - component.carbs : 0,
+      mealComponents: updatedComponents,
+    }));
+  };
+
   return (
     <>
+      <TopCard>
+        <IconRow>
+          <SparklesIcon width={24} height={24} fill={DarkGreen} />
+          <Spacer direction="horizontal" size="xs" />
+          <CustomTitle color={DarkGreen}>
+            {t('add_food_screen.analyze_complete_title')}
+          </CustomTitle>
+        </IconRow>
+
+        <Spacer direction="vertical" size="s" />
+        <CustomText color={Green}>
+          {t('add_food_screen.analyze_complete_subtitle')}
+        </CustomText>
+      </TopCard>
+      <Spacer direction="vertical" size="s" />
+      {imageUri && (
+        <>
+          <Spacer direction="vertical" size="m" />
+          <Image
+            source={{ uri: imageUri }}
+            style={{ width: '100%', height: 200, borderRadius: 16 }}
+            resizeMode="cover"
+          />
+        </>
+      )}
+      <Spacer direction="vertical" size="xl" />
+
       <Card>
         <Title>{t('add_food_screen.food_details')}</Title>
         <Spacer direction="vertical" size="xl" />
@@ -131,10 +195,71 @@ const FoodDetailsForm = ({
             }
           />
         </Row>
+        <Spacer direction="vertical" size="xl" />
+
+        <MealComponentsContainer>
+          <Row>
+            {nutritionData.mealComponents.length > 0 &&
+              nutritionData.mealComponents.map(
+                (component: IMealItemComponent) => (
+                  <>
+                    <MealComponentCard>
+                      <CustomText>{component.name}</CustomText>
+                      <Spacer direction="vertical" size="xs" />
+
+                      <CustomText>{component.calories} kcal</CustomText>
+                      <DeleteButton
+                        onPress={() => {
+                          handleDeleteMealItemComponent(component);
+                        }}
+                      >
+                        <CloseIcon width={15} height={15} fill={White} />
+                      </DeleteButton>
+                    </MealComponentCard>
+                    <Spacer direction="horizontal" size="xs" />
+                  </>
+                ),
+              )}
+          </Row>
+        </MealComponentsContainer>
       </Card>
     </>
   );
 };
+
+const IconRow = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const MealComponentsContainer = styled.View`
+  flex: 1;
+`;
+
+const MealComponentCard = styled.View`
+  padding: 8px 16px;
+  border: 1px solid ${Gray4};
+  border-radius: 16px;
+  background-color: ${White};
+`;
+
+const TopCard = styled.View`
+  width: 100%;
+  padding: 20px;
+  border: 1px solid ${Green};
+  background-color: ${LightGreen};
+  border-radius: 32px;
+`;
+
+const CustomTitle = styled.Text<{ color: string }>`
+  ${TextL};
+  color: ${({ color }: { color: string }) => color || Dark};
+`;
+
+const CustomText = styled.Text<{ color: string }>`
+  ${TextM};
+  color: ${({ color }: { color: string }) => color || Dark};
+`;
 
 const Card = styled.View`
   width: 100%;
@@ -163,6 +288,18 @@ const DropdownLabel = styled.Text`
 
 const InputContainer = styled.View`
   flex: 1;
+`;
+
+const DeleteButton = styled.Pressable`
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 16px;
+  background-color: ${Red};
+  align-items: center;
+  justify-content: center;
+  bottom: 55px;
+  left: -8px;
 `;
 
 export default FoodDetailsForm;

@@ -47,6 +47,8 @@
   "insights_screen": {
     "title": "Insights",
     "subtitle": "Your nutrition trends and tips",
+    "last_7_days": "Last 7 Days",
+    "last_30_days": "Last 30 Days",
     "average_intake": "Average Intake",
     "macro_distribution": "Macro Distribution",
     "calories_trend": "Calories Trend",
@@ -117,6 +119,8 @@
   "onboarding_second_screen": {
     "title": "Tell us about yourself.",
     "subtitle": "We need some basic measurements to calculate your targets.",
+    "metric": "Metric",
+    "imperial": "Imperial",
     "weight_kg": "Weight (kg)",
     "weight_lbs": "Weight (lbs)",
     "height_cm": "Height (cm)",
@@ -245,7 +249,9 @@
     "calories": "Calories",
     "protein": "Protein (g)",
     "fat": "Fat (g)",
-    "carbs": "Carbs (g)"
+    "carbs": "Carbs (g)",
+    "analyze_complete_title": "AI analysis complete",
+    "analyze_complete_subtitle": "Review and adjust the nutritional information below"
   },
   "settings_screen": {
     "title": "Settings",
@@ -332,6 +338,9 @@
     "ingredients_placeholder": "e.g., chicken, broccoli, rice",
     "dietary_needs": "Dietary Needs",
     "meal_type": "Meal Type",
+    "cuisine": "Cuisine",
+    "cuisine_placeholder": "e.g., Italian, Chinese, Mexican",
+    "creativity": "Creativity Level",
     "search_placeholder": "Search recipes...",
     "filter": "Filter",
     "no_recipes": "No recipes found",
@@ -354,6 +363,23 @@
     "carbs": "Carbs (g)",
     "save_recipe": "Save Recipe",
     "start_over": "Start Over"
+  },
+  "forgot_password": {
+    "title": "Forgot Password?",
+    "content": "Please enter your registered email address below. We'll send you a One-Time password (OTP) to reset your password securely.",
+    "registered_email": "Registered email address",
+    "otp_code_title": "Enter OTP Code",
+    "otp_content": "We've sent a 4-digit OTP code to your email address. Please enter it below to verify and continue with password reset.",
+    "resend_timer_prefix": "You can resend the code in",
+    "seconds": "seconds",
+    "resend_code": "Resend code",
+    "new_password_title": "Secure your account",
+    "new_password_content": "Your account security is our top priority. Please create a new password using a mix of letters, numbers and symbols.",
+    "send_otp": "Send OTP"
+  },
+  "meal_details": {
+    "health_score": "Health Score",
+    "serving_size": "Serving Size"
   },
   "toast": {
     "food_added": "Food added successfully!",

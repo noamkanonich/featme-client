@@ -1,6 +1,7 @@
 import axios from 'axios';
-import { IUser } from '../data/IUser';
-import { supabase } from '../lib/supabase/supabase';
+import { IUser } from '../../data/user/IUser';
+import { supabase } from '../../lib/supabase/supabase';
+import { toUser } from './user-mapper';
 
 export const updateUserOnDB = async (updatedUser: IUser | undefined) => {
   if (!updatedUser) {
@@ -34,9 +35,23 @@ export const updateUserOnDB = async (updatedUser: IUser | undefined) => {
 
 export const getUserById = async (userId: string) => {
   try {
-    const response = await axios.get('/me');
+    console.log('Fetching user with ID:', userId);
+    // const response = await axios.get('/me');
 
-    return response.data;
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', userId)
+      .maybeSingle();
+
+    console.log(data);
+    if (error) {
+      console.log(error.message);
+    }
+
+    const user = toUser(data);
+
+    return user;
   } catch (err) {
     console.log(err);
   }

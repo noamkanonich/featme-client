@@ -88,8 +88,8 @@ const Container = styled(LinearGradient).attrs<{
   $disabled?: boolean;
 }>`
   width: 100%;
+  height: 52px;
   border-radius: 16px;
-  padding: 16px;
   align-items: center;
   justify-content: center;
   max-height: 64px;

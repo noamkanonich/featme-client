@@ -12,13 +12,15 @@ import { FoodItem } from '../../../data/food/FoodItem';
 import { MealType } from '../../../data/meals/MealType';
 import InsightsScreen from '../../../screens/insights/InsightsScreen';
 import RecipesScreen from '../../../screens/recipes/RecipesScreen';
+import { NavigatorScreenParams } from '@react-navigation/native';
+import ProfileStack, { ProfileStackParams } from '../profile/ProfileStack';
 
 export type RootTabParamList = {
   Home: undefined;
   Recipes: undefined;
   History: undefined;
   Insights: undefined;
-  Profile: undefined;
+  Profile: NavigatorScreenParams<ProfileStackParams>;
   AddFood: undefined;
   Settings: undefined;
   FoodDetails: { item: FoodItem; mealTypeName: MealType };
@@ -57,7 +59,7 @@ const Tabs = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={ProfileStack}
         options={{ title: 'Profile' }}
       />
       <Tab.Screen name="AddFood" component={AddFoodScreen} />

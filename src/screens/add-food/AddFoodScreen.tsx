@@ -5,45 +5,49 @@ import styled from '../../../styled-components';
 import Spacer from '../../components/spacer/Spacer';
 import ChevronLeftIcon from '../../../assets/icons/chevron-left.svg';
 import ChevronRightIcon from '../../../assets/icons/chevron-right.svg';
-import { useNavigation, useIsFocused } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { HeadingM, TextM } from '../../theme/typography';
-import { Gray1, Gray7, Yellow } from '../../theme/colors';
+import { Gray1, Gray7, Green, White } from '../../theme/colors';
 import { format } from 'date-fns';
 import i18n from '../../i18n';
 import { useTranslation } from 'react-i18next';
-import {
-  getMealByHour,
-  getMealIdByTypeAndDate,
-  getMeals,
-} from '../../utils/meals-utils';
+
 import useAuth from '../../lib/auth/useAuth';
 import CustomButton from '../../components/buttons/CustomButton';
-import LightningIcon from '../../../assets/icons/lightning.svg';
 import AnalyzeImageCard from './AnalyzeImageCard';
 import AnalyzeTextCard from './AnalyzeTextCard';
 import FoodDetailsForm from './FoodDetailsForm';
 import { MealType } from '../../data/meals/MealType';
-import { addFoodToMeal } from '../../utils/food-utils';
+import { addFoodToMeal } from '../../utils/food/food-utils';
 import { FEATME_GROQ_API_KEY } from '@env';
 import useDate from '../../lib/date/useDate';
 import uuid from 'react-native-uuid';
+import {
+  getMealByHour,
+  getMealIdByTypeAndDate,
+  getMeals,
+} from '../../utils/meals/meals-utils';
+import { addFoodItemToMeal } from '../../utils/food/food-utils-new';
+import { useToast } from 'react-native-toast-notifications';
+import { addFoodItemComponents } from '../../utils/meal-item-components/meal-item-components-utils';
 
 const AddFoodScreen = () => {
   const { t } = useTranslation();
   const { user } = useAuth();
   const navigation = useNavigation();
+  const toast = useToast();
   const isRtl = i18n.dir() === 'rtl';
   const ChevronIcon = isRtl ? ChevronRightIcon : ChevronLeftIcon;
   const { selectedDate } = useDate();
   const [isLoading, setIsLoading] = useState(false);
-
-  console.log(format(selectedDate, 'yyyy-MM-dd'));
 
   const [analysisComplete, setAnalysisComplete] = useState(false);
   const [isQuickAdd, setIsQuickAdd] = useState(false);
   const [mealType, setMealType] = useState(getMealByHour());
   const [nutritionData, setNutritionData] = useState({
     id: uuid.v4() as string,
+    mealId: '',
+    userId: user?.id || '',
     name: '',
     description: '',
     calories: 0,
@@ -54,7 +58,8 @@ const AddFoodScreen = () => {
     meal_type: getMealByHour(),
     date: format(selectedDate, 'yyyy-MM-dd'),
     imageUri: '',
-    ai_generated: false,
+    aiGenerated: true,
+    mealComponents: [],
   });
 
   const mealsData = useMemo(
@@ -89,10 +94,12 @@ const AddFoodScreen = () => {
         fat: Number(result.fat ?? 0),
         carbs: Number(result.carbs ?? 0),
         servingSize: result.serving_size ?? '',
-        meal_type: mealType,
+        mealType: mealType,
         date: format(selectedDate, 'yyyy-MM-dd'),
         imageUri: imageUri,
-        ai_generated: true,
+        aiGenerated: true,
+        healthLevel: result.health_level,
+        mealComponents: result.meal_components || [],
       }));
     },
     [mealType, selectedDate],
@@ -112,29 +119,51 @@ const AddFoodScreen = () => {
         fat: Number(result.fat ?? 0),
         carbs: Number(result.carbs ?? 0),
         servingSize: result.serving_size ?? '',
-        meal_type: mealType,
+        mealType: mealType,
         date: format(selectedDate, 'yyyy-MM-dd'),
         imageUri: result.image_url,
-        ai_generated: true,
+        aiGenerated: true,
+        healthLevel: result.health_level,
+        mealComponents: result.meal_components || [],
       }));
     },
     [mealType, selectedDate],
   );
 
   const handleSaveFood = useCallback(async () => {
-    setIsLoading(true);
-    const mealId = await getMealIdByTypeAndDate(
-      user!.id,
-      mealType,
-      selectedDate,
-    );
-    await addFoodToMeal(mealId, nutritionData, selectedDate);
-    console.log('Food saved to meal:', mealId, nutritionData);
-    setIsQuickAdd(false);
-    setAnalysisComplete(false);
-    setIsLoading(false);
-    navigation.goBack();
-  }, [user, mealType, nutritionData, navigation, selectedDate]);
+    try {
+      setIsLoading(true);
+      const mealId = await getMealIdByTypeAndDate(
+        user!.id,
+        mealType,
+        selectedDate,
+      );
+
+      const mealItemComponents = nutritionData.mealComponents;
+
+      // await addFoodToMeal(mealId!, nutritionData, selectedDate);
+      await addFoodItemToMeal(mealId!, nutritionData, selectedDate);
+      await addFoodItemComponents(mealItemComponents, nutritionData.id);
+      console.log('Food saved to meal:', mealId, nutritionData);
+      setIsQuickAdd(false);
+      setAnalysisComplete(false);
+      setIsLoading(false);
+      toast.show(t('toast.food_added'), {
+        type: 'success',
+        textStyle: { color: Green },
+        placement: 'bottom',
+      });
+      navigation.goBack();
+    } catch (error) {
+      console.error('Error saving food to meal:', error);
+      setIsLoading(false);
+      toast.show(t('toast.add_food_error'), {
+        type: 'danger',
+        textStyle: { color: White },
+        placement: 'bottom',
+      });
+    }
+  }, [user, mealType, nutritionData, navigation, selectedDate, toast, t]);
 
   return (
     <Root>
@@ -207,18 +236,6 @@ const AddFoodScreen = () => {
             </>
           )}
         </Container>
-
-        {!isQuickAdd && (
-          <Bottom>
-            <CustomButton
-              label={t('add_food_screen.quick_add')}
-              backgroundColor={Yellow}
-              startIcon={LightningIcon}
-              onPress={() => setIsQuickAdd(true)}
-            />
-          </Bottom>
-        )}
-
         <Spacer direction="vertical" size="xl" />
       </ScrollView>
     </Root>
@@ -252,10 +269,6 @@ const Subtitle = styled.Text`
 `;
 const ButtonWrap = styled.View`
   flex: 1;
-`;
-const Bottom = styled.View`
-  flex: 1;
-  padding: 0 20px;
 `;
 
 export default AddFoodScreen;

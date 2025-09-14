@@ -2,7 +2,7 @@
 
 import { ActivityLevel } from '../../data/ActivityLevel';
 import { IUserGoals } from '../../data/IUserGoals';
-import { UserGoalsRow } from '../../data/user-goals/UserGoalsRow';
+import { UserGoalsRow } from '../../data/user-goals/UserGoalsRaw';
 import { UserGoal } from '../../data/UserGoal';
 
 export const USER_GOAL_TO_STRING: Record<UserGoal, string> = {

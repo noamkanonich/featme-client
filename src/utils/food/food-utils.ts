@@ -1,13 +1,11 @@
 // src/utils/meal-food-items.ts  (דוגמה לשם קובץ)
-import { supabase } from '../lib/supabase/supabase';
-import { FoodItem } from '../data/food/FoodItem';
+import { supabase } from '../../lib/supabase/supabase';
+import { FoodItem } from '../../data/food/FoodItem';
 
 // 👇 ממפים (עדכן נתיב אם צריך)
-import {
-  foodItemsFromRaw,
-  foodItemsToRaw,
-} from '../utils/mappers/foodItemMapper';
+
 import uuid from 'react-native-uuid';
+import { foodItemsFromRaw, foodItemsToRaw } from './food-mappers';
 
 const calcTotals = (items: FoodItem[] = []) => {
   return items.reduce(
@@ -42,7 +40,6 @@ const setMealItems = async (
   const raw = foodItemsToRaw(items);
   console.log('RAW FOOD ITEM', raw);
   const { calories, protein, fat, carbs } = calcTotals(items);
-  console.log('CALCULATED TOTALS', { calories, protein, fat, carbs });
   const { data, error } = await supabase
     .from('meals')
     .update({
@@ -89,6 +86,9 @@ export const addFoodToMeal = async (
       createdAt: selectedDate,
       updatedAt: foodItem.updatedAt,
       imageUri: foodItem.imageUri ?? null,
+      aiGenerated: foodItem.aiGenerated ?? false,
+      isFavorite: foodItem.isFavorite ?? false,
+      healthLevel: foodItem.healthLevel,
     };
 
     return await setMealItems(mealId, [...current, itemWithId]);
@@ -117,6 +117,7 @@ export const updateFoodInMeal = async (
   updatedFoodItem: Partial<FoodItem> & { id: string },
 ) => {
   try {
+    console.log('Updating food item in meal:', mealId, updatedFoodItem);
     const current = await getMealItems(mealId);
     const idx = current.findIndex(i => i.id === updatedFoodItem.id);
     if (idx === -1) throw new Error('Food item not found in meal');

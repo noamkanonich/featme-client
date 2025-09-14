@@ -8,6 +8,7 @@ import Spacer from '../spacer/Spacer';
 const CustomTopBar = () => {
   return (
     <Root>
+      <Spacer direction="vertical" size="s" />
       <Row>
         <IconBox>
           <Image

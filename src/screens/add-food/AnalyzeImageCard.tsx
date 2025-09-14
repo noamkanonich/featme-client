@@ -1,29 +1,23 @@
 // src/screens/add-food/AnalyzeImageCard.tsx
 import React, { useCallback, useState } from 'react';
-import {
-  View,
-  Pressable,
-  Image,
-  ActivityIndicator,
-  Platform,
-} from 'react-native';
+import { Pressable, Image, ActivityIndicator } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import styled from '../../../styled-components';
 import Spacer from '../../components/spacer/Spacer';
 import CameraIcon from '../../../assets/icons/camera.svg';
-import AnalyzeIcon from '../../../assets/icons/analyze.svg';
 import { TextM, TextS } from '../../theme/typography';
-import { Gray1, Gray4, White } from '../../theme/colors';
+import { Gray1, White } from '../../theme/colors';
 import {
   launchCamera,
   launchImageLibrary,
   CameraOptions,
   ImageLibraryOptions,
 } from 'react-native-image-picker';
-
 import { requestCameraPermission } from './utils';
 import { useTranslation } from 'react-i18next';
 import { analyzeImageWithGroq } from './groq';
+import i18n from '../../i18n';
+import CustomButton from '../../components/buttons/CustomButton';
 
 interface IAnalyzeImageCard {
   language: string;
@@ -31,33 +25,34 @@ interface IAnalyzeImageCard {
   onResult: (result: any, imageUri: string) => void;
 }
 
-const AnalyzeImageCard = ({
-  language,
-  apiKey,
-  onResult,
-}: IAnalyzeImageCard) => {
+const AnalyzeImageCard = ({ apiKey, onResult }: IAnalyzeImageCard) => {
   const { t } = useTranslation();
   const [busy, setBusy] = useState(false);
   const [imageUri, setImageUri] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleAnalyzeDataUrl = useCallback(
     async (dataUrl: string, uriForPreview: string) => {
       setBusy(true);
       try {
-        const lang = language === 'he' ? 'Hebrew' : 'English';
-        const result = await analyzeImageWithGroq(dataUrl, apiKey, lang);
+        setIsLoading(true);
+        const result = await analyzeImageWithGroq(
+          dataUrl,
+          apiKey,
+          i18n.language,
+        );
         onResult(result, uriForPreview);
       } catch (e) {
         console.log('Groq vision failed', e);
       } finally {
+        setIsLoading(false);
         setBusy(false);
       }
     },
-    [apiKey, language, onResult],
+    [apiKey, onResult],
   );
 
   const handleOpenCamera = useCallback(async () => {
-    console.log('Opening camera');
     const granted = await requestCameraPermission();
     if (!granted) return;
 
@@ -108,32 +103,50 @@ const AnalyzeImageCard = ({
       <Spacer direction="vertical" size="s" />
 
       <Row>
-        <Pressable onPress={handleOpenCamera}>
-          <Pill>
-            <PillLabel>{t('add_food_screen.open_camera')}</PillLabel>
-          </Pill>
-        </Pressable>
+        <ButtonContainer>
+          <CustomButton
+            label={t('add_food_screen.open_camera')}
+            onPress={handleOpenCamera}
+          />
+        </ButtonContainer>
         <Spacer direction="horizontal" size="m" />
-        <Pressable onPress={handlePickFromGallery}>
-          <Pill>
-            <PillLabel>{t('add_food_screen.pick_from_gallery')}</PillLabel>
-          </Pill>
-        </Pressable>
+        <ButtonContainer>
+          <CustomButton
+            label={t('add_food_screen.pick_from_gallery')}
+            onPress={handlePickFromGallery}
+          />
+        </ButtonContainer>
       </Row>
 
+      {/* Preview with loading overlay */}
       {imageUri && (
         <>
           <Spacer direction="vertical" size="m" />
-          <Image
-            source={{ uri: imageUri }}
-            style={{ width: '100%', height: 200, borderRadius: 16 }}
-            resizeMode="cover"
-          />
+          <ImageContainer>
+            <StyledImage source={{ uri: imageUri }} resizeMode="cover" />
+            {isLoading && (
+              <Overlay>
+                <ActivityIndicator size="large" color={White} />
+              </Overlay>
+            )}
+          </ImageContainer>
         </>
       )}
 
-      <Spacer direction="vertical" size="m" />
-      {busy && <ActivityIndicator size="small" color={White} />}
+      {/* Optional small spinner for async state outside the image */}
+      {!imageUri && isLoading && (
+        <>
+          <Spacer direction="vertical" size="m" />
+          <ImagePlaceholder>
+            <Overlay>
+              <ActivityIndicator size="large" color={White} />
+            </Overlay>
+          </ImagePlaceholder>
+        </>
+      )}
+
+      {/* <Spacer direction="vertical" size="m" /> */}
+      {/* {busy && <ActivityIndicator size="small" color={Dark} />} */}
     </Card>
   );
 };
@@ -164,7 +177,6 @@ const IconBox = styled(LinearGradient).attrs({
 const CardTitle = styled.Text`
   ${TextM};
 `;
-
 const CardSubtitle = styled.Text`
   ${TextS};
   color: ${Gray1};
@@ -188,8 +200,38 @@ const Pill = styled(LinearGradient).attrs({
 `;
 
 const PillLabel = styled.Text`
-  ${TextS};
+  ${TextM};
   color: ${White};
+`;
+
+/* ---- New styles for image + loading overlay ---- */
+const ImageContainer = styled.View`
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+`;
+
+const StyledImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`;
+
+const Overlay = styled.View`
+  position: absolute;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.45);
+  align-items: center;
+  justify-content: center;
+`;
+
+const ImagePlaceholder = styled(ImageContainer)`
+  background-color: #000; /* dark backdrop while loading with no image yet */
+`;
+
+const ButtonContainer = styled.View`
+  flex: 1;
 `;
 
 export default AnalyzeImageCard;

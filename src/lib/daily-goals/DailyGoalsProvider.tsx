@@ -2,7 +2,7 @@ import React, { ReactNode, useCallback, useEffect, useState } from 'react';
 import { IDailyGoals } from '../../data/IDailyGoals';
 import DailyGoalsContext from './DailyGoalsContext';
 import useAuth from '../auth/useAuth';
-import { getUserGoalsByUserId } from '../../utils/user-goals-utils';
+import { getUserGoalsByUserId } from '../../utils/user-goals/user-goals-utils';
 
 interface DailyGoalsProviderProps {
   children: ReactNode;

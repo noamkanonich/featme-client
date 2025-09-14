@@ -5,7 +5,7 @@ import { addDays, isToday } from 'date-fns';
 import ChevronLeftIcon from '../../../assets/icons/chevron-left.svg';
 import ChevronRightIcon from '../../../assets/icons/chevron-right.svg';
 import { Dark } from '../../theme/colors';
-import { TextL, TextM } from '../../theme/typography';
+import { HeadingM, TextM } from '../../theme/typography';
 import i18n from '../../i18n';
 
 interface IDaySlider {
@@ -123,14 +123,12 @@ const IconBtn = styled.Pressable`
 `;
 
 const Title = styled.Text`
-  ${TextL};
-  font-size: 20px;
+  ${HeadingM};
   font-weight: bold;
 `;
 
 const Subtitle = styled.Text`
   ${TextM};
-  font-size: 14px;
   color: #6b7280;
 `;
 

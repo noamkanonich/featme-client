@@ -9,7 +9,7 @@ import OnboardingFifthScreen from '../../../screens/onboarding/OnboardingFifthSc
 import OnboardingFinalScreen from '../../../screens/onboarding/OnboardingFinalScreen';
 
 import { ActivityLevel } from '../../../data/ActivityLevel';
-import { Gender } from '../../../data/IUser';
+import { Gender } from '../../../data/user/IUser';
 import { UnitType } from '../../../data/UnitType';
 import { UserGoal } from '../../../data/UserGoal';
 

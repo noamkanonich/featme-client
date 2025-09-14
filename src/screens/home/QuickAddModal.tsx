@@ -4,7 +4,7 @@ import Modal from '../../components/modal/Modal';
 import { FoodItem } from '../../data/food/FoodItem';
 import styled from '../../../styled-components';
 import { HeadingM, TextM, TextMLight } from '../../theme/typography';
-import { Dark, Gray4, Green } from '../../theme/colors';
+import { Dark, Green } from '../../theme/colors';
 import Spacer from '../../components/spacer/Spacer';
 import { useTranslation } from 'react-i18next';
 import CustomInput from '../../components/input/CustomInput';
@@ -14,11 +14,11 @@ import i18n from '../../i18n';
 import useDate from '../../lib/date/useDate';
 import { format } from 'date-fns';
 import CustomButton from '../../components/buttons/CustomButton';
-import LinearGradient from 'react-native-linear-gradient';
 import LightningIcon from '../../../assets/icons/lightning.svg';
 import CloseIcon from '../../../assets/icons/close.svg';
 import ImagePickerCard from '../../components/image-picker/ImagePickerCard ';
 import { Pressable } from 'react-native';
+import uuid from 'react-native-uuid';
 
 interface QuickAddModalProps {
   visible: boolean;
@@ -39,7 +39,7 @@ const QuickAddModal = ({
   const { selectedDate } = useDate();
   const [foodName, setFoodName] = useState('');
   const [foodDescription, setFoodDescription] = useState('');
-  const [imageUri, setImageUri] = useState<string | null>(null);
+  const [imageUri, setImageUri] = useState<string | undefined>(undefined);
   const [nutritionData, setNutritionData] = useState({
     calories: 0,
     protein: 0,
@@ -56,7 +56,7 @@ const QuickAddModal = ({
     }
 
     const newFoodItem: FoodItem = {
-      id: Math.random().toString(36).substring(7),
+      id: uuid.v4() as string,
       name: foodName,
       mealId: mealId,
       description: foodDescription,
@@ -67,6 +67,7 @@ const QuickAddModal = ({
       servingSize: '',
       imageUri: imageUri || '', // use picked image
       aiGenerated: false,
+      isFavorite: false,
     };
 
     onRequestClose(newFoodItem);
@@ -75,7 +76,7 @@ const QuickAddModal = ({
     setFoodName('');
     setFoodDescription('');
     setNutritionData({ calories: 0, protein: 0, fat: 0, carbs: 0 });
-    setImageUri(null);
+    setImageUri(undefined);
   };
 
   return (
@@ -180,18 +181,31 @@ const QuickAddModal = ({
               />
             </Row>
 
-            <Spacer direction="vertical" size="m" />
+            <Spacer direction="vertical" size="xl" />
 
             {/* ----- Simple image picker (no AI) ----- */}
-            <ImagePickerCard
-              initialUri={imageUri ?? undefined}
-              onPicked={uri => setImageUri(uri)}
-              title={t('quick_add.add_image')}
-              subtitle={t('add_food_screen.pick_from_gallery')}
-              openCameraLabel={t('add_food_screen.open_camera')}
-              openGalleryLabel={t('add_food_screen.pick_from_gallery')}
-            />
+            <Row>
+              {/* {showIcon && (
+          <>
+            <IconBox>
+              <CameraIcon width={24} height={24} />
+            </IconBox>
+            <Spacer direction="horizontal" size="xs" />
+          </>
+        )}
+        <AddImageLabel>{title}</AddImageLabel> */}
+            </Row>
+            <Label>{t('quick_add.add_image')}</Label>
+            <Spacer direction="vertical" size="xs" />
 
+            <ImageContainer>
+              <ImagePickerCard
+                initialUri={imageUri ?? undefined}
+                onPicked={uri => setImageUri(uri)}
+                openCameraLabel={t('add_food_screen.open_camera')}
+                openGalleryLabel={t('add_food_screen.pick_from_gallery')}
+              />
+            </ImageContainer>
             <Spacer direction="vertical" size="xl" />
 
             <CustomButton
@@ -217,6 +231,13 @@ const Container = styled.View`
   flex: 1;
 `;
 
+const ImageContainer = styled.View`
+  width: 100%;
+  height: 200px;
+  border-radius: 24px;
+  overflow: hidden; /* חשוב כדי שהתמונה/פלייסהולדר ייחתכו בפינות */
+`;
+
 const TitleSuffix = styled.Text`
   ${HeadingM};
   font-size: 24px;
@@ -236,6 +257,10 @@ const TitleRow = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+`;
+
+const Label = styled.Text`
+  ${TextM};
 `;
 
 export default QuickAddModal;

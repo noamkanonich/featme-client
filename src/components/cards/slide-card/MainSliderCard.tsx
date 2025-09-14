@@ -2,7 +2,6 @@ import {
   Animated,
   useWindowDimensions,
   Easing,
-  Linking,
   PanResponder,
   Platform,
   Pressable,
@@ -12,16 +11,9 @@ import React, { useRef, useState } from 'react';
 import {
   Blue,
   Gray4,
-  Green,
-  Light,
-  Light1,
-  Light2,
   LightBlue,
-  LightGreen,
   LightPurple,
-  LightRed,
   Purple,
-  Red,
 } from '../../../theme/colors';
 import { SvgProps } from 'react-native-svg';
 import { useTranslation } from 'react-i18next';
@@ -30,9 +22,7 @@ import CloseIcon from '../../../../assets/icons/close.svg';
 import ISliderCardProps from './ISliderCardProps';
 import i18n from '../../../i18n';
 import styled, { css } from '../../../../styled-components';
-import { TextL, TextM } from '../../../theme/typography';
 import { shadow } from '../../../theme/utils';
-import Spacer from '../../spacer/Spacer';
 import BelowSliderCard from './BelowSliderCard';
 
 const MainSliderCard = ({
@@ -41,6 +31,7 @@ const MainSliderCard = ({
   background,
   icon: Icon,
   children,
+  onUpdate,
   onDelete,
   onPress,
 }: ISliderCardProps) => {
@@ -89,7 +80,7 @@ const MainSliderCard = ({
       color: Purple,
       background: LightPurple,
       onPress: () => {
-        'onUpdate()';
+        onUpdate();
         cardIsOpen.current.value = false;
         Animated.timing(position.current, {
           toValue: 0,
@@ -176,26 +167,6 @@ const MainSliderCard = ({
       },
     }),
   );
-
-  const handleDownload = async () => {
-    if (!item!.digitalForm.digitalFormResponse) {
-      return;
-    }
-
-    const supported = await Linking.canOpenURL(
-      item!.digitalForm.digitalFormResponse,
-    );
-
-    if (supported) {
-      await Linking.openURL(item!.digitalForm.digitalFormResponse);
-    } else {
-      console.error(
-        `Don't know how to open this URL: ${
-          item!.digitalForm.digitalFormResponse
-        }`,
-      );
-    }
-  };
 
   return (
     <Root>
@@ -292,55 +263,6 @@ const BelowContainer = styled.Pressable`
   right: 0;
   border-radius: 16px;
   overflow: hidden;
-`;
-
-const CategoryRow = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const TopRowContainer = styled.View`
-  flex: 1;
-`;
-
-const TopRow = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const CategoryTextContainer = styled.View<{ fontScale: number }>`
-  ${({ fontScale }) =>
-    `flex: ${fontScale < 1.7 ? '1' : fontScale < 2.1 ? '0.75' : '1'}`};
-`;
-
-const CategoryColumn = styled.View`
-  flex: 1;
-`;
-
-const CategoryText = styled.Text`
-  ${({ theme }) => theme.media.isMobile && TextM};
-  ${({ theme }) => theme.media.isTablet && TextL};
-`;
-
-const TagContainer = styled.View`
-  align-self: flex-start;
-`;
-
-const IconBackground = styled.View<{
-  background: string;
-  isChevronButton?: boolean;
-}>`
-  ${({ background }) => css`
-    background: ${background};
-    opacity: 0.1;
-  `};
-  ${({ isChevronButton }) =>
-    `border-radius: ${isChevronButton ? '16px' : '8px'}`};
-  position: absolute;
-  top: 0px;
-  start: 0px;
-  width: 100%;
-  height: 100%;
 `;
 
 export default MainSliderCard;

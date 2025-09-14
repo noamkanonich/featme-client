@@ -1,6 +1,6 @@
-import { IUser } from '../data/IUser';
-import { supabase } from '../lib/supabase/supabase';
-import { getUserById } from './user-utils';
+import { IUser } from '../../data/user/IUser';
+import { supabase } from '../../lib/supabase/supabase';
+import { getUserById } from '../user/user-utils';
 
 export const loginUser = async (email: string, password: string) => {
   try {

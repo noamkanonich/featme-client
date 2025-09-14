@@ -1,6 +1,6 @@
 import { UnitType } from '../UnitType';
 
-export type UserSettingsRow = {
+export type UserSettingsRaw = {
   id: string | number;
   user_id: string | number;
   language: string;

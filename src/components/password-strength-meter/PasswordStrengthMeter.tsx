@@ -64,8 +64,43 @@ const PasswordStrengthMeter: React.FC<Props> = ({ password }) => {
           Password strength: {strength.text}
         </StrengthText>
       )}
-
-      <Requirements>
+      <Row>
+        <RequirementRow key={'3'} met={requirements[0].met}>
+          <RequirementIcon met={requirements[0].met}>
+            {requirements[0].met ? <CheckMark /> : null}
+          </RequirementIcon>
+          <RequirementLabel met={requirements[0].met}>
+            {requirements[0].text}
+          </RequirementLabel>
+        </RequirementRow>
+        <RequirementRow key={'2'} met={requirements[1].met}>
+          <RequirementIcon met={requirements[1].met}>
+            {requirements[1].met ? <CheckMark /> : null}
+          </RequirementIcon>
+          <RequirementLabel met={requirements[1].met}>
+            {requirements[1].text}
+          </RequirementLabel>
+        </RequirementRow>
+      </Row>
+      <Row>
+        <RequirementRow key={'2'} met={requirements[2].met}>
+          <RequirementIcon met={requirements[2].met}>
+            {requirements[2].met ? <CheckMark /> : null}
+          </RequirementIcon>
+          <RequirementLabel met={requirements[2].met}>
+            {requirements[2].text}
+          </RequirementLabel>
+        </RequirementRow>
+        <RequirementRow key={'3'} met={requirements[3].met}>
+          <RequirementIcon met={requirements[3].met}>
+            {requirements[3].met ? <CheckMark /> : null}
+          </RequirementIcon>
+          <RequirementLabel met={requirements[3].met}>
+            {requirements[3].text}
+          </RequirementLabel>
+        </RequirementRow>
+      </Row>
+      {/* <Requirements>
         {requirements.map((req, idx) => (
           <RequirementRow key={idx} met={req.met}>
             <RequirementIcon met={req.met}>
@@ -74,13 +109,19 @@ const PasswordStrengthMeter: React.FC<Props> = ({ password }) => {
             <RequirementLabel met={req.met}>{req.text}</RequirementLabel>
           </RequirementRow>
         ))}
-      </Requirements>
+      </Requirements> */}
     </Container>
   );
 };
 
 const Container = styled.View`
   margin-top: 8px;
+`;
+
+const Row = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const BarsContainer = styled.View`

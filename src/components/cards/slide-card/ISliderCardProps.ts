@@ -8,6 +8,7 @@ interface ISliderCardProps {
   icon: ElementType<SvgProps>;
   children: React.ReactNode;
   onPress: () => void;
+  onUpdate: () => void;
   onDelete: () => void;
 }
 

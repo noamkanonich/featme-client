@@ -23,9 +23,7 @@ export const HeadingM = css`
 `;
 
 export const HeadingXL = css`
-  font-family: 'Circular20-Medium${Platform.OS === 'web'
-    ? ', sans-serif'
-    : ''}';
+  font-family: 'Circular20-Medium';
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
@@ -35,9 +33,8 @@ export const HeadingXL = css`
 `;
 
 export const HeadingXXL = css`
-  font-family: 'Circular20-Medium${Platform.OS === 'web'
-    ? ', sans-serif'
-    : ''}';
+  font-family: 'Circular20-Medium';
+
   font-weight: 500;
   font-size: 60px;
   line-height: 60px;
